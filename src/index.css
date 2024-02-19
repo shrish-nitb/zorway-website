@@ -4,6 +4,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .home-first {
@@ -324,4 +325,131 @@ body {
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
+}
+
+.home-fourth {
+  background-color: #000;
+  padding: 95px 0px;
+}
+
+.glass-outer {
+  border-radius: 40px;
+  border-top: 1px solid rgba(218, 218, 218, 0.45);
+  width: 800px;
+  height: 350px;
+  background: #232323;
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.glass-inner {
+  border-radius: 35px;
+  border-top: 1px solid rgba(104, 104, 104, 0.44);
+  border-left: 1px solid rgba(104, 104, 104, 0.44);
+  background: #292929;
+  display: flex;
+  width: 780px;
+  height: 330px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.cool-image {
+  width: 596px;
+  height: 250.94px;
+  /* background-size: contain; */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.horizontal-panes-fourth {
+  display: flex;
+  justify-content: space-between;
+}
+.horizontal-panes-fourth-reverse {
+  flex-direction: row-reverse;
+}
+
+.glass-right {
+  padding-right: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  left: unset;
+  right: -35px;
+}
+.glass-left {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  left: -35px;
+  right: unset;
+}
+
+.panes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 205px;
+}
+
+.glass-inner::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: url(arrow.svg);
+  position: absolute;
+  top: 37px;
+  right: 59px;
+}
+
+.glass-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 490px;
+  height: 232px;
+  border-radius: 40px;
+  object-fit: cover;
+  position: relative;
+  top: 50%;
+}
+
+.glass-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 42px 78px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.head {
+  font-family: Inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.purple-head {
+  color: var(--var, #aa67fe);
+}
+
+.white-head {
+  color: var(--var, #fff);
+}
+
+.glass-text-concept {
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
