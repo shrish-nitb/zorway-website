@@ -304,8 +304,8 @@ function Home() {
                   </div>
                   <div className="glass-text-concept">
                     Transforming visionary concepts into vibrant digital
-                    solutions, <br /> shaping the future of app development with every
-                    line of code we craft!
+                    solutions, <br /> shaping the future of app development with
+                    every line of code we craft!
                   </div>
                 </div>
                 <img
@@ -314,6 +314,339 @@ function Home() {
                 ></img>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="home-fifth">
+        <div className="title-white">
+          <span className="purple-head">Reasons </span>
+          Why We Are The One
+        </div>
+        <div className="subtitle subtitle-fifth">
+          Customer satisfaction is our priority, and we ensure to deliver what
+          we promise. Let us align our innovative ideas and strategies to your
+          needs to generate unique and powerful results.
+        </div>
+        <div className="cards">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16 3.5V5.5C16 5.77614 15.7761 6 15.5 6H8.5C8.22386 6 8 5.77614 8 5.5V3.5C8 3.22386 8.22386 3 8.5 3H15.5C15.7761 3 16 3.22386 16 3.5Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M16 4H18.9669C20.0715 4 20.9669 4.89543 20.9669 6V19C20.9669 20.1046 20.0715 21 18.9669 21H5C3.89543 21 3 20.1046 3 19V6C3 4.89543 3.89543 4 5 4H8V4"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 11H15"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 15H12"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div>Custom website development</div>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M21.2 21H3L3 2.80005"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M14.1183 5.69458L18.361 9.93722L11.2899 17.0083L7.04346 17.0045L7.04727 12.7656L14.1183 5.69458Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M18.3608 4.28037L19.775 5.69458C20.5561 6.47563 20.5561 7.74196 19.775 8.52301L18.3608 9.93722L14.1182 5.69458L15.5324 4.28037C16.3134 3.49932 17.5798 3.49932 18.3608 4.28037Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div>Complete Research</div>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 3L15 9.00031H21.0007L16 14L18 21L12.0003 17.5L6 21L8 14L3 9.00031H9L12 3Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div>Complete UI/UX Wire-frames</div>
+          </div>
+          <div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 6.00008H13.4647C17.1568 5.99351 20.2501 6.38951 20.882 11.0748"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6 9L3 6L6 3"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 17.9999H10.5353C6.86945 18.0064 3.79402 17.6161 3.13188 13.0246"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18 15L21 18L18 21"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div>Fastest Delivery</div>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M15.353 17.7009L15.3598 17.4243C15.3598 16.7432 15.5198 16.1951 15.8398 15.78C18.0798 13.8279 19.1998 11.9611 19.1998 10.1794C19.1998 6.21433 15.9763 3 11.9998 3C8.02335 3 4.7998 6.21433 4.7998 10.1794C4.7998 11.9499 5.9198 13.8168 8.1598 15.78C8.44425 16.149 8.60227 16.6231 8.63388 17.2022L8.64261 17.6028V17.6028L8.65263 17.8042V17.8042L8.67226 18.0248C8.67647 18.0629 8.68118 18.1017 8.68644 18.141L8.72501 18.383C8.93959 19.5373 9.66467 21 11.9998 21C14.3349 21 15.06 19.5373 15.2746 18.383L15.3132 18.141V18.141L15.3385 17.9124V17.9124L15.353 17.7009V17.7009Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.7002 17.0058C9.73769 17.3952 10.8376 17.5899 12 17.5899C13.1624 17.5899 14.2624 17.3952 15.3 17.0058"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div>Domain/Hosting Setup</div>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.16 3H18.84C20.0329 3 21 3.96706 21 5.16V18.84C21 20.0329 20.0329 21 18.84 21H5.16C3.96706 21 3 20.0329 3 18.84L3 5.16C3 3.96706 3.96706 3 5.16 3Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7 11.5594L11.1176 15.5L17 8.5"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div>Technical Consultancy</div>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M17.0233 8.46469L6.5853 18.9027H1.76776L1.76465 14.082L12.2026 3.64404L17.0233 8.46469Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12.2026 3.64401L14.0001 1.84653C14.7812 1.06548 16.0475 1.06548 16.8285 1.84653L18.8208 3.83875C19.6018 4.6198 19.6018 5.88613 18.8208 6.66718L17.0233 8.46466V8.46466"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div>Dedicated Writers</div>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M7.1499 10.5L14.1299 17L22.1499 6"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 10.5L9.00115 17"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M13.0273 11.5537L17.0002 6"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div>Satisfaction </div>
+          </div>
+          <div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 6.00008H13.4647C17.1568 5.99351 20.2501 6.38951 20.882 11.0748"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6 9L3 6L6 3"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 17.9999H10.5353C6.86945 18.0064 3.79402 17.6161 3.13188 13.0246"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18 15L21 18L18 21"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div>Flexible Revision</div>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 3L15 9.00031H21.0007L16 14L18 21L12.0003 17.5L6 21L8 14L3 9.00031H9L12 3Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div>Plagiarism Free Content</div>
+          </div>
+        </div>
+      </section>
+      <section className="home-sixth">
+        <div className="container-sixth">
+          <div className="title-white">
+            <span className="purple-head">Endorsed </span>
+            By
+          </div>
+          <div className="subtitle subtitle-sixth">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
           </div>
         </div>
       </section>
