@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background-color: #151515;
 }
 
 .home-first {
@@ -188,7 +189,7 @@ body {
 
 .title-white {
   color: #fff;
-  text-align: center;
+
   font-family: Inter;
   font-size: 48px;
   font-style: normal;
@@ -198,7 +199,7 @@ body {
 
 .subtitle {
   color: rgba(255, 255, 255, 0.6);
-  text-align: center;
+
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
@@ -566,13 +567,42 @@ body {
   background: #151515;
 }
 
-.subtitle-sixth{
+.subtitle-sixth {
   max-width: 770px;
   padding-block: 40px 25px;
 }
 
-.container-sixth{
+.container-sixth {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.thumb-parent {
+  background-color: #151515;
+  gap: 49px;
+  padding-inline: 10vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  padding-block: 5vh;
+}
+
+.thumb-parent > img {
+  border-radius: 25px;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.thumb-parent > div{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1280px) {
+  .thumb-parent {
+    grid-template-columns: 1fr;
+    gap: 19px;
+  }
 }
