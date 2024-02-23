@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ReadPage() {
+export default function Reader() {
   return (
     <div>
      hello

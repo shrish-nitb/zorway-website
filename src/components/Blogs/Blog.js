@@ -1,18 +1,19 @@
 import React from "react";
 import { AnimatePresence } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
-import BlogPage from "./BlogPage";
-import ReadPage from "./ReadPage";
+import Collection from "./Collection";
+import Reader from "./Reader";
 
 export default function Blog() {
   const location = useLocation();
+  
 
   return (
     <>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<BlogPage />} />
-          <Route path="/read" element={<ReadPage />} />
+          <Route path="" element={<Collection />} />
+          <Route path="/*" element={<Reader />} />
         </Routes>
       </AnimatePresence>
     </>
