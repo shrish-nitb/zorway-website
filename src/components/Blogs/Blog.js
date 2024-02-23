@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import RoutesWithAnimation from "./RoutesWithAnimation";
+import BlogRoutes from "./BlogRoutes";
 import { AnimatePresence } from "framer-motion";
 
 export default function Blog() {
@@ -8,7 +8,7 @@ export default function Blog() {
     <>
       <BrowserRouter>
         <AnimatePresence>
-          <RoutesWithAnimation />
+          <BlogRoutes />
         </AnimatePresence>
       </BrowserRouter>
     </>
