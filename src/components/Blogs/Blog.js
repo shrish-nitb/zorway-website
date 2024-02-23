@@ -1,15 +1,15 @@
 import React from "react";
-import LocationProvider from "../LocationProvider";
-import { BrowserRouter, } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import RoutesWithAnimation from "./RoutesWithAnimation";
+import { AnimatePresence } from "framer-motion";
 
 export default function Blog() {
   return (
     <>
       <BrowserRouter>
-        <LocationProvider>
-         <RoutesWithAnimation />
-        </LocationProvider>
+        <AnimatePresence>
+          <RoutesWithAnimation />
+        </AnimatePresence>
       </BrowserRouter>
     </>
   );
