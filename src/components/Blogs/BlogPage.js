@@ -8,7 +8,9 @@ export default function BlogPage() {
         initial={{y:"100vh"}}
         animate={{y:"0vh"}}
         exit={{y:"100vh"}}
+       
         className="thumb-parent"
+        
       >
         <img src="./blogthumb.png" alt="" />
         <div>

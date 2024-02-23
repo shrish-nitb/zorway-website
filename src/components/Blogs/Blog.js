@@ -7,7 +7,7 @@ export default function Blog() {
   return (
     <>
       <BrowserRouter>
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           <BlogRoutes />
         </AnimatePresence>
       </BrowserRouter>
