@@ -15,7 +15,7 @@ export default function BlogPage() {
         <img src="./blogthumb.png" alt="" />
         <div>
           <div className="title-white ">
-            <Link to="/blog">
+            <Link to="read">
               Publishing Mobile Apps:
               <br />A How To Guide
             </Link>
