@@ -1,19 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Second from "../General/Second";
 import ScrollPlates from "./ScrollPlates";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
-import {
-  Routes,
-  Route,
-  useLocation,
-  unstable_HistoryRouter,
-} from "react-router-dom";
 import Glossy from "../General/Glossy";
 import MemberThumb from "./MemberThumb";
+import { useScroll } from "framer-motion";
 
 export default function About() {
-  const location = useLocation();
+  const { scrollY } = useScroll();
+
+  useEffect(() => {
+    console.log("Scroll Y:", scrollY);
+  }, [scrollY]);
 
   return (
     <>
@@ -108,17 +107,51 @@ export default function About() {
             </>
           }
         ></Second>
-        <section className="scroll-horizontal-section">
-          <div class="title-white">
-            <span class="purple-head">How We </span>Work
-          </div>
-          <ScrollPlates
-            bg={"url(plate-1.png)"}
-            icon={"plate-icon-1.svg"}
-            title={"Research"}
-            subtitle={"Lorem ipsum dolor sit"}
-          />
-        </section>
+        <div style={{ height: "300vh" }}>
+          <section className="scroll-horizontal-section">
+            <div className="title-white">
+              <span className="purple-head">How We </span>Work
+            </div>
+            <div
+              style={{
+                height: "76vh",
+                width: "80vw",
+                display: "grid",
+                gridTemplateColumns: "1fr 2fr",
+              }}
+            >
+              <div
+                style={{
+                  overflow: "hidden scroll",
+                }}
+              >
+                <ScrollPlates
+                  bg={"url(plate-1.png)"}
+                  icon={"plate-icon-1.svg"}
+                  title={"Research"}
+                  subtitle={"Lorem ipsum dolor sit"}
+                />
+                <ScrollPlates
+                  bg={"url(plate-1.png)"}
+                  icon={"plate-icon-1.svg"}
+                  title={"Research"}
+                  subtitle={"Lorem ipsum dolor sit"}
+                />
+                <ScrollPlates
+                  bg={"url(plate-1.png)"}
+                  icon={"plate-icon-1.svg"}
+                  title={"Research"}
+                  subtitle={"Lorem ipsum dolor sit"}
+                />
+              </div>
+              <div className="fading-plates">
+                <img src="plate-1.png" alt="" />
+                <img src="plate-2.png" alt="" />
+                <img src="plate-3.png" alt="" />
+              </div>
+            </div>
+          </section>
+        </div>
         <section className="members">
           <div className="title-white purple-head">
             Unite with Our Founding Team:
@@ -147,7 +180,7 @@ export default function About() {
               us?
             </div>
           </div>
-          <div style={{ margin: "unset" }} class="outlined-btn">
+          <div style={{ margin: "unset" }} className="outlined-btn">
             <div>Get In Touch</div>
             <svg
               xmlns="http://www.w3.org/2000/svg"

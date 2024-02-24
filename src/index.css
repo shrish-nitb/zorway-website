@@ -192,7 +192,6 @@ body {
   background-position: right;
   background-repeat: no-repeat;
   padding: 61px 40px;
-  width: 100%;
 }
 
 .title-white {
@@ -799,26 +798,29 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: sticky;
+  top:0;
 }
 
 .plate-horizontal {
-  height: 76vh;
-  width: 80vw;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.plate-horizontal > div {
+  height: 100%;
+  width: 100%;
   display: flex;
+  align-content: center;
   align-items: center;
-  
 }
 
-.fading-plates>img{
+.fading-plates {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.fading-plates > img {
   position: absolute;
-    height: auto;
-    width: 40vw;
+  height: auto;
+  width: 53.33vw;
 }
 
 .plate-icon {
