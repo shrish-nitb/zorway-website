@@ -8,7 +8,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   background-color: #151515;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .home-first {
@@ -785,6 +785,7 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 69px;
   padding-block: 8.83vh;
+  align-items: center;
 }
 
 .second-flex > div {
@@ -802,12 +803,20 @@ a {
 
 .plate-horizontal {
   height: 76vh;
-  width: 70vw;
-  background-repeat: no-repeat;
-  background-position: right center;
+  width: 80vw;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.plate-horizontal > div {
   display: flex;
-  align-content: center;
   align-items: center;
+  
+}
+
+.fading-plates>img{
+  position: absolute;
 }
 
 .plate-icon {
@@ -846,7 +855,7 @@ a {
 }
 
 .about-hero-section {
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -854,7 +863,6 @@ a {
   display: flex;
   gap: 25px;
   flex-direction: column;
-  padding-inline: 35vw;
   box-sizing: border-box;
   text-align: center;
   background: url("https://s3-alpha-sig.figma.com/img/f295/63c2/037c09846625eb90744f7ce82135d8b1?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ai-rYLdJiAqfJniS~7lQKkVBfjz0ZVUnVXqdeF1M8kerxf9ID-pPZOQDIwNG6jb1WMhuZ0twfRcr~azqSKPWuPliNMi9BBkAXD4E6Y7fVZojMFp6xpAl9MbS51iWOvWMAA7dBqidkrkc08gC6ym7~15XQZLKg2yZjHGsRXNOFyGUt5Qqoa9KrZ2H7lFkrol4MBK3MUHvj9jzdEWwXjm~O9PaRSb7apLxC6v4pRwQRUpVItFoUw6XXIB8~-96q4VG4iYZ8KEmw7kJfl55Nnc87BME9TjqS881xTHj7YI2iNpb2ikXPpC8FwHPWOjQhCZ~9H5I8MtuFT9lcmtPRlN7dg__");
