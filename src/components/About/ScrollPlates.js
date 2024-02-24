@@ -1,8 +1,14 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
-export default function ScrollPlates({ bg, icon, title, subtitle }) {
+export default function ScrollPlates({rest, action, bg, icon, title, subtitle }) {
   return (
-    <div className="plate-horizontal">
+    <motion.div
+      transition={{ type: "spring", damping: 9, duration: 2 }}
+      initial={{y: 200, opacity: 0}}
+      animate={action}
+      className="plate-horizontal"
+    >
       <img className="plate-icon" src={icon} alt="" />
       <div className="plate-item">
         <div className="plate-text-title">
@@ -33,6 +39,6 @@ export default function ScrollPlates({ bg, icon, title, subtitle }) {
         </div>
         <div className="plate-text-subtitle">{subtitle}</div>
       </div>
-    </div>
+    </motion.div>
   );
 }

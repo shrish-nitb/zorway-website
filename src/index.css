@@ -803,11 +803,10 @@ a {
 }
 
 .plate-horizontal {
-  height: 100%;
-  width: 100%;
   display: flex;
   align-content: center;
   align-items: center;
+  position: absolute;
 }
 
 .fading-plates {
