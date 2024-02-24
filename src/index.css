@@ -20,7 +20,7 @@ body {
   justify-content: center;
   align-content: center;
   align-items: center;
-  height: 140vh;
+  height: 100vh;
 }
 
 .content {
@@ -183,7 +183,11 @@ body {
 
 /* home-second css starts here */
 .home-second {
-  background: #1d1d1d;
+  background-color: #1d1d1d;
+  background-image: url(Glow-2.png);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
   padding: 61px 40px;
 }
 
@@ -210,7 +214,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 358px;
+  /* height: 358px; */
   gap: 12px;
 }
 
@@ -588,19 +592,25 @@ body {
   grid-template-columns: 1.8fr 1fr;
   grid-template-rows: 460px;
   padding-block: 5vh;
+  position: relative;
+  z-index: 10;
 }
 
-.thumb-parent > img {
+.image-container > img {
   border-radius: 25px;
   cursor: pointer;
   width: 100%;
-  max-width: 846px;
-  max-height: 460px;
+  /* max-width: 846px;
+  max-height: 460px; */
   object-fit: cover;
 }
 
-.thumb-parent > div{
+.thumb-parent > div {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1280px) {
@@ -608,4 +618,179 @@ body {
     grid-template-columns: 1fr;
     gap: 19px;
   }
+  .image-container > img {
+    width: 100%;
+    height: 100%;
+    max-width: unset;
+    max-height: unset;
+  }
+}
+
+.thumbGrid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  z-index: 9;
+}
+
+.thumbGrid > div > .image-container > img {
+  width: 100%;
+  height: auto;
+  /* max-height: 183px; */
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.thumbGrid > div > .title-white {
+  font-size: 20px !important;
+  line-height: 24px !important;
+  padding-inline: 18px;
+  margin-top: 28px;
+}
+
+.thumbGrid > div > .subtitle {
+  font-size: 14px;
+  line-height: 24px !important;
+  padding-inline: 18px;
+}
+
+.tp-reader {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.tools {
+  padding-inline: 10vw;
+  padding-block: 20px 37px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 20;
+}
+
+.button-tools {
+  display: flex;
+  padding: 11px 13px;
+  background: transparent;
+  color: #adadad;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid #818181;
+  cursor: pointer;
+}
+
+.tools > div {
+  display: flex;
+  gap: 37px;
+}
+
+.search {
+  display: flex;
+  width: 423px;
+  padding: 9px 26px 8px 26px;
+  align-items: center;
+  gap: 21px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+}
+
+.image-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    rgba(124, 105, 150, 0.34) 3.63%,
+    rgba(153, 93, 228, 0.27) 97.49%
+  );
+  border-radius: 25px;
+}
+
+.tools-header {
+  padding-block: 54px 0px;
+}
+
+.icon-btn {
+  display: flex;
+  gap: 9px;
+}
+
+.blog-info > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blog-info > div > div:first-child {
+  color: #fff;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.blog-info > div > div:last-child {
+  color: rgba(255, 255, 255, 0.6);
+
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+}
+
+.content-blog {
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 140% */
+  padding-block: 60px;
+}
+
+.content-blog-heading {
+  color: #fff;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 47px;
+  padding-top: 30px;
+}
+
+.second-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 69px;
+  padding-block: 8.83vh;
+}
+
+.second-flex > div {
+  flex-grow: 1;
+}
+
+.scroll-horizontal-section {
+  padding-block: 10.7vh 10.7vh;
+  gap: 9.09vh;
+  background: #151515;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
