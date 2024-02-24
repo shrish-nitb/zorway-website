@@ -817,6 +817,8 @@ a {
 
 .fading-plates>img{
   position: absolute;
+    height: auto;
+    width: 40vw;
 }
 
 .plate-icon {
