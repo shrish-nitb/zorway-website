@@ -9,6 +9,7 @@ export default function Glossy({ bg, position, children }) {
           style={{ backgroundImage: bg, backgroundPosition: position }}
         >
           <div
+            className="Glossy-inner"
             style={{
               display: "flex",
               justifyContent: "center",
