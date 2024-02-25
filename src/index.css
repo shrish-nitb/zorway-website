@@ -1106,6 +1106,11 @@ a {
   .second-grid > div {
     padding-inline: unset !important;
   }
+  .palette {
+    gap: 5rem !important;
+    grid-template-columns: 13rem;
+    grid-template-rows: repeat(3, 13rem) !important;
+  }
 }
 
 /* regular css begins */
