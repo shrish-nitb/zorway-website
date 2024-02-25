@@ -6,7 +6,7 @@ export default function Carousel() {
   const [opacity, setOpacity] = useState([1, 0.3, 0.3]);
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       setOpacity((prevOpacity) => {
         let temp = [...prevOpacity];
         temp[view] = 0.3;
@@ -15,8 +15,8 @@ export default function Carousel() {
       });
       setView((view + 1) % 3);
     }, 3000);
-    
-  });
+    return () => clearInterval(interval);
+  }, [view]);
   return (
     <>
       <div class="title-white" style={{ textAlign: "center" }}>
