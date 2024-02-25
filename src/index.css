@@ -1001,7 +1001,7 @@ a {
 }
 
 @media screen and (max-width: 500px) {
-  .content{
+  .content {
     font-size: 13px !important;
   }
   html {
@@ -1031,7 +1031,7 @@ a {
   }
 }
 @media screen and (max-width: 639px) {
-  .content{
+  .content {
     font-size: 13px;
   }
   .second-grid {
@@ -1278,6 +1278,15 @@ a {
   }
   .third-flex {
     justify-content: center;
+  }
+  .palette {
+    grid-template-columns: repeat(3, 13rem) !important;
+    grid-template-rows: 12rem !important;
+    gap: 5rem !important;
+  }
+
+  .member-info {
+    width: 16rem;
   }
 }
 
