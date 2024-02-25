@@ -16,6 +16,7 @@ body {
   background-position: center;
   background-color: #151515;
   background-size: cover;
+  overflow: hidden;
 }
 
 .center {
@@ -23,7 +24,7 @@ body {
   justify-content: center;
   align-content: center;
   align-items: center;
-  height: 100vh;
+  height: max-content;
 }
 
 .content {
@@ -35,7 +36,7 @@ body {
   align-content: center;
   flex-direction: column;
   flex-wrap: nowrap;
-  gap: 2.0625em;
+  gap: 1.7em;
 }
 
 .icons {
@@ -50,68 +51,66 @@ body {
 
 .btn-pill {
   display: flex;
-  padding: 0.4375rem;
+  padding: 0.4375em;
   justify-content: center;
   align-items: center;
-  border-radius: 1rem;
-  border: 0.0625rem solid rgba(255, 255, 255, 0.05);
+  border-radius: 1em;
+  border: 0.0625em solid rgba(255, 255, 255, 0.05);
   background: linear-gradient(
     90deg,
     rgba(251, 137, 32, 0.14) 0%,
     rgba(255, 77, 1, 0.11) 100%
   );
   cursor: pointer;
-  width: 16.9375rem;
-  height: 1rem;
+  width: 16.9375em;
+  height: 1em;
 }
 
 .btn-pill > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.4375rem;
+  gap: 0.4375em;
 }
 
 .btn-pill > div > span {
-  width: 15.75rem;
   color: #ff9217;
   text-align: center;
   font-family: "Inter";
-  font-size: 0.7375rem;
+  font-size: 0.7375em;
   font-style: normal;
   font-weight: 500;
-  line-height: 1rem; /* 135.593% */
+  line-height: 1em; /* 135.593% */
 }
 
 .heading {
   font-family: Inter;
-  font-size: 4.525rem;
+  font-size: 4.525em;
   font-style: normal;
   font-weight: 700;
-  line-height: 5.25rem; /* 116.022% */
   background: linear-gradient(94deg, #e5f4ff 0%, #5dade5 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .subHeading {
-  height: 5.125rem;
+  height: 5.125em;
   overflow: hidden;
 }
 
 .subHeading > div {
   display: flex;
-  padding: 0rem 4.1875rem 0rem 4.3125rem;
+  padding: 0em 4.1875em 0em 4.3125em;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  gap: 2.4375rem;
+  gap: 2.4375em;
   flex-shrink: 0;
   font-family: Inter;
-  font-size: 3rem;
+  font-size: 3em;
   font-style: normal;
   font-weight: 700;
-  line-height: 5.25rem; /* 175% */
+  line-height: 5.25em; /* 175% */
   background: linear-gradient(94deg, #e5f4ff 0%, #5dade5 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -121,67 +120,72 @@ body {
 
 .description {
   color: #f2f2f2;
-  max-width: 32.5rem;
+  max-width: 26em;
   text-align: center;
   font-family: Inter;
-  font-size: 1.1187rem;
+  font-size: 1em;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.75rem; /* 156.425% */
+  line-height: 1.75em; /* 156.425% */
 }
 
 .linkbtn {
   display: flex;
-  max-width: 9.2056rem;
-  max-height: 2.125rem;
-  padding: 0.5625rem 1.9778rem;
+  padding: 0.6625em 2.6778em;
   justify-content: center;
   align-items: center;
-  border-radius: 2.1875rem;
-  border: 0.0625rem solid rgba(0, 0, 0, 0.05);
+  border-radius: 2.1875em;
+  border: 0.0625em solid rgba(0, 0, 0, 0.05);
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0rem 0rem 0rem 0.1875rem rgba(255, 255, 255, 0.2);
+  box-shadow: 0em 0em 0em 0.1875em rgba(255, 255, 255, 0.2);
   color: #000;
   font-family: Inter;
-  font-size: 0.8688rem;
+  font-size: 0.9688em;
   font-style: normal;
   font-weight: 500;
-  line-height: 1rem; /* 115.108% */
-  letter-spacing: 0.0125rem;
+  line-height: 1em;
+  letter-spacing: 0.0125em;
   cursor: pointer;
 }
 
 .morebtn {
   display: flex;
-  height: 3.0063rem;
+  height: 3.0063em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.9778rem;
+  gap: 0.9778em;
   cursor: pointer;
+  position: relative;
+  top: 2.8125em;
 }
 
 .morebtn > span {
   color: rgba(255, 255, 255, 0.4);
   font-family: Inter;
-  font-size: 0.8688rem;
+  font-size: 1em;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.0063rem; /* 115.827% */
+  line-height: 1.0063em; /* 115.827% */
 }
 
 .rings {
-  width: 100%;
-  height: inherit;
-  object-fit: none;
+  width: auto;
+  height: 100vh;
+  object-fit: contain;
   object-position: center;
 }
 
 .icons {
-  width: 100%;
+  width: 100vh;
   height: inherit;
   object-fit: none;
   object-position: center;
+}
+
+.view-down {
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* home-second css starts here */
@@ -234,11 +238,14 @@ body {
 /* home third section begins */
 .home-third {
   width: 100%;
-  height: 46.25rem;
+  min-height: 90vh;
   background: url(81.png);
   background-position: right;
   background-repeat: no-repeat;
   background-color: black;
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 
 .third-flex {
@@ -247,6 +254,7 @@ body {
   align-items: center;
   gap: 0.9375rem;
   justify-content: space-around;
+  width: 100%;
 }
 
 .third-flex-text {
@@ -302,10 +310,12 @@ body {
 .third-flex-head-white {
   color: #fff;
   font-weight: 400;
+  font-size: 3.125rem;
 }
 .third-flex-head-color {
   color: #aa67fe;
   font-weight: 700;
+  font-size: 3.125rem;
 }
 .txt-left {
   text-align: left;
@@ -463,7 +473,7 @@ body {
 }
 
 .home-fifth {
-  padding-block: 26vh 14.5vh;
+  padding-block: 17vh 14.5vh;
   background: #151515;
   display: flex;
   flex-direction: column;
@@ -873,7 +883,7 @@ a {
   box-sizing: border-box;
   text-align: center;
   background: url("https://s3-alpha-sig.figma.com/img/f295/63c2/037c09846625eb90744f7ce82135d8b1?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ai-rYLdJiAqfJniS~7lQKkVBfjz0ZVUnVXqdeF1M8kerxf9ID-pPZOQDIwNG6jb1WMhuZ0twfRcr~azqSKPWuPliNMi9BBkAXD4E6Y7fVZojMFp6xpAl9MbS51iWOvWMAA7dBqidkrkc08gC6ym7~15XQZLKg2yZjHGsRXNOFyGUt5Qqoa9KrZ2H7lFkrol4MBK3MUHvj9jzdEWwXjm~O9PaRSb7apLxC6v4pRwQRUpVItFoUw6XXIB8~-96q4VG4iYZ8KEmw7kJfl55Nnc87BME9TjqS881xTHj7YI2iNpb2ikXPpC8FwHPWOjQhCZ~9H5I8MtuFT9lcmtPRlN7dg__");
-  background-size: cover;
+  background-size: contain;
   position: relative;
 }
 
@@ -991,23 +1001,39 @@ a {
 }
 
 @media screen and (max-width: 500px) {
+  .content{
+    font-size: 13px !important;
+  }
   html {
-    font-size: 13px;
-  }
-  .third-flex {
-    padding-inline: 3.45vw;
-  }
-  .home-fifth {
-    padding-inline: 3.45vw;
+    font-size: 12px;
   }
   .second-grid > div {
     padding-inline: 0 !important;
   }
-  .home-second {
-    padding: 3.8125rem 3.45vw;
+
+  .cards {
+    width: 100% !important;
+  }
+  .thumbGrid > div > .title-white {
+    font-size: 1rem !important;
+    line-height: 1.4rem !important;
+    margin-top: 0;
+    padding-inline: 0.8rem;
+  }
+
+  .thumbGrid > div > .subtitle {
+    font-size: 0.75rem;
+    line-height: 1.2rem !important;
+    padding-inline: 0.8rem;
+  }
+  .home-third {
+    background: none !important;
   }
 }
 @media screen and (max-width: 639px) {
+  .content{
+    font-size: 13px;
+  }
   .second-grid {
     grid-template-columns: 1fr !important;
     justify-items: center !important;
@@ -1065,11 +1091,24 @@ a {
   }
   .home-fifth {
     text-align: center;
+    padding-block: 1rem;
   }
   .home-sixth {
     text-align: center;
   }
+  .thumbGrid {
+    grid-template-columns: repeat(2, 50%) !important;
+  }
+  section {
+    padding-inline: 30px !important;
+    box-sizing: border-box;
+  }
+  .second-grid > div {
+    padding-inline: unset !important;
+  }
 }
+
+/* regular css begins */
 
 .caro-plate-1 {
   background: url("112.png");
@@ -1148,25 +1187,113 @@ a {
   gap: 70px;
 }
 
+/* regular css ends */
+
 @media screen and (min-width: 640px) and (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
+  .second-grid {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+  }
   .cards {
     grid-template-columns: repeat(2, minmax(10px, 294px));
     grid-template-rows: repeat(5, 5.4375rem);
+  }
+  .third-flex-text {
+    justify-content: center;
+    text-align: center;
+  }
+  .third-flex {
+    flex-direction: column;
+    gap: 40px;
+    padding-block: 3rem;
+  }
+  .features {
+    grid-template-columns: repeat(2, 21.125rem);
+    grid-template-rows: repeat(3, 3.943rem);
+  }
+  .features > div {
+    font-size: 1.2rem;
+  }
+
+  .thumbGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 12px;
+  }
   .cards {
     grid-template-columns: repeat(2, minmax(10px, 294px));
     grid-template-rows: repeat(5, 5.4375rem);
   }
+  .third-flex-text {
+    justify-content: center;
+    text-align: center;
+  }
+  .third-flex {
+    flex-direction: column;
+    gap: 40px;
+    padding-block: 3rem;
+  }
+  .features {
+    grid-template-columns: repeat(2, 21.125rem);
+    grid-template-rows: repeat(3, 3.943rem);
+  }
+  .features > div {
+    font-size: 1.2rem;
+  }
+}
+
+/* common changes upto 1023px */
+@media screen and (max-width: 1023px) {
+  .thumbGrid {
+    gap: 24px 24px !important;
+  }
+  .home-third {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.35906862745098034) 16%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      url("81.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+  }
+
+  .second-grid > img {
+    width: 80% !important;
+  }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
+  html {
+    font-size: 14px;
+  }
+  .third-flex {
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1535px) {
 }
 
 @media screen and (min-width: 1536px) {
+}
+
+.marquee-child {
+  padding-block: 3.125rem 6.375rem;
+  /* keep width same as supplied to the <Marquee> */
+  width: max-content;
+  display: flex;
+}
+
+.marquee-child > svg {
+  padding-inline: 2rem;
 }
