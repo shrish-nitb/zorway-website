@@ -1247,6 +1247,12 @@ a {
   .features > div {
     font-size: 1.2rem;
   }
+  .palette {
+    grid-template-columns: repeat(3, 13rem) !important;
+    grid-template-rows: 12rem !important;
+    gap: 5rem !important;
+  }
+
 }
 
 /* common changes upto 1023px */
@@ -1270,6 +1276,7 @@ a {
   .second-grid > img {
     width: 80% !important;
   }
+  
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
