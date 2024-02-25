@@ -1,6 +1,8 @@
 import Btnpill from "./btn-pill";
 import { motion } from "framer-motion";
 import Second from "../General/Second";
+import ThumbGrid from "../Blogs/ThumbGrid";
+import Carousel from "../General/Carousel"
 
 function Home() {
   return (
@@ -97,7 +99,7 @@ function Home() {
                 flexDirection: "column",
                 gap: "50px",
                 justifyContent: "center",
-                paddingInline: "4.45vw"
+                paddingInline: "4.45vw",
               }}
             >
               <div class="title-white">
@@ -686,6 +688,7 @@ function Home() {
           </div>
         </div>
       </section>
+      <Carousel></Carousel>
       <section className="home-sixth">
         <div className="container-sixth">
           <div className="title-white">
@@ -698,6 +701,7 @@ function Home() {
           </div>
         </div>
       </section>
+      <ThumbGrid bg={"#1D1D1D"} purple={"Zorway"} white={"Blogs"} button={"All Blogs"}></ThumbGrid>
     </>
   );
 }
