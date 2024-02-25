@@ -15,6 +15,7 @@ export default function Carousel() {
       });
       setView((view + 1) % 3);
     }, 3000);
+    
   });
   return (
     <>
