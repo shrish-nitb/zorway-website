@@ -279,7 +279,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="home-fourth">
+      {/* <section className="home-fourth">
         <div className="panes-container">
           <div className="horizontal-panes-fourth">
             <div
@@ -364,7 +364,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="home-fifth">
         <div className="title-white">
           <span className="purple-head">Reasons </span>
