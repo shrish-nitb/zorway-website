@@ -20,6 +20,9 @@ function Home() {
   let anim06 = useTransform(scrollYProgress, [0.0743, 0.1808], [0, 1]);
   let anim07 = useTransform(scrollYProgress, [0.03, 0.127], [1, 0]);
   let anim08 = useTransform(scrollYProgress, [0.03, 0.127], [0, -100]);
+  let anim09 = useTransform(scrollYProgress, [0.036, 0.382], ["100%", "0%"]);
+  let anim10 = useTransform(scrollYProgress, [0.036, 0.382], ["-100%", "0%"]);
+  let anim11 = useTransform(scrollYProgress, [0.036, 0.382], [0, 1]);
 
   return (
     <>
@@ -108,6 +111,7 @@ function Home() {
             <motion.img
               src="globe.png"
               style={{ x: anim05, opacity: anim06, width: "100%" }}
+              
               alt=""
             />
           </>
@@ -157,7 +161,7 @@ function Home() {
       />
       <section className="home-third">
         <div className="third-flex">
-          <motion.div className="third-flex-text">
+          <motion.div style={{ x: anim10, opacity: anim11}} className="third-flex-text">
             <div>
               <span className="third-flex-head-white">We Design,</span>
               <br />
@@ -186,7 +190,7 @@ function Home() {
               </svg>
             </div>
           </motion.div>
-          <div className="features">
+          <motion.div style={{ x: anim09, opacity: anim11}} className="features">
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -301,7 +305,7 @@ function Home() {
               </svg>
               <div>Plagiarism Free Content</div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       {/* <section className="home-fourth">
