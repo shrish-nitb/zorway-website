@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
 export default function Carousel() {
   const [view, setView] = useState(0);
   const [opacity, setOpacity] = useState([1, 0.3, 0.3, 0.3, 0.3, 0.3]);
+
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,7 +25,9 @@ export default function Carousel() {
         <span class="purple-head">Our </span>Testimonials
       </div>
       <div style={{ width: "100vw" }}>
-        <motion.div className="caro-container" animate={{ x: -816 * view }}>
+        <motion.div className="caro-container" animate={{ x: -816 * view }}
+        transition={{duration: 1}}
+        >
           <motion.div animate={{ opacity: opacity[0] }} className="caro-plates">
             <div className="caro-plate-1">
               <div className="caro-info-container">

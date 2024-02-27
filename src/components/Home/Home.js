@@ -4,18 +4,34 @@ import Second from "../General/Second";
 import ThumbGrid from "../Blogs/ThumbGrid";
 import Carousel from "../General/Carousel";
 import Marquee from "react-fast-marquee";
+import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 
 function Home() {
+  const { scrollYProgress } = useScroll();
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    console.log(latest);
+  });
+
+  let anim01 = useTransform(scrollYProgress, [0.0154, 0.0743], [250, 0]);
+  let anim02 = useTransform(scrollYProgress, [0.0154, 0.0743], [0, 1]);
+  let anim03 = useTransform(scrollYProgress, [0.0154, 0.0743], [3, 1]);
+  let anim04 = useTransform(scrollYProgress, [0.0743, 0.1808], ["100%", "0%"]);
+  let anim05 = useTransform(scrollYProgress, [0.0743, 0.1808], ["-100%", "0%"]);
+  let anim06 = useTransform(scrollYProgress, [0.0743, 0.1808], [0, 1]);
+  let anim07 = useTransform(scrollYProgress, [0.03, 0.127], [1, 0]);
+  let anim08 = useTransform(scrollYProgress, [0.03, 0.127], [0, -100]);
+
   return (
     <>
       <motion.section
+        
         initial={{ scale: 1.5, filter: "blur(1px)", opacity: 0 }}
         animate={{ scale: 1, filter: "blur(0px)", opacity: 1 }}
-        transition={{ duration: 1}}
+        transition={{ duration: 1 }}
         className="home-first"
       >
-        <div className="center">
-          <img className="rings" src="rings.png" />
+        <motion.div style={{ opacity: anim07, y: anim08 }} className="center">
+          <motion.img style={{ opacity: anim07, y: anim08 }} className="rings" src="rings.png" />
           {/* <img className="icons" src="icons.svg" /> */}
           <div className="content">
             <Btnpill />
@@ -65,37 +81,48 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </motion.section>
       <Second
         white={
           <>
-            One Organization,
-            <br />
-            Infinite Possibilities.
+            <motion.div style={{ y: anim01, opacity: anim02, scale: anim03 }}>
+              One Organization,
+              <br />
+              Infinite Possibilities.
+            </motion.div>
           </>
         }
         subtitle={
           <>
-            Enable your business to create improved processes,
-            <br />
-            leading to superior outcomes.
+            <motion.div style={{ y: anim01, opacity: anim02, scale: anim03 }}>
+              Enable your business to create improved processes,
+              <br />
+              leading to superior outcomes.
+            </motion.div>
           </>
         }
+        padding={"15.83vh 8.83vh"}
         left={
           <>
-            <img src="globe.png" style={{ width: "100%" }} alt="" />
+            <motion.img
+              src="globe.png"
+              style={{ x: anim05, opacity: anim06, width: "100%" }}
+              alt=""
+            />
           </>
         }
         right={
           <>
-            <div
+            <motion.div
               style={{
                 display: "flex",
                 flexDirection: "column",
                 gap: "50px",
                 justifyContent: "center",
                 paddingInline: "4.45vw",
+                x: anim04,
+                opacity: anim06,
               }}
             >
               <div class="title-white">
@@ -124,13 +151,13 @@ function Home() {
                   />
                 </svg>
               </div>
-            </div>
+            </motion.div>
           </>
         }
       />
       <section className="home-third">
         <div className="third-flex">
-          <div className="third-flex-text">
+          <motion.div className="third-flex-text">
             <div>
               <span className="third-flex-head-white">We Design,</span>
               <br />
@@ -158,7 +185,7 @@ function Home() {
                 />
               </svg>
             </div>
-          </div>
+          </motion.div>
           <div className="features">
             <div>
               <svg

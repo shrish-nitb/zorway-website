@@ -5,9 +5,9 @@ export default function ThumbGrid({ bg, purple, white, button }) {
     <>
       <div
         style={{
-          background: "rgb(29, 29, 29)",
+          background: bg,
           
-          paddingBlock: 75,
+          paddingBlock: 25,
           display: "flex",
           flexDirection: "column",
           gap: 61,
@@ -23,7 +23,7 @@ export default function ThumbGrid({ bg, purple, white, button }) {
             gridTemplateColumns: "repeat(3, 1fr)",
             justifyContent: "center",
             paddingInline: "10vw",
-            gap: "87px 93px",
+            gap: "87px 46px",
           }}
           className="thumbGrid"
         >
