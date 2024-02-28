@@ -6,7 +6,6 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   background-color: #151515;
   /* width: 100vw; */
 }
@@ -227,13 +226,14 @@ body {
 
 .home-second::before {
   background-image: url(https://s3-alpha-sig.figma.com/img/5ed9/7bcf/7b19e4a0406cebcae657426ed7304a27?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=M26S4Zt9hFDbT~YjPfxBwiIQ3tTT-LO87zz~gWB0F8XP9wVo-4MgU1f0Xf-J67tL-bLYCOCG96Up0TY-thTdbMHT2~I907XM8YhbwHj6KeHUO0TxqdSx9NHGdqoTtKbsOY~VdK-Nr80~IrHBUebB5H8NDo9n3Y8A1mF97UF3QCxGFlGuas92L7FsQMTEInNbMdDDNwR2~wBvGrl8XhscnXxbjOLg41MZ7RAwVi8RKasZTmAL7j~01D7zLMvYYYyU2njUzqi6K5ncSnYMMIGsWUyotOHAdUTPiixS2ApPdCcZN9aCdhyQqMExIyYO9FmaHTTw3SRW~iZqcui9vEisag__);
-  width: 36.4375rem;
-  height: 14.0084rem;
+
   position: absolute;
   content: "";
   left: 0;
   background-repeat: no-repeat;
-  
+  width: 100vw;
+  height: 14.0084rem;
+  background-size: contain;
 }
 
 /* home third section begins */
@@ -631,13 +631,13 @@ a {
   text-decoration: none;
 }
 
-.footer{
+.footer {
   padding: 5.4375rem 7.9375rem;
   display: flex;
   justify-content: center;
 }
 
-.thumbGrid > div{
+.thumbGrid > div {
   cursor: pointer;
 }
 
@@ -1115,6 +1115,7 @@ a {
   section {
     padding-inline: 30px !important;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
   .second-grid > div {
     padding-inline: unset !important;
@@ -1361,13 +1362,13 @@ a {
     gap: 1rem !important;
     flex-direction: column !important;
   }
-  .thumbGrid{
+  .thumbGrid {
     gap: 25px 40px !important;
   }
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1535px) {
-  .thumbGrid{
+  .thumbGrid {
     gap: 25px 40px !important;
   }
 }
