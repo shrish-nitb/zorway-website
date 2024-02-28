@@ -153,7 +153,7 @@ function Home() {
           <>
             <motion.img
               src="globe.png"
-              style={window.innerWidth > 639 ? { x: anim05, opacity: anim06, width: "100%" } : {}}
+              style={{ x: anim05, opacity: anim06, width: "100%" }}
               alt=""
             />
           </>
@@ -167,8 +167,8 @@ function Home() {
                 gap: "50px",
                 justifyContent: "center",
                 paddingInline: "4.45vw",
-                x: (window.innerWidth > 639) ? anim04 : {},
-                opacity: (window.innerWidth > 639) ? anim06 : {},
+                x: anim04,
+                opacity: anim06,
               }}
             >
               <div class="title-white">
