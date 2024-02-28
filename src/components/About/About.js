@@ -223,7 +223,7 @@ export default function About() {
           ></MemberThumb>
         </div>
       </section>
-      <Glossy bg={`url("112.png")`} position={"right"}>
+      <Glossy bg={`url("112.png")`} position={"right"} paddingInline={true}>
         <div className="career-container">
           <div className="head purple-head">Want a career with us?</div>
           <div className="subtitle">
