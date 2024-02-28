@@ -125,6 +125,7 @@ function Home() {
                   ? { y: anim01, opacity: anim02, scale: anim03 }
                   : {}
               }
+              data-aos="fade-out"
             >
               One Organization,
               <br />

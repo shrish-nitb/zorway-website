@@ -508,7 +508,6 @@ body {
   grid-row-gap: 2.4375rem;
   width: 100%;
   justify-content: center;
-  overflow-x: hidden;
 }
 
 .cards > div {
