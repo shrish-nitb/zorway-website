@@ -15,9 +15,21 @@ function Home() {
     console.log(latest);
   });
 
-  let anim01 = "0vh";
-  let anim02 = 1;
-  let anim03 = 1;
+  let anim01 = useTransform(
+    scrollYProgress,
+    [0.07882831012733728, 0.14140019703108825],
+    ["100vh", "0vh"]
+  );
+  let anim02 = useTransform(
+    scrollYProgress,
+    [0.07882831012733728, 0.14140019703108825],
+    [0, 1]
+  );
+  let anim03 = useTransform(
+    scrollYProgress,
+    [0.07882831012733728, 0.14140019703108825],
+    [0, 1]
+  );
   let anim04 = useTransform(
     scrollYProgress,
     [0.18158116942853908, 0.27191166321601107],
@@ -28,12 +40,16 @@ function Home() {
     [0.18158116942853908, 0.27191166321601107],
     ["-100%", "0%"]
   );
-  let anim06 = 1;
-  let anim07 = 0;
-  let anim08 = "-100";
-  let anim09 = "0%";
-  let anim10 = "0%";
-  let anim11 = 1;
+  let anim06 = useTransform(
+    scrollYProgress,
+    [0.18158116942853908, 0.2929223312683316],
+    [0, 1]
+  );
+  let anim07 = useTransform(scrollYProgress, [0.03, 0.127], [1, 0]);
+  let anim08 = useTransform(scrollYProgress, [0.03, 0.127], [0, -100]);
+  let anim09 = useTransform(scrollYProgress, [0.037, 0.382], ["100%", "0%"]);
+  let anim10 = useTransform(scrollYProgress, [0.037, 0.382], ["-100%", "0%"]);
+  let anim11 = useTransform(scrollYProgress, [0.037, 0.382], [0, 1]);
 
   return (
     <>
