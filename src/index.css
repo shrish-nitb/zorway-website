@@ -1131,6 +1131,12 @@ a {
     box-sizing: border-box;
     padding-inline: 30px !important;
   }
+  .home-second {
+    padding-inline: 0px !important;
+  }
+  .home-second > .gapper > div {
+    padding-inline: 30px !important;
+  }
   .second-grid > div {
     padding-inline: unset !important;
   }
