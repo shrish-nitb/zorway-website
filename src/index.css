@@ -178,11 +178,21 @@ section {
   object-position: center;
 }
 
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .icons {
   width: auto;
   height: 100vh;
   object-fit: contain;
   object-position: center;
+  animation: rotate360 30s linear infinite;
 }
 
 .view-down {
