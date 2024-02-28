@@ -15,17 +15,25 @@ function Home() {
     console.log(latest);
   });
 
-  let anim01 = useTransform(scrollYProgress, [0.07882831012733728, 0.14140019703108825], ["100vh", "0vh"]);
-  let anim02 = useTransform(scrollYProgress, [0.07882831012733728, 0.14140019703108825], [0, 1]);
-  let anim03 = useTransform(scrollYProgress, [0.07882831012733728, 0.14140019703108825], [0, 1]);
-  let anim04 = useTransform(scrollYProgress, [0.18158116942853908, 0.27191166321601107], ["100%", "0%"]);
-  let anim05 = useTransform(scrollYProgress, [0.18158116942853908, 0.27191166321601107], ["-100%", "0%"]);
-  let anim06 = useTransform(scrollYProgress, [0.18158116942853908, 0.2929223312683316], [0, 1]);
-  let anim07 = useTransform(scrollYProgress, [0.03, 0.127], [1, 0]);
-  let anim08 = useTransform(scrollYProgress, [0.03, 0.127], [0, -100]);
-  let anim09 = useTransform(scrollYProgress, [0.037, 0.382], ["100%", "0%"]);
-  let anim10 = useTransform(scrollYProgress, [0.037, 0.382], ["-100%", "0%"]);
-  let anim11 = useTransform(scrollYProgress, [0.037, 0.382], [0, 1]);
+  let anim01 = "0vh";
+  let anim02 = 1;
+  let anim03 = 1;
+  let anim04 = useTransform(
+    scrollYProgress,
+    [0.18158116942853908, 0.27191166321601107],
+    ["100%", "0%"]
+  );
+  let anim05 = useTransform(
+    scrollYProgress,
+    [0.18158116942853908, 0.27191166321601107],
+    ["-100%", "0%"]
+  );
+  let anim06 = 1;
+  let anim07 = 0;
+  let anim08 = "-100";
+  let anim09 = "0%";
+  let anim10 = "0%";
+  let anim11 = 1;
 
   return (
     <>
@@ -35,9 +43,12 @@ function Home() {
         transition={{ duration: 1 }}
         className="home-first"
       >
-        <motion.div style={{ opacity: anim07, y: anim08 }} className="center">
+        <motion.div
+          // style={{ opacity: anim07, y: anim08 }}
+          className="center"
+        >
           <motion.img
-            style={{ opacity: anim07, y: anim08 }}
+            // style={{ opacity: anim07, y: anim08 }}
             className="rings"
             src="rings.png"
           />
@@ -131,7 +142,7 @@ function Home() {
                 justifyContent: "center",
                 paddingInline: "4.45vw",
                 x: anim04,
-               
+
                 opacity: anim06,
               }}
             >
@@ -203,10 +214,7 @@ function Home() {
             style={{ x: anim09, opacity: anim11 }}
             className="features"
           >
-            <div
-              data-aos="zoom-out"
-              data-aos-easing="ease-out"
-            >
+            <div data-aos="zoom-out" data-aos-easing="ease-out">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -225,10 +233,7 @@ function Home() {
               </svg>
               <div>Custom website development</div>
             </div>
-            <div
-              data-aos="zoom-out"
-              data-aos-easing="ease-out"
-            >
+            <div data-aos="zoom-out" data-aos-easing="ease-out">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
