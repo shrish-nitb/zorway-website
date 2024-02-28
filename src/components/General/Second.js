@@ -16,7 +16,7 @@ export default function Second({
       <div className="gapper" style={{ textAlign: "center" }}>
         <div
           style={
-            destination == "homepage"
+            destination == "homepage" && (window.innerWidth > 639)
               ? { height: "25rem", paddingTop: "calc(38vh - 3.8125rem)" }
               : {}
           }
@@ -24,7 +24,7 @@ export default function Second({
           <div className="title-white purple-head">{purple}</div>
           <div
             style={
-              destination == "homepage"
+              destination == "homepage" && (window.innerWidth > 639)
                 ? { position: "sticky", top: "38vh" }
                 : {}
             }

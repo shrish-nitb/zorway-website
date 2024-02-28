@@ -9,9 +9,6 @@ body {
   background-color: #151515;
 }
 
-
-
-
 .home-first {
   background-image: url(./illumination.png);
   background-position: center;
@@ -99,7 +96,7 @@ body {
   overflow: hidden;
 }
 
-.subHeading > div >div{
+.subHeading > div > div {
   position: absolute;
 }
 .subHeading > div {
@@ -510,6 +507,7 @@ body {
   grid-row-gap: 2.4375rem;
   width: 100%;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 .cards > div {
@@ -1058,6 +1056,9 @@ a {
   }
 }
 @media screen and (max-width: 639px) {
+  .second-grid {
+    padding-top: 5rem !important;
+  }
   .content {
     font-size: 13px;
   }
@@ -1128,6 +1129,10 @@ a {
   }
   section {
     box-sizing: border-box;
+    padding-inline: 30px !important;
+  }
+  .home-second {
+    padding-inline: 0px !important;
   }
   .second-grid > div {
     padding-inline: unset !important;

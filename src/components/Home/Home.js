@@ -15,12 +15,36 @@ function Home() {
     console.log(latest);
   });
 
-  let anim01 = useTransform(scrollYProgress, [0.07882831012733728, 0.14140019703108825], [700, 0]);
-  let anim02 = useTransform(scrollYProgress, [0.07882831012733728, 0.14140019703108825], [0, 1]);
-  let anim03 = useTransform(scrollYProgress, [0.07882831012733728, 0.14140019703108825], [0, 1]);
-  let anim04 = useTransform(scrollYProgress, [0.18158116942853908, 0.27191166321601107], ["100%", "0%"]);
-  let anim05 = useTransform(scrollYProgress, [0.18158116942853908, 0.27191166321601107], ["-100%", "0%"]);
-  let anim06 = useTransform(scrollYProgress, [0.18158116942853908, 0.2929223312683316], [0, 1]);
+  let anim01 = useTransform(
+    scrollYProgress,
+    [0.07882831012733728, 0.14140019703108825],
+    [700, 0]
+  );
+  let anim02 = useTransform(
+    scrollYProgress,
+    [0.07882831012733728, 0.14140019703108825],
+    [0, 1]
+  );
+  let anim03 = useTransform(
+    scrollYProgress,
+    [0.07882831012733728, 0.14140019703108825],
+    [0, 1]
+  );
+  let anim04 = useTransform(
+    scrollYProgress,
+    [0.18158116942853908, 0.27191166321601107],
+    ["100%", "0%"]
+  );
+  let anim05 = useTransform(
+    scrollYProgress,
+    [0.18158116942853908, 0.27191166321601107],
+    ["-100%", "0%"]
+  );
+  let anim06 = useTransform(
+    scrollYProgress,
+    [0.18158116942853908, 0.2929223312683316],
+    [0, 1]
+  );
   let anim07 = useTransform(scrollYProgress, [0.03, 0.127], [1, 0]);
   let anim08 = useTransform(scrollYProgress, [0.03, 0.127], [0, -100]);
   let anim09 = useTransform(scrollYProgress, [0.037, 0.382], ["100%", "0%"]);
@@ -95,7 +119,13 @@ function Home() {
       <Second
         white={
           <>
-            <motion.div style={{ y: anim01, opacity: anim02, scale: anim03 }}>
+            <motion.div
+              style={
+                window.innerWidth > 639
+                  ? { y: anim01, opacity: anim02, scale: anim03 }
+                  : {}
+              }
+            >
               One Organization,
               <br />
               Infinite Possibilities.
@@ -104,7 +134,13 @@ function Home() {
         }
         subtitle={
           <>
-            <motion.div style={{ y: anim01, opacity: anim02, scale: anim03 }}>
+            <motion.div
+              style={
+                window.innerWidth > 639
+                  ? { y: anim01, opacity: anim02, scale: anim03 }
+                  : {}
+              }
+            >
               Enable your business to create improved processes,
               <br />
               leading to superior outcomes.
@@ -116,7 +152,7 @@ function Home() {
           <>
             <motion.img
               src="globe.png"
-              style={{ x: anim05, opacity: anim06, width: "100%" }}
+              style={window.innerWidth > 639 ? { x: anim05, opacity: anim06, width: "100%" } : {}}
               alt=""
             />
           </>
@@ -130,9 +166,8 @@ function Home() {
                 gap: "50px",
                 justifyContent: "center",
                 paddingInline: "4.45vw",
-                x: anim04,
-               
-                opacity: anim06,
+                x: (window.innerWidth > 639) ? anim04 : {},
+                opacity: (window.innerWidth > 639) ? anim06 : {},
               }}
             >
               <div class="title-white">
@@ -165,7 +200,7 @@ function Home() {
           </>
         }
       />
-      <section className="home-third" style={{overflowX:"hidden"}}>
+      <section className="home-third" style={{ overflowX: "hidden" }}>
         <div className="third-flex">
           <motion.div
             style={{ x: anim10, opacity: anim11 }}
@@ -203,10 +238,7 @@ function Home() {
             style={{ x: anim09, opacity: anim11 }}
             className="features"
           >
-            <div
-              data-aos="zoom-out"
-              data-aos-easing="ease-out"
-            >
+            <div data-aos="zoom-out" data-aos-easing="ease-out">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -225,10 +257,7 @@ function Home() {
               </svg>
               <div>Custom website development</div>
             </div>
-            <div
-              data-aos="zoom-out"
-              data-aos-easing="ease-out"
-            >
+            <div data-aos="zoom-out" data-aos-easing="ease-out">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -247,10 +276,7 @@ function Home() {
               </svg>
               <div>Flexible Revision Policy</div>
             </div>
-            <div
-              data-aos="zoom-out"
-              data-aos-easing="ease-out"
-            >
+            <div data-aos="zoom-out" data-aos-easing="ease-out">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -269,10 +295,7 @@ function Home() {
               </svg>
               <div>Domain/Hosting Setup</div>
             </div>
-            <div
-              data-aos="zoom-out"
-              data-aos-easing="ease-out"
-            >
+            <div data-aos="zoom-out" data-aos-easing="ease-out">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -291,10 +314,7 @@ function Home() {
               </svg>
               <div>Technical Consultancy</div>
             </div>
-            <div
-              data-aos="zoom-out"
-              data-aos-easing="ease-out"
-            >
+            <div data-aos="zoom-out" data-aos-easing="ease-out">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -313,10 +333,7 @@ function Home() {
               </svg>
               <div>Complete UI/UX Wire-frames</div>
             </div>
-            <div
-              data-aos="zoom-out"
-              data-aos-easing="ease-out"
-            >
+            <div data-aos="zoom-out" data-aos-easing="ease-out">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
