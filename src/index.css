@@ -177,9 +177,9 @@ body {
 }
 
 .icons {
-  width: 100vh;
-  height: inherit;
-  object-fit: none;
+  width: auto;
+  height: 100vh;
+  object-fit: contain;
   object-position: center;
 }
 

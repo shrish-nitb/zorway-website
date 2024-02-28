@@ -1,17 +1,27 @@
 import { motion, useScroll } from "framer-motion";
 import React from "react";
 
-
-export default function Second({ purple, white, subtitle, left, right, padding }) {
-  const {scrollYProgress} = useScroll();
+export default function Second({
+  purple,
+  white,
+  subtitle,
+  left,
+  right,
+  destination,
+}) {
+  const { scrollYProgress } = useScroll();
 
   return (
     <section className="home-second">
       <div className="gapper" style={{ textAlign: "center" }}>
-        <div  className="title-white purple-head">{purple}</div>
-        <div className="title-white">{white}</div>
-        <div className="subtitle">{subtitle}</div>
-        <div className="second-grid" style={{paddingBlock: padding || "8.83vh"}}>
+        <div style={(destination == "homepage") ? { height: "25rem", paddingTop: "calc(38vh - 3.8125rem)" } : {}}>
+          <div className="title-white purple-head">{purple}</div>
+          <div style={(destination == "homepage") ? { position: "sticky", top: "38vh" } : {}}>
+            <div className="title-white">{white}</div>
+            <div className="subtitle">{subtitle}</div>
+          </div>
+        </div>
+        <div className="second-grid" style={(destination == "homepage") ? { paddingTop: "12.5rem" } : {}}>
           {left}
           {right}
         </div>

@@ -5,37 +5,43 @@ import ThumbGrid from "../Blogs/ThumbGrid";
 import Carousel from "../General/Carousel";
 import Marquee from "react-fast-marquee";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
+  Aos.init();
   const { scrollYProgress } = useScroll();
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     console.log(latest);
   });
 
-  let anim01 = useTransform(scrollYProgress, [0.0154, 0.0743], [250, 0]);
-  let anim02 = useTransform(scrollYProgress, [0.0154, 0.0743], [0, 1]);
-  let anim03 = useTransform(scrollYProgress, [0.0154, 0.0743], [3, 1]);
-  let anim04 = useTransform(scrollYProgress, [0.0743, 0.1808], ["100%", "0%"]);
-  let anim05 = useTransform(scrollYProgress, [0.0743, 0.1808], ["-100%", "0%"]);
-  let anim06 = useTransform(scrollYProgress, [0.0743, 0.1808], [0, 1]);
+  let anim01 = useTransform(scrollYProgress, [0.07882831012733728, 0.14140019703108825], [700, 0]);
+  let anim02 = useTransform(scrollYProgress, [0.07882831012733728, 0.14140019703108825], [0, 1]);
+  let anim03 = useTransform(scrollYProgress, [0.07882831012733728, 0.14140019703108825], [0, 1]);
+  let anim04 = useTransform(scrollYProgress, [0.18158116942853908, 0.27191166321601107], ["100%", "0%"]);
+  let anim05 = useTransform(scrollYProgress, [0.18158116942853908, 0.27191166321601107], ["-100%", "0%"]);
+  let anim06 = useTransform(scrollYProgress, [0.18158116942853908, 0.2929223312683316], [0, 1]);
   let anim07 = useTransform(scrollYProgress, [0.03, 0.127], [1, 0]);
   let anim08 = useTransform(scrollYProgress, [0.03, 0.127], [0, -100]);
-  let anim09 = useTransform(scrollYProgress, [0.036, 0.382], ["100%", "0%"]);
-  let anim10 = useTransform(scrollYProgress, [0.036, 0.382], ["-100%", "0%"]);
-  let anim11 = useTransform(scrollYProgress, [0.036, 0.382], [0, 1]);
+  let anim09 = useTransform(scrollYProgress, [0.037, 0.382], ["100%", "0%"]);
+  let anim10 = useTransform(scrollYProgress, [0.037, 0.382], ["-100%", "0%"]);
+  let anim11 = useTransform(scrollYProgress, [0.037, 0.382], [0, 1]);
 
   return (
     <>
       <motion.section
-        
         initial={{ scale: 1.5, filter: "blur(1px)", opacity: 0 }}
         animate={{ scale: 1, filter: "blur(0px)", opacity: 1 }}
         transition={{ duration: 1 }}
         className="home-first"
       >
         <motion.div style={{ opacity: anim07, y: anim08 }} className="center">
-          <motion.img style={{ opacity: anim07, y: anim08 }} className="rings" src="rings.png" />
-          {/* <img className="icons" src="icons.svg" /> */}
+          <motion.img
+            style={{ opacity: anim07, y: anim08 }}
+            className="rings"
+            src="rings.png"
+          />
+          <img className="icons" src="icons.png" />
           <div className="content">
             <Btnpill />
             <div>
@@ -105,13 +111,12 @@ function Home() {
             </motion.div>
           </>
         }
-        padding={"15.83vh 8.83vh"}
+        destination={"homepage"}
         left={
           <>
             <motion.img
               src="globe.png"
-              style={{ x: anim05, opacity: anim06, width: "100%" }}
-              
+              style={{ x: anim05, y: anim04, opacity: anim06, width: "100%" }}
               alt=""
             />
           </>
@@ -126,6 +131,7 @@ function Home() {
                 justifyContent: "center",
                 paddingInline: "4.45vw",
                 x: anim04,
+                y: anim05,
                 opacity: anim06,
               }}
             >
@@ -161,7 +167,10 @@ function Home() {
       />
       <section className="home-third">
         <div className="third-flex">
-          <motion.div style={{ x: anim10, opacity: anim11}} className="third-flex-text">
+          <motion.div
+            style={{ x: anim10, opacity: anim11 }}
+            className="third-flex-text"
+          >
             <div>
               <span className="third-flex-head-white">We Design,</span>
               <br />
@@ -190,8 +199,14 @@ function Home() {
               </svg>
             </div>
           </motion.div>
-          <motion.div style={{ x: anim09, opacity: anim11}} className="features">
-            <div>
+          <motion.div
+            style={{ x: anim09, opacity: anim11 }}
+            className="features"
+          >
+            <div
+              data-aos="zoom-out"
+              data-aos-easing="ease-out"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -210,7 +225,10 @@ function Home() {
               </svg>
               <div>Custom website development</div>
             </div>
-            <div>
+            <div
+              data-aos="zoom-out"
+              data-aos-easing="ease-out"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -229,7 +247,11 @@ function Home() {
               </svg>
               <div>Flexible Revision Policy</div>
             </div>
-            <div>
+            <div
+              data-aos="zoom-out"
+              data-aos-delay="1000"
+              data-aos-easing="ease-out"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -248,7 +270,11 @@ function Home() {
               </svg>
               <div>Domain/Hosting Setup</div>
             </div>
-            <div>
+            <div
+              data-aos="zoom-out"
+              data-aos-delay="1000"
+              data-aos-easing="ease-out"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -267,7 +293,11 @@ function Home() {
               </svg>
               <div>Technical Consultancy</div>
             </div>
-            <div>
+            <div
+              data-aos="zoom-out"
+              data-aos-delay="2000"
+              data-aos-easing="ease-out"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -286,7 +316,11 @@ function Home() {
               </svg>
               <div>Complete UI/UX Wire-frames</div>
             </div>
-            <div>
+            <div
+              data-aos="zoom-out"
+              data-aos-delay="2000"
+              data-aos-easing="ease-out"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -405,7 +439,10 @@ function Home() {
           needs to generate unique and powerful results.
         </div>
         <div className="cards">
-          <div>
+          <div
+            data-aos="fade-up"
+            data-aos-easing="ease-out-back"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -446,7 +483,10 @@ function Home() {
             </svg>
             <div>Custom website development</div>
           </div>
-          <div>
+          <div
+            data-aos="fade-down"
+            data-aos-easing="ease-out-back"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -482,7 +522,10 @@ function Home() {
             </svg>
             <div>Complete Research</div>
           </div>
-          <div>
+          <div
+            data-aos="fade-left"
+            data-aos-easing="ease-out-back"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -502,7 +545,10 @@ function Home() {
             </svg>
             <div>Complete UI/UX Wire-frames</div>
           </div>
-          <div>
+          <div
+            data-aos="fade-right"
+            data-aos-easing="ease-out-back"
+          >
             <svg
               width="24"
               height="24"
@@ -541,7 +587,10 @@ function Home() {
             </svg>
             <div>Fastest Delivery</div>
           </div>
-          <div>
+          <div
+            data-aos="fade-up"
+            data-aos-easing="ease-out-back"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -568,7 +617,10 @@ function Home() {
             </svg>
             <div>Domain/Hosting Setup</div>
           </div>
-          <div>
+          <div
+            data-aos="fade-down"
+            data-aos-easing="ease-out-back"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -595,7 +647,10 @@ function Home() {
             </svg>
             <div>Technical Consultancy</div>
           </div>
-          <div>
+          <div
+            data-aos="fade-left"
+            data-aos-easing="ease-out-back"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
@@ -622,7 +677,10 @@ function Home() {
             </svg>
             <div>Dedicated Writers</div>
           </div>
-          <div>
+          <div
+            data-aos="fade-right"
+            data-aos-easing="ease-out-back"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -654,7 +712,10 @@ function Home() {
             </svg>
             <div>Satisfaction </div>
           </div>
-          <div>
+          <div
+            data-aos="fade-up"
+            data-aos-easing="ease-out-back"
+          >
             <svg
               width="24"
               height="24"
@@ -693,7 +754,10 @@ function Home() {
             </svg>
             <div>Flexible Revision</div>
           </div>
-          <div>
+          <div
+            data-aos="fade-down"
+            data-aos-easing="ease-out-back"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
