@@ -1159,6 +1159,24 @@ a {
     width: 17rem;
     z-index: 2;
   }
+  .scroll-horizontal-section {
+    flex-direction: column !important;
+    gap: 4rem !important;
+    height:90vh !important;
+    justify-content: center !important;
+    padding-block: 0vh !important;
+  }
+  .scroll-horizontal-section > div:last-child {
+    height: 40vh !important;
+    width: 80vw !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+  .fading-plates > img {
+    position: absolute !important;
+    height: auto !important;
+    width: 100% !important;
+  }
 }
 
 /* regular css begins */
