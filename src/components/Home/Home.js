@@ -441,7 +441,8 @@ function Home() {
         <div className="cards">
           <div
             data-aos="fade-up"
-            data-aos-easing="ease-out-back"
+            data-aos-delay="250"
+            data-aos-easing="ease-in-sine"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -485,7 +486,8 @@ function Home() {
           </div>
           <div
             data-aos="fade-down"
-            data-aos-easing="ease-out-back"
+            data-aos-delay="250"
+            data-aos-easing="ease-in-sine"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -524,7 +526,8 @@ function Home() {
           </div>
           <div
             data-aos="fade-left"
-            data-aos-easing="ease-out-back"
+            data-aos-delay="250"
+            data-aos-easing="ease-in-sine"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -547,7 +550,8 @@ function Home() {
           </div>
           <div
             data-aos="fade-right"
-            data-aos-easing="ease-out-back"
+            data-aos-delay="250"
+            data-aos-easing="ease-in-sine"
           >
             <svg
               width="24"
@@ -589,7 +593,8 @@ function Home() {
           </div>
           <div
             data-aos="fade-up"
-            data-aos-easing="ease-out-back"
+            data-aos-delay="250"
+            data-aos-easing="ease-in-sine"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -619,7 +624,8 @@ function Home() {
           </div>
           <div
             data-aos="fade-down"
-            data-aos-easing="ease-out-back"
+            data-aos-delay="250"
+            data-aos-easing="ease-in-sine"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -649,7 +655,8 @@ function Home() {
           </div>
           <div
             data-aos="fade-left"
-            data-aos-easing="ease-out-back"
+            data-aos-delay="250"
+            data-aos-easing="ease-in-sine"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -679,7 +686,8 @@ function Home() {
           </div>
           <div
             data-aos="fade-right"
-            data-aos-easing="ease-out-back"
+            data-aos-delay="250"
+            data-aos-easing="ease-in-sine"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -714,7 +722,8 @@ function Home() {
           </div>
           <div
             data-aos="fade-up"
-            data-aos-easing="ease-out-back"
+            data-aos-delay="250"
+            data-aos-easing="ease-in-sine"
           >
             <svg
               width="24"
@@ -756,7 +765,8 @@ function Home() {
           </div>
           <div
             data-aos="fade-down"
-            data-aos-easing="ease-out-back"
+            data-aos-delay="250"
+            data-aos-easing="ease-in-sine"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
