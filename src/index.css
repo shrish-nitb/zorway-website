@@ -10,6 +10,10 @@ body {
   /* width: 100vw; */
 }
 
+section {
+  overflow: hidden;
+}
+
 .home-first {
   background-image: url(./illumination.png);
   background-position: center;
