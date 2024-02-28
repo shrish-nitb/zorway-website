@@ -15,7 +15,7 @@ function Home() {
     console.log(latest);
   });
 
-  let anim01 = useTransform(scrollYProgress, [0.07882831012733728, 0.14140019703108825], [700, 0]);
+  let anim01 = useTransform(scrollYProgress, [0.07882831012733728, 0.14140019703108825], ["100vh", "0vh"]);
   let anim02 = useTransform(scrollYProgress, [0.07882831012733728, 0.14140019703108825], [0, 1]);
   let anim03 = useTransform(scrollYProgress, [0.07882831012733728, 0.14140019703108825], [0, 1]);
   let anim04 = useTransform(scrollYProgress, [0.18158116942853908, 0.27191166321601107], ["100%", "0%"]);
