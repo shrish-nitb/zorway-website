@@ -116,7 +116,7 @@ function Home() {
           <>
             <motion.img
               src="globe.png"
-              style={{ x: anim05, y: anim04, opacity: anim06, width: "100%" }}
+              style={{ x: anim05, opacity: anim06, width: "100%" }}
               alt=""
             />
           </>
@@ -131,7 +131,7 @@ function Home() {
                 justifyContent: "center",
                 paddingInline: "4.45vw",
                 x: anim04,
-                y: anim05,
+               
                 opacity: anim06,
               }}
             >
