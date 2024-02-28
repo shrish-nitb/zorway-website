@@ -53,7 +53,7 @@ export default function About() {
           <span className="about-heading-grad">About</span>
           <span> Us</span>
         </div>
-        <div className="subtitle">
+        <div className="subtitle  maxw-sub">
           Unleash the full potential of your concept, enterprise, and
           aspirations, turning them into reality.
         </div>

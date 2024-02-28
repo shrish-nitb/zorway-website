@@ -909,7 +909,18 @@ a {
   background: url("https://s3-alpha-sig.figma.com/img/f295/63c2/037c09846625eb90744f7ce82135d8b1?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ai-rYLdJiAqfJniS~7lQKkVBfjz0ZVUnVXqdeF1M8kerxf9ID-pPZOQDIwNG6jb1WMhuZ0twfRcr~azqSKPWuPliNMi9BBkAXD4E6Y7fVZojMFp6xpAl9MbS51iWOvWMAA7dBqidkrkc08gC6ym7~15XQZLKg2yZjHGsRXNOFyGUt5Qqoa9KrZ2H7lFkrol4MBK3MUHvj9jzdEWwXjm~O9PaRSb7apLxC6v4pRwQRUpVItFoUw6XXIB8~-96q4VG4iYZ8KEmw7kJfl55Nnc87BME9TjqS881xTHj7YI2iNpb2ikXPpC8FwHPWOjQhCZ~9H5I8MtuFT9lcmtPRlN7dg__");
   background-size: cover;
   position: relative;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.maxw-sub{
+  max-width: 31.4375rem;
+}
+
+.testimonial {
+  background-image: url("343.png") !important;
+  overflow: hidden;
 }
 
 .classic-1 {
@@ -920,6 +931,13 @@ a {
   background-image: url("group\ 775.png");
   height: 16.6875rem;
   background-position: center;
+}
+
+.avatars-bg{
+  background-image: url("avatarsframe.png") !important;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .classic-2 {
@@ -1023,6 +1041,19 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: 1.25rem;
+}
+
+.testimonial-typo {
+  color: #989898;
+
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px; /* 27px */
+}
+.testimonial-color-white {
+  color: #fff;
 }
 
 @media screen and (max-width: 500px) {
@@ -1162,7 +1193,7 @@ a {
   .scroll-horizontal-section {
     flex-direction: column !important;
     gap: 4rem !important;
-    height:90vh !important;
+    height: 90vh !important;
     justify-content: center !important;
     padding-block: 0vh !important;
   }
@@ -1177,8 +1208,8 @@ a {
     height: auto !important;
     width: 100% !important;
   }
-  .about-hero-section{
-    background-size:contain;
+  .about-hero-section {
+    background-size: contain;
   }
 }
 
