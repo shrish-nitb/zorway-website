@@ -165,7 +165,7 @@ function Home() {
           </>
         }
       />
-      <section className="home-third">
+      <section className="home-third" style={{overflowX:"hidden"}}>
         <div className="third-flex">
           <motion.div
             style={{ x: anim10, opacity: anim11 }}
@@ -249,7 +249,6 @@ function Home() {
             </div>
             <div
               data-aos="zoom-out"
-              data-aos-delay="1000"
               data-aos-easing="ease-out"
             >
               <svg
@@ -272,7 +271,6 @@ function Home() {
             </div>
             <div
               data-aos="zoom-out"
-              data-aos-delay="1000"
               data-aos-easing="ease-out"
             >
               <svg
@@ -295,7 +293,6 @@ function Home() {
             </div>
             <div
               data-aos="zoom-out"
-              data-aos-delay="2000"
               data-aos-easing="ease-out"
             >
               <svg
@@ -318,7 +315,6 @@ function Home() {
             </div>
             <div
               data-aos="zoom-out"
-              data-aos-delay="2000"
               data-aos-easing="ease-out"
             >
               <svg

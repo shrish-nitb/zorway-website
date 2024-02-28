@@ -14,16 +14,33 @@ export default function Second({
   return (
     <section className="home-second">
       <div className="gapper" style={{ textAlign: "center" }}>
-        <div style={(destination == "homepage") ? { height: "25rem", paddingTop: "calc(38vh - 3.8125rem)" } : {}}>
+        <div
+          style={
+            destination == "homepage"
+              ? { height: "25rem", paddingTop: "calc(38vh - 3.8125rem)" }
+              : {}
+          }
+        >
           <div className="title-white purple-head">{purple}</div>
-          <div style={(destination == "homepage") ? { position: "sticky", top: "38vh" } : {}}>
+          <div
+            style={
+              destination == "homepage"
+                ? { position: "sticky", top: "38vh" }
+                : {}
+            }
+          >
             <div className="title-white">{white}</div>
             <div className="subtitle">{subtitle}</div>
           </div>
         </div>
-        <div className="second-grid" style={(destination == "homepage") ? { paddingTop: "12.5rem" } : {}}>
-          {left}
-          {right}
+        <div style={{overflowX:"hidden"}}>
+          <div
+            className="second-grid"
+            style={destination == "homepage" ? { paddingTop: "12.5rem" } : {}}
+          >
+            {left}
+            {right}
+          </div>
         </div>
       </div>
     </section>

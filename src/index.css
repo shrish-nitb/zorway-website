@@ -9,9 +9,8 @@ body {
   background-color: #151515;
 }
 
-section {
-  overflow: hidden;
-}
+
+
 
 .home-first {
   background-image: url(./illumination.png);
@@ -211,7 +210,7 @@ section {
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
-  padding: 3.8125rem 2.5rem;
+  padding: 3.8125rem 0rem;
 }
 
 .title-white {
@@ -1128,9 +1127,7 @@ a {
     grid-template-columns: repeat(2, 50%) !important;
   }
   section {
-    padding-inline: 30px !important;
     box-sizing: border-box;
-    overflow-x: hidden;
   }
   .second-grid > div {
     padding-inline: unset !important;
