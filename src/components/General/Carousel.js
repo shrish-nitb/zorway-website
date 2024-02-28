@@ -24,7 +24,7 @@ export default function Carousel() {
       <div class="title-white" style={{ textAlign: "center" }}>
         <span class="purple-head">Our </span>Testimonials
       </div>
-      <div style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
+      <div style={{ width: "100%", height: "100vh", overflow: "hidden" }}>
         <motion.div className="caro-container" animate={{ x: -816 * view }}
         transition={{duration: 1}}
         >
