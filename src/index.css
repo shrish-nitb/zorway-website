@@ -1531,8 +1531,8 @@ a {
     background-size: cover;
   }
   .article-container {
-    height: 100vh;
-    max-height: 770px;
+    height: unset;
+    max-height: unset;
     display: grid;
     grid-template-columns: 1fr;
     /* grid-template-rows: 1fr 1fr; */
@@ -1542,8 +1542,8 @@ a {
     place-items: center;
   }
   .blackie {
-    height: 100vh;
-    max-height: 770px;
+    height: unset;
+    max-height: unset;
     display: grid;
     grid-template-columns: 1fr;
     padding: 3rem 1rem;
