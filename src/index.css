@@ -174,6 +174,7 @@ body {
 .rings {
   width: auto;
   height: 100vh;
+  max-height: 770px;
   object-fit: contain;
   object-position: center;
 }
@@ -190,6 +191,7 @@ body {
 .icons {
   width: auto;
   height: 100vh;
+  max-height: 770px;
   object-fit: contain;
   object-position: center;
   animation: rotate360 30s linear infinite;
@@ -933,6 +935,7 @@ a {
 
 .about-hero-section {
   height: 100vh;
+  max-height: 770px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -972,6 +975,7 @@ a {
 .avatars-bg {
   background-image: url("avatarsframe.png") !important;
   height: 100vh;
+  max-height: 770px;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -979,6 +983,7 @@ a {
 .glows-bg {
   background-image: url("Gloww.png") !important;
   height: 100vh;
+  max-height: 770px;
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
@@ -1526,7 +1531,8 @@ a {
     background-size: cover;
   }
   .article-container {
-    min-height: 100vh;
+    height: 100vh;
+    max-height: 770px;
     display: grid;
     grid-template-columns: 1fr;
     /* grid-template-rows: 1fr 1fr; */
@@ -1536,7 +1542,8 @@ a {
     place-items: center;
   }
   .blackie {
-    min-height: 100vh;
+    height: 100vh;
+    max-height: 770px;
     display: grid;
     grid-template-columns: 1fr;
     padding: 3rem 1rem;
