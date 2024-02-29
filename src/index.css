@@ -1563,7 +1563,7 @@ a {
   }
   .article-image {
     grid-row: 1;
-    width: 75%;
+    width: 100%;
   }
 }
 
