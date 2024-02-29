@@ -228,6 +228,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 1.75rem; /* 140% */
+  max-width: 43rem;
 }
 .gapper {
   display: flex;
@@ -251,7 +252,7 @@ body {
 /* home third section begins */
 .home-third {
   width: 100%;
-  min-height: 90vh;
+  height: max-content;
   background: url(81.png);
   background-position: right;
   background-repeat: no-repeat;
@@ -263,11 +264,12 @@ body {
 
 .third-flex {
   display: flex;
-  height: 100%;
+
   align-items: center;
   gap: 0.9375rem;
   justify-content: space-around;
   width: 100%;
+  padding-block: 25vh;
 }
 
 .third-flex-text {
@@ -508,6 +510,8 @@ body {
   grid-row-gap: 2.4375rem;
   width: 100%;
   justify-content: center;
+  overflow: hidden;
+  height: max-content;
 }
 
 .cards > div {
@@ -864,6 +868,7 @@ a {
   gap: 4.3125rem;
   padding-block: 8.83vh;
   align-items: center;
+  justify-items: center;
 }
 
 .second-flex > div {
@@ -963,6 +968,9 @@ a {
 .testimonial {
   background-image: url("343.png") !important;
   overflow: hidden;
+}
+.testimonial-heading {
+  margin-top: 66px !important;
 }
 
 .classic-1 {
@@ -1204,7 +1212,6 @@ a {
     text-align: center;
   }
   .third-flex {
-    height: auto;
     gap: 60px;
   }
   .features {
@@ -1218,7 +1225,6 @@ a {
     padding: 1rem 0.7281rem;
   }
   .home-third {
-    height: auto;
     background: none;
   }
   .cards > div:nth-child(10) {
@@ -1393,12 +1399,12 @@ a {
   padding-inline: 0px 70px;
   box-sizing: border-box;
   gap: 70px;
-  font-size:16px;
+  font-size: 16px;
 }
 
 /* regular css ends */
 
-@media screen and (min-width: 640px) and (max-width: 767px) {
+@media screen and (min-width: 640px) and (max-width: 825px) {
   html {
     font-size: 12px;
   }
@@ -1461,7 +1467,7 @@ a {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
   .cards {
     grid-template-columns: repeat(2, minmax(10px, 294px));
@@ -1474,7 +1480,7 @@ a {
   .third-flex {
     flex-direction: column;
     gap: 40px;
-    padding-block: 3rem;
+    padding-block: 7rem;
   }
   .features {
     grid-template-columns: repeat(2, 21.125rem);
@@ -1496,24 +1502,26 @@ a {
 
 /* common changes upto 1023px */
 @media screen and (max-width: 1023px) {
-  .testimonial-heading{
-    margin-top: 66px !important;
+  .center {
+    font-size: 21px;
+    /* ipad air */
   }
-  .caro-container{
-    padding-block:66px 66px;
+
+  .caro-container {
+    padding-block: 66px 66px;
   }
-  .caro-parent{
-    min-height: 100vh !important;
+  .caro-parent {
+    /* min-height: 100vh !important; */
     height: max-content !important;
-    padding-inline:3em;
+    padding-inline: 3em;
   }
-  .caro-plates{
+  .caro-plates {
     display: flex;
     flex-direction: column-reverse;
     max-width: 300px;
     justify-content: flex-end;
   }
-  .caro-container{
+  .caro-container {
     font-size: 14px;
   }
   .read-container {
@@ -1554,11 +1562,11 @@ a {
       url("81.png");
     background-repeat: no-repeat;
     background-position: right;
-    background-size: contain;
+    background-size: cover;
   }
 
   .second-grid > img {
-    width: 80% !important;
+    width: 60% !important;
   }
   .members {
     text-align: center;
@@ -1664,13 +1672,13 @@ a {
     font-weight: 700;
     line-height: 26px;
   }
-  .caro-container{
+  .caro-container {
     font-size: 12px;
   }
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1535px) {
-  .caro-container{
+  .caro-container {
     font-size: 13px;
   }
   .thumbGrid {
@@ -1682,6 +1690,33 @@ a {
 }
 
 @media screen and (min-width: 1536px) {
+}
+
+@media screen and (min-height: 600px) {
+  .third-flex {
+    padding-block: 5vh !important;
+  }
+}
+
+@media screen and (min-height: 920px) {
+  /* .home-third {
+    min-height: 67vh;
+  } */
+  .home-fifth {
+    padding-block: 66px 0px;
+  }
+}
+
+@media screen and (min-height: 1024px) {
+  .center {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-height: 1366px) {
+  .center {
+    font-size: 24px;
+  }
 }
 
 .marquee-child {
@@ -1722,5 +1757,3 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-
-

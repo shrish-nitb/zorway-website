@@ -7,6 +7,7 @@ import Marquee from "react-fast-marquee";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import 'animate.css';
 
 function Home() {
   Aos.init();
@@ -112,10 +113,10 @@ function Home() {
               We’ll be its architects.
             </div>
             <div className="linkbtn">Get A Quote</div>
-            <div className="morebtn">
+            <div className="morebtn 	" >
               <span>Learn More</span>
               <div className="view-down">
-                <i class="fa-solid fa-arrow-down"></i>
+                <i class="fa-solid fa-arrow-down animate__animated animate__slower animate__shakeY animate__infinite"></i>
               </div>
             </div>
           </div>
@@ -126,7 +127,7 @@ function Home() {
           <>
             <motion.div
               style={
-                window.innerWidth > 639
+                window.innerHeight > 850
                   ? { y: anim01, opacity: anim02, scale: anim03 }
                   : {}
               }
@@ -142,7 +143,7 @@ function Home() {
           <>
             <motion.div
               style={
-                window.innerWidth > 639
+                window.innerWidth > 850
                   ? { y: anim01b, opacity: anim02, scale: anim03 }
                   : {}
               }
