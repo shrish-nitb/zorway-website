@@ -105,6 +105,7 @@ export default function Reader() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "linear", duration: 1 }}
           style={{ paddingInline: "17vw" }}
+          className="read-container"
         >
           <div className="title-white ">
             Publishing Mobile Apps: A How To Guide

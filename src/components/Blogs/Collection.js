@@ -83,7 +83,7 @@ export default function BlogPage() {
       <div className="footer">
         <div className="button-tools">Load More</div>
       </div>
-      <Glossy bg={`url("112.png")`} position={"right"}>
+      <Glossy bg={`url("112.png")`} position={"right"} paddingInline={true}>
         <div className="career-container">
           <div className="head purple-head">Want a career with us?</div>
           <div className="subtitle">

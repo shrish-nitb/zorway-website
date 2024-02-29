@@ -13,7 +13,7 @@ export default function ThumbGrid({ bg, purple, white, button }) {
           gap: 61,
         }}
       >
-        <div style={{textAlign: "center"}}>
+        <div style={{textAlign: "center", display: (white || purple) ? "block" : "none"}}>
           <span className="title-white purple-head">{purple}</span>
           <span className="title-white"> {white}</span>
         </div>
