@@ -40,7 +40,7 @@ export default function Carousel({ heading }) {
           className="caro-container"
           animate={
             window.innerWidth <= 1023
-              ? { x: (width + 35) * view * -1 + (view - 1) * 35 + 48 }
+              ? { x: (width + 35) * view * -1 + (view - 1) * 35 + 40 }
               : { x: width * view * -1 + (width + 70) / 2 }
           }
           transition={{ duration: 1 }}
