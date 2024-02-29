@@ -174,7 +174,6 @@ body {
 .rings {
   width: auto;
   height: 100vh;
-  max-height: 770px;
   object-fit: contain;
   object-position: center;
 }
@@ -191,7 +190,6 @@ body {
 .icons {
   width: auto;
   height: 100vh;
-  max-height: 770px;
   object-fit: contain;
   object-position: center;
   animation: rotate360 30s linear infinite;
@@ -1338,22 +1336,22 @@ a {
 
 .caro-info-container {
   display: flex;
-  gap: 10px;
+  gap: 0.625em;
   align-items: center;
-  padding: 40px;
+  padding: 2.5em;
 }
 
 .caro-avatar {
-  width: 57px;
-  height: 57px;
+  width: 3.5625em;
+  height: 3.5625em;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0.625em;
 }
 
 .caro-plate-2 {
-  border-radius: 29px;
+  border-radius: 1.8125em;
   border: 1px solid #b6b6b6;
-  padding: 35px;
+  padding: 2.1875em;
   background: var(
     --grad1,
     linear-gradient(
@@ -1364,7 +1362,7 @@ a {
   );
 
   font-family: Inter;
-  font-size: 18px;
+  font-size: 1.125em;
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
@@ -1382,8 +1380,8 @@ a {
 
 .caro-plates {
   display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 408px));
-  grid-template-rows: minmax(313px, 1fr);
+  grid-template-columns: repeat(2, minmax(18.75em, 25.5em));
+  grid-template-rows: minmax(19.5625em, 1fr);
 }
 
 .caro-container {
@@ -1392,9 +1390,10 @@ a {
   flex-wrap: nowrap;
   padding-block: 116px 122px;
   width: max-content;
-  padding-inline: 70px;
+  padding-inline: 0px 70px;
   box-sizing: border-box;
   gap: 70px;
+  font-size:16px;
 }
 
 /* regular css ends */
@@ -1497,6 +1496,26 @@ a {
 
 /* common changes upto 1023px */
 @media screen and (max-width: 1023px) {
+  .testimonial-heading{
+    margin-top: 66px !important;
+  }
+  .caro-container{
+    padding-block:66px 66px;
+  }
+  .caro-parent{
+    min-height: 100vh !important;
+    height: max-content !important;
+    padding-inline:3em;
+  }
+  .caro-plates{
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 300px;
+    justify-content: flex-end;
+  }
+  .caro-container{
+    font-size: 14px;
+  }
   .read-container {
     padding-inline: 2rem !important;
     text-align: justify !important;
@@ -1645,9 +1664,15 @@ a {
     font-weight: 700;
     line-height: 26px;
   }
+  .caro-container{
+    font-size: 12px;
+  }
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1535px) {
+  .caro-container{
+    font-size: 13px;
+  }
   .thumbGrid {
     gap: 25px 40px !important;
   }
@@ -1697,3 +1722,5 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+
+

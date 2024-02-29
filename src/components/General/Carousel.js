@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 export default function Carousel({ heading }) {
   const [view, setView] = useState(0);
   const [opacity, setOpacity] = useState([1, 0.3, 0.3, 0.3, 0.3, 0.3]);
+  const caroPlate = useRef(null);
+  const [width, setWidth] = useState(0);
 
   useEffect(() => {
+    setWidth(Number(caroPlate.current.getBoundingClientRect().width) + 70);
     const interval = setInterval(() => {
       setOpacity((prevOpacity) => {
         let temp = [...prevOpacity];
@@ -20,19 +23,33 @@ export default function Carousel({ heading }) {
   return (
     <>
       {heading ? (
-        <div class="title-white" style={{ textAlign: "center" }}>
-          <span class="purple-head">Our </span>Testimonials
+        <div
+          class="title-white testimonial-heading"
+          style={{ textAlign: "center" }}
+        >
+          <span class="purple-head ">Our </span>Testimonials
         </div>
       ) : (
         <></>
       )}
-      <div style={{ width: "100%", height: "100vh", overflow: "hidden" }}>
+      <div
+        className="caro-parent"
+        style={{ width: "100%", height: "100vh", overflow: "hidden" }}
+      >
         <motion.div
           className="caro-container"
-          animate={{ x: -816 * view }}
+          animate={
+            window.innerWidth <= 1023
+              ? { x: (width + 35) * view * -1 + (view - 1) * 35 + 48 }
+              : { x: width * view * -1 + (width + 70) / 2 }
+          }
           transition={{ duration: 1 }}
         >
-          <motion.div animate={{ opacity: opacity[0] }} className="caro-plates">
+          <motion.div
+            animate={{ opacity: opacity[0] }}
+            className="caro-plates"
+            ref={caroPlate}
+          >
             <div className="caro-plate-1">
               <div className="caro-info-container">
                 <img
