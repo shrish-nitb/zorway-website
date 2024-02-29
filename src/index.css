@@ -655,7 +655,8 @@ a {
 }
 
 .article-container {
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 770px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 81px;
