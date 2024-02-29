@@ -20,6 +20,11 @@ function Home() {
     [0.07882831012733728, 0.14140019703108825],
     [700, 0]
   );
+  let anim01b = useTransform(
+    scrollYProgress,
+    [0.07882831012733728, 0.14140019703108825],
+    [700, 65]
+  );
   let anim02 = useTransform(
     scrollYProgress,
     [0.07882831012733728, 0.14140019703108825],
@@ -28,7 +33,7 @@ function Home() {
   let anim03 = useTransform(
     scrollYProgress,
     [0.07882831012733728, 0.14140019703108825],
-    [0, 1]
+    [0, 1.6]
   );
   let anim04 = useTransform(
     scrollYProgress,
@@ -138,7 +143,7 @@ function Home() {
             <motion.div
               style={
                 window.innerWidth > 639
-                  ? { y: anim01, opacity: anim02, scale: anim03 }
+                  ? { y: anim01b, opacity: anim02, scale: anim03 }
                   : {}
               }
             >
@@ -803,7 +808,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <Carousel></Carousel>
+      <Carousel heading={true}></Carousel>
       <section className="home-sixth">
         <div className="container-sixth">
           <div className="title-white">
