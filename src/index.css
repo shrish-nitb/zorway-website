@@ -1599,6 +1599,14 @@ a {
   }
 }
 
+@media screen and (max-height: 400px) {
+  .testimonial {
+    background-image: url(http://localhost:3000/static/media/343.e01e73c….png) !important;
+    overflow: hidden;
+    padding-top: 4rem !important;
+  }
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   html {
     font-size: 14px;
