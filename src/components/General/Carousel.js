@@ -34,7 +34,7 @@ export default function Carousel({ heading }) {
       )}
       <div
         className="caro-parent"
-        style={{ width: "100%", height: "100vh", overflow: "hidden" }}
+        style={{ width: "100%", height: "100vh", overflow: "hidden", boxSizing:"border-box" }}
       >
         <motion.div
           className="caro-container"
