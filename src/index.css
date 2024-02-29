@@ -1538,7 +1538,7 @@ a {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    padding: 81px;
+    padding: 3rem 1rem;
     box-sizing: border-box;
     background: transparent;
     place-items: center;
