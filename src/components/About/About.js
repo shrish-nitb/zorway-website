@@ -85,8 +85,8 @@ export default function About() {
           alt=""
         />
         <motion.img
-          initial={{ x: "538px", opacity: 0 }}
-          animate={{ x: "0px", opacity: 1 }}
+          initial={{ x: 538, opacity: 0 }}
+          animate={{ x: (538 * ( 1 - (window.innerWidth / 800))), opacity: 1 }}
           transition={{ duration: 2, ease: [0.42, 0, 0.58, 1] }}
           className="classic-3"
           src="Vector 34.svg"

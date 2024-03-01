@@ -59,15 +59,14 @@ function Home() {
 
   return (
     <>
-      <motion.section
-     
-        className="home-first"
-      >
-        <motion.div style={{ opacity: anim07, y: anim08 }}
-           initial={{ y: 300, opacity: 0 }}
-           animate={{ y: 0, opacity: 1 }}
-           transition={{ type: "spring", damping: 8, duration: 0.5 }}
-        className="center">
+      <motion.section className="home-first">
+        <motion.div
+          style={{ opacity: anim07, y: anim08 }}
+          initial={{ y: 300, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ type: "spring", damping: 8, duration: 0.5 }}
+          className="center"
+        >
           <motion.img
             style={{ opacity: anim07, y: anim08 }}
             className="rings"
@@ -160,8 +159,11 @@ function Home() {
           <>
             <motion.img
               src="globe.png"
-              style={window.innerWidth > 700
-                ? { x: anim05, opacity: anim06, width: "100%" } : {}}
+              style={
+                window.innerWidth > 700
+                  ? { x: anim05, opacity: anim06, width: "100%" }
+                  : {}
+              }
               alt=""
             />
           </>
@@ -176,7 +178,7 @@ function Home() {
                 justifyContent: "center",
                 paddingInline: "4.45vw",
                 x: window.innerWidth > 700 ? anim04 : 0,
-                opacity: window.innerWidth > 700 ? anim04 : 1,
+                opacity: window.innerWidth > 700 ? anim06 : 1,
               }}
             >
               <div class="title-white">
@@ -212,7 +214,9 @@ function Home() {
       <section className="home-third" style={{ overflowX: "hidden" }}>
         <div className="third-flex">
           <motion.div
-            style={window.innerWidth > 700 ? { x: anim10, opacity: anim11 } :{}}
+            style={
+              window.innerWidth > 700 ? { x: anim10, opacity: anim11 } : {}
+            }
             className="third-flex-text"
           >
             <div>
@@ -244,7 +248,9 @@ function Home() {
             </div>
           </motion.div>
           <motion.div
-            style={window.innerWidth > 700 ? { x: anim09, opacity: anim11 } : {}}
+            style={
+              window.innerWidth > 700 ? { x: anim09, opacity: anim11 } : {}
+            }
             className="features"
           >
             <div data-aos="zoom-out" data-aos-easing="ease-out">

@@ -1605,7 +1605,9 @@ a {
   }
 
   .second-grid > img {
-    width: 60% !important;
+    width: 100% !important;
+    grid-row: 1;
+    margin-bottom: 2rem;
   }
   .members {
     text-align: center;
@@ -1669,8 +1671,8 @@ a {
 
   .scroll-horizontal-section {
     flex-direction: column !important;
-    gap: 0rem !important;
-    height: 61vh !important;
+    gap: 2rem !important;
+    height: 100vh !important;
     justify-content: center !important;
     padding-block: 0vh !important;
   }
