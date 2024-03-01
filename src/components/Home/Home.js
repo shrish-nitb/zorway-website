@@ -18,22 +18,22 @@ function Home() {
 
   let anim01 = useTransform(
     scrollYProgress,
-    [0.07882831012733728, 0.14140019703108825],
-    [700, 0]
+    [0, 0.14140019703108825],
+    [100, 0]
   );
   let anim01b = useTransform(
     scrollYProgress,
-    [0.07882831012733728, 0.14140019703108825],
-    [700, 20]
+    [0, 0.14140019703108825],
+    [100, 20]
   );
   let anim02 = useTransform(
     scrollYProgress,
-    [0.07882831012733728, 0.14140019703108825],
+    [0, 0.14140019703108825],
     [0, 1]
   );
   let anim03 = useTransform(
     scrollYProgress,
-    [0.07882831012733728, 0.14140019703108825],
+    [0, 0.14140019703108825],
     [0, 1.2]
   );
   let anim04 = useTransform(
@@ -124,6 +124,7 @@ function Home() {
         </motion.div>
       </motion.section>
       <Second
+      
         white={
           <>
             <motion.div
@@ -716,6 +717,7 @@ function Home() {
             data-aos="fade-right"
             data-aos-delay="150"
             data-aos-easing="ease-in-sine"
+            
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
