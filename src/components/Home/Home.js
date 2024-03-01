@@ -7,7 +7,7 @@ import Marquee from "react-fast-marquee";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import 'animate.css';
+import "animate.css";
 
 function Home() {
   Aos.init();
@@ -24,7 +24,7 @@ function Home() {
   let anim01b = useTransform(
     scrollYProgress,
     [0.07882831012733728, 0.14140019703108825],
-    [700, 65]
+    [700, 20]
   );
   let anim02 = useTransform(
     scrollYProgress,
@@ -34,7 +34,7 @@ function Home() {
   let anim03 = useTransform(
     scrollYProgress,
     [0.07882831012733728, 0.14140019703108825],
-    [0, 1.6]
+    [0, 1.2]
   );
   let anim04 = useTransform(
     scrollYProgress,
@@ -60,12 +60,14 @@ function Home() {
   return (
     <>
       <motion.section
-        initial={{ scale: 1.5, filter: "blur(1px)", opacity: 0 }}
-        animate={{ scale: 1, filter: "blur(0px)", opacity: 1 }}
-        transition={{ duration: 1 }}
+     
         className="home-first"
       >
-        <motion.div style={{ opacity: anim07, y: anim08 }} className="center">
+        <motion.div style={{ opacity: anim07, y: anim08 }}
+           initial={{ y: 300, opacity: 0 }}
+           animate={{ y: 0, opacity: 1 }}
+           transition={{ type: "spring", damping: 8, duration: 0.5 }}
+        className="center">
           <motion.img
             style={{ opacity: anim07, y: anim08 }}
             className="rings"
@@ -113,7 +115,7 @@ function Home() {
               We’ll be its architects.
             </div>
             <div className="linkbtn">Get A Quote</div>
-            <div className="morebtn 	" >
+            <div className="morebtn 	">
               <span>Learn More</span>
               <div className="view-down">
                 <i class="fa-solid fa-arrow-down animate__animated animate__slower animate__shakeY animate__infinite"></i>
@@ -127,11 +129,10 @@ function Home() {
           <>
             <motion.div
               style={
-                window.innerHeight > 850
+                window.innerWidth > 850
                   ? { y: anim01, opacity: anim02, scale: anim03 }
                   : {}
               }
-              
             >
               One Organization,
               <br />

@@ -31,13 +31,17 @@ export default function BlogPage() {
             />
           </div>
           <motion.div
-            exit={{
-              position: "absolute",
-              right: "10vw",
-              width: "calc((80vw - 49px) / 2.8)",
-              y: "30vh",
-              opacity: 0,
-            }}
+            exit={
+              window.innerWidth > 1280
+                ? {
+                    position: "absolute",
+                    right: "10vw",
+                    width: "calc((80vw - 49px) / 2.8)",
+                    y: "30vh",
+                    opacity: 0,
+                  }
+                : {}
+            }
             transition={{ type: "spring", duration: 1 }}
           >
             <div className="title-white ">
@@ -51,7 +55,7 @@ export default function BlogPage() {
         </motion.div>
       </Link>
       <motion.div
-        exit={{ y: "-755px", opacity: 1 }}
+        exit={window.innerWidth > 1280 ? { y: "-755px", opacity: 1 } : {}}
         transition={{ ease: "linear", duration: 1 }}
         className="tools"
       >

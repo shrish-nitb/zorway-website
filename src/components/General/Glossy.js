@@ -6,7 +6,7 @@ export default function Glossy({ bg, position, children, paddingInline }) {
       <div className="GlossyParent">
         <div
           className="Glossy"
-          style={{ backgroundImage: bg, backgroundPosition: position }}
+          style={{ backgroundImage: "url(circle.png)", backgroundSize:"contain" }}
         >
           <div
             className="Glossy-inner"

@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/About/About";
 import Testimonials from "./components/Testimonial/Testimonial";
 import 'animate.css';
+import Glossy from "./components/General/Glossy";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
