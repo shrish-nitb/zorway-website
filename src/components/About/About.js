@@ -7,15 +7,15 @@ import MemberThumb from "./MemberThumb";
 import { useScroll } from "framer-motion";
 import { useMotionValueEvent } from "framer-motion";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // import required modules
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from "swiper/modules";
 
 export default function About() {
   const b = useScroll();
@@ -86,7 +86,7 @@ export default function About() {
         />
         <motion.img
           initial={{ x: 538, opacity: 0 }}
-          animate={{ x: (538 * ( 1 - (window.innerWidth / 800))), opacity: 1 }}
+          animate={{ x: 538 * (1 - window.innerWidth / 800), opacity: 1 }}
           transition={{ duration: 2, ease: [0.42, 0, 0.58, 1] }}
           className="classic-3"
           src="Vector 34.svg"
@@ -222,7 +222,7 @@ export default function About() {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        modules={[ Autoplay, Navigation]}
+        modules={[Autoplay, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>Slide 1</SwiperSlide>
