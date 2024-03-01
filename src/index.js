@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/About/About";
 import Testimonials from "./components/Testimonial/Testimonial";
 import 'animate.css';
-import Glossy from "./components/General/Glossy";
+import Service from "./components/Service/service";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,6 +18,7 @@ root.render(
         <Route path="/about" element={<About />} />
         <Route path="/blogs/*" element={<Blog />} />
         <Route path="/testimonial/*" element={<Testimonials />} />
+        <Route path="/service/*" element={<Service />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
