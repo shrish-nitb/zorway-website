@@ -1778,6 +1778,12 @@ a {
 @media screen and (min-width: 1536px) {
 }
 
+@media screen and ((min-height: 600px) ) {
+  .third-flex{
+    padding-block: unset !important;
+  }
+}
+
 @media screen and (min-height: 900px) {
   .third-flex {
     padding-block: 9vh !important;
