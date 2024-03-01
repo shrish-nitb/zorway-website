@@ -1266,6 +1266,7 @@ a {
   section {
     box-sizing: border-box;
     padding-inline: 30px !important;
+
   }
   .home-second {
     padding-inline: 0px !important;
@@ -1545,6 +1546,15 @@ a {
 
 /* common changes upto 1023px */
 @media screen and (max-width: 1023px) {
+  .testimonial-d{
+    columns: 1 !important;
+  }
+  .testimonial-f{
+    display: block !important;
+  }
+  .testimonial-c{
+    display: none;
+  }
   .center {
     font-size: 21px;
     /* ipad air */
@@ -1890,3 +1900,38 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+
+.testimonial-a {
+  padding-inline: unset !important;
+  border-radius: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.testimonial-b {
+  display: none !important;
+} 
+
+.testimonial-c {
+  position: absolute;
+  z-index: 1;
+  right: 5rem;
+  top: 5rem;
+}
+
+.testimonial-d{
+  background:url("lines.png");
+  background-size: contain;
+  columns: 2;
+  column-gap: 20px;
+  padding-block: 3.75rem !important;
+}
+
+.testimonial-e{
+  padding-block: 0 !important; 
+}
+
+.testimonial-f{
+  display: none;
+}
+
+

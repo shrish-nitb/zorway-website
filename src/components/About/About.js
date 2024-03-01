@@ -54,9 +54,10 @@ export default function About() {
   return (
     <>
       <motion.section
-        initial={{ scale: 2, filter: "blur(1px)", opacity: 0 }}
-        animate={{ scale: 1, filter: "blur(0px)", opacity: 1 }}
-        transition={{ duration: 1.5 }}
+      style={{overflow:"hidden"}}
+        initial={{ y: 300, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ type: "spring", damping: 8, duration: 0.5 }}
         className="about-hero-section"
       >
         <div className="about-heading">
@@ -86,7 +87,7 @@ export default function About() {
         />
         <motion.img
           initial={{ x: 538, opacity: 0 }}
-          animate={{ x: 538 * (1 - window.innerWidth / 800), opacity: 1 }}
+          animate={{ x: (window.innerWidth > 1023) ? 0 : 538 , opacity: 1 }}
           transition={{ duration: 2, ease: [0.42, 0, 0.58, 1] }}
           className="classic-3"
           src="Vector 34.svg"

@@ -30,7 +30,6 @@ export default function Reader() {
           </div>
         </div>
       </motion.div>
-      <Link to="read">
         <motion.div className="thumb-parent tp-reader">
           <div class="image-container">
             <div class="image-overlay"></div>
@@ -181,7 +180,7 @@ export default function Reader() {
             of millions of users worldwide. Good luck!
           </div>
         </motion.div>
-      </Link>
+     
     </>
   );
 }

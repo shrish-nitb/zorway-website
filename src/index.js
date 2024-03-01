@@ -8,6 +8,7 @@ import About from "./components/About/About";
 import Testimonials from "./components/Testimonial/Testimonial";
 import 'animate.css';
 import Service from "./components/Service/service";
+import View from "./components/Testimonial/View";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,6 +20,7 @@ root.render(
         <Route path="/blogs/*" element={<Blog />} />
         <Route path="/testimonial/*" element={<Testimonials />} />
         <Route path="/service/*" element={<Service />} />
+        <Route path="/view/*" element={<View />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

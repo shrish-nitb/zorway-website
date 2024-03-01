@@ -1230,6 +1230,8 @@ function Home() {
         white={"Blogs"}
         button={"All Blogs"}
       ></ThumbGrid>
+      <br />
+      <br />
     </>
   );
 }
