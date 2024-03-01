@@ -1565,7 +1565,7 @@ a {
   }
   .read-container {
     padding-inline: 2rem !important;
-    text-align: justify !important;
+    /* text-align: justify !important; */
   }
   .tools {
     padding-inline: 10vw;
@@ -1605,7 +1605,7 @@ a {
   }
 
   .second-grid > img {
-    width: 80% !important;
+    width: 60% !important;
   }
   .members {
     text-align: center;
