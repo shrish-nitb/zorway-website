@@ -1778,7 +1778,7 @@ a {
 @media screen and (min-width: 1536px) {
 }
 
-@media screen and ((min-height: 600px) ) {
+@media screen and (max-height: 700px) and (max-width: 500px) {
   .third-flex{
     padding-block: unset !important;
   }
