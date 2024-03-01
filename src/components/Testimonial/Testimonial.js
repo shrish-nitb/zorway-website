@@ -17,8 +17,15 @@ export default function Testimonials() {
         className="about-hero-section testimonial"
         style={{ justifyContent: "flex-start", paddingTop: "9rem" }}
       >
-        <motion.div style={{ position: "relative", zIndex: 100 }}>
-          >
+        <motion.div
+          style={{
+            position: "relative",
+            zIndex: 100,
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
           <div class="about-heading">
             <span class="about-heading-grad">Collaborate</span>
             <br />

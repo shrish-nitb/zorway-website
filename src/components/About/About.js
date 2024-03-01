@@ -60,6 +60,15 @@ export default function About() {
         transition={{ type: "spring", damping: 8, duration: 0.5 }}
         className="about-hero-section"
       >
+        <motion.div
+          className="classic-1 glows-bg"
+          initial={{ y: "-100px", opacity: 0 }}
+          animate={{ y: "0px", opacity: 1 }}
+          transition={{ duration: 1.8, ease: [0.42, 0, 0.58, 1] }}
+          src=""
+          alt=""
+          
+        />
         <div className="about-heading">
           <span className="about-heading-grad">About</span>
           <span> Us</span>
