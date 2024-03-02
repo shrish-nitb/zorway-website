@@ -1,19 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-export default function ThumbGrid({ bg, purple, white, button }) {
+export default function ThumbGrid({ bg, purple, white, button, keyword }) {
+  let thumbGridData = [
+    {
+      src: "https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Vgcj9KTTbEWLou--g6NBt949iAGTgPEwPhJXA5qiKuXWilOSGCLIWPcsVG1sHT1bNVVnwTluU9k8a6wbPabqlowhJyo5owxxxSsXUnhC-1sIs8oC--hmqM9XH3fbQFfYNApPh1mt4NZrF1h4lmvWPcaa6zqLjOi8tnPYywHSKaNgUs1s8j6XniAvzylIyrtJ4QhMEwVGY4kMHXn0TWL00o8jgXP9bkpUp8wCXGKIJ83uRbK35g0yQDGGPscQhNm0gCcJUpKSOTnUACOY83fUNN8mmDIAs--4Q3tOlugsKcY6xNLYGC4LZxePc99~Hp-0xvxiTRPXDkn05AyNf7suNQ__",
+      title: "Publishing shrish Mobile Apps: A How To Guide",
+      subtitle: "Steps and Materials to Publishing on the Mobile App Store",
+      uid: "shrish",
+    },
+    {
+      src: "https://imageio.forbes.com/specials-images/imageserve/6306480cfc19086e99c1d375/Team-of-young-computer-programmers-cooperating-while-working-in-the-office/960x0.jpg?format=jpg&width=960",
+      title: "Publishing Mobile Apps: A How To Guide",
+      subtitle: "Steps and Materials to Publishing on the Mobile App Store",
+      uid: "",
+    },
+    {
+      src: "https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Vgcj9KTTbEWLou--g6NBt949iAGTgPEwPhJXA5qiKuXWilOSGCLIWPcsVG1sHT1bNVVnwTluU9k8a6wbPabqlowhJyo5owxxxSsXUnhC-1sIs8oC--hmqM9XH3fbQFfYNApPh1mt4NZrF1h4lmvWPcaa6zqLjOi8tnPYywHSKaNgUs1s8j6XniAvzylIyrtJ4QhMEwVGY4kMHXn0TWL00o8jgXP9bkpUp8wCXGKIJ83uRbK35g0yQDGGPscQhNm0gCcJUpKSOTnUACOY83fUNN8mmDIAs--4Q3tOlugsKcY6xNLYGC4LZxePc99~Hp-0xvxiTRPXDkn05AyNf7suNQ__",
+      title: "Publishing Mobile Apps: A How To Guide",
+      subtitle: "Steps and Materials to Publishing on the Mobile App Store",
+      uid: "",
+    },
+    {
+      src: "https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Vgcj9KTTbEWLou--g6NBt949iAGTgPEwPhJXA5qiKuXWilOSGCLIWPcsVG1sHT1bNVVnwTluU9k8a6wbPabqlowhJyo5owxxxSsXUnhC-1sIs8oC--hmqM9XH3fbQFfYNApPh1mt4NZrF1h4lmvWPcaa6zqLjOi8tnPYywHSKaNgUs1s8j6XniAvzylIyrtJ4QhMEwVGY4kMHXn0TWL00o8jgXP9bkpUp8wCXGKIJ83uRbK35g0yQDGGPscQhNm0gCcJUpKSOTnUACOY83fUNN8mmDIAs--4Q3tOlugsKcY6xNLYGC4LZxePc99~Hp-0xvxiTRPXDkn05AyNf7suNQ__",
+      title: "Publishing Mobile Apps: A How To Guide",
+      subtitle: "Steps and Materials to Publishing on the Mobile App Store",
+      uid: "",
+    },
+    {
+      src: "https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Vgcj9KTTbEWLou--g6NBt949iAGTgPEwPhJXA5qiKuXWilOSGCLIWPcsVG1sHT1bNVVnwTluU9k8a6wbPabqlowhJyo5owxxxSsXUnhC-1sIs8oC--hmqM9XH3fbQFfYNApPh1mt4NZrF1h4lmvWPcaa6zqLjOi8tnPYywHSKaNgUs1s8j6XniAvzylIyrtJ4QhMEwVGY4kMHXn0TWL00o8jgXP9bkpUp8wCXGKIJ83uRbK35g0yQDGGPscQhNm0gCcJUpKSOTnUACOY83fUNN8mmDIAs--4Q3tOlugsKcY6xNLYGC4LZxePc99~Hp-0xvxiTRPXDkn05AyNf7suNQ__",
+      title: "Publishing Mobile Apps: A How To Guide",
+      subtitle: "Steps and Materials to Publishing on the Mobile App Store",
+      uid: "",
+    },
+    {
+      src: "https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Vgcj9KTTbEWLou--g6NBt949iAGTgPEwPhJXA5qiKuXWilOSGCLIWPcsVG1sHT1bNVVnwTluU9k8a6wbPabqlowhJyo5owxxxSsXUnhC-1sIs8oC--hmqM9XH3fbQFfYNApPh1mt4NZrF1h4lmvWPcaa6zqLjOi8tnPYywHSKaNgUs1s8j6XniAvzylIyrtJ4QhMEwVGY4kMHXn0TWL00o8jgXP9bkpUp8wCXGKIJ83uRbK35g0yQDGGPscQhNm0gCcJUpKSOTnUACOY83fUNN8mmDIAs--4Q3tOlugsKcY6xNLYGC4LZxePc99~Hp-0xvxiTRPXDkn05AyNf7suNQ__",
+      title: "Publishing shrish Mobile Apps: A How To Guide",
+      subtitle: "Steps and Materials to Publishing on the Mobile App Store",
+      uid: "shrish",
+    },
+  ];
+
   return (
     <>
       <div
         style={{
           background: bg,
-          
           paddingBlock: 25,
           display: "flex",
           flexDirection: "column",
           gap: 61,
         }}
       >
-        <div style={{textAlign: "center", display: (white || purple) ? "block" : "none"}}>
+        <div
+          style={{
+            textAlign: "center",
+            display: white || purple ? "block" : "none",
+          }}
+        >
           <span className="title-white purple-head">{purple}</span>
           <span className="title-white"> {white}</span>
         </div>
@@ -27,96 +71,40 @@ export default function ThumbGrid({ bg, purple, white, button }) {
           }}
           className="thumbGrid"
         >
-          <div>
-            <div class="image-container">
-              <div class="image-overlay"></div>
-              <img
-                src="https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Vgcj9KTTbEWLou--g6NBt949iAGTgPEwPhJXA5qiKuXWilOSGCLIWPcsVG1sHT1bNVVnwTluU9k8a6wbPabqlowhJyo5owxxxSsXUnhC-1sIs8oC--hmqM9XH3fbQFfYNApPh1mt4NZrF1h4lmvWPcaa6zqLjOi8tnPYywHSKaNgUs1s8j6XniAvzylIyrtJ4QhMEwVGY4kMHXn0TWL00o8jgXP9bkpUp8wCXGKIJ83uRbK35g0yQDGGPscQhNm0gCcJUpKSOTnUACOY83fUNN8mmDIAs--4Q3tOlugsKcY6xNLYGC4LZxePc99~Hp-0xvxiTRPXDkn05AyNf7suNQ__"
-                alt=""
-              />
-            </div>
-            <div className="title-white">
-              Publishing Mobile Apps: A How To Guide
-            </div>
-            <div className="subtitle">
-              Steps and Materials to Publishing on the Mobile App Store
-            </div>
-          </div>
-          <div>
-            <div class="image-container">
-              <div class="image-overlay"></div>
-              <img
-                src="https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Vgcj9KTTbEWLou--g6NBt949iAGTgPEwPhJXA5qiKuXWilOSGCLIWPcsVG1sHT1bNVVnwTluU9k8a6wbPabqlowhJyo5owxxxSsXUnhC-1sIs8oC--hmqM9XH3fbQFfYNApPh1mt4NZrF1h4lmvWPcaa6zqLjOi8tnPYywHSKaNgUs1s8j6XniAvzylIyrtJ4QhMEwVGY4kMHXn0TWL00o8jgXP9bkpUp8wCXGKIJ83uRbK35g0yQDGGPscQhNm0gCcJUpKSOTnUACOY83fUNN8mmDIAs--4Q3tOlugsKcY6xNLYGC4LZxePc99~Hp-0xvxiTRPXDkn05AyNf7suNQ__"
-                alt=""
-              />
-            </div>
-            <div className="title-white">
-              Publishing Mobile Apps: A How To Guide
-            </div>
-            <div className="subtitle">
-              Steps and Materials to Publishing on the Mobile App Store
-            </div>
-          </div>
-          <div>
-            <div class="image-container">
-              <div class="image-overlay"></div>
-              <img
-                src="https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Vgcj9KTTbEWLou--g6NBt949iAGTgPEwPhJXA5qiKuXWilOSGCLIWPcsVG1sHT1bNVVnwTluU9k8a6wbPabqlowhJyo5owxxxSsXUnhC-1sIs8oC--hmqM9XH3fbQFfYNApPh1mt4NZrF1h4lmvWPcaa6zqLjOi8tnPYywHSKaNgUs1s8j6XniAvzylIyrtJ4QhMEwVGY4kMHXn0TWL00o8jgXP9bkpUp8wCXGKIJ83uRbK35g0yQDGGPscQhNm0gCcJUpKSOTnUACOY83fUNN8mmDIAs--4Q3tOlugsKcY6xNLYGC4LZxePc99~Hp-0xvxiTRPXDkn05AyNf7suNQ__"
-                alt=""
-              />
-            </div>
-            <div className="title-white">
-              Publishing Mobile Apps: A How To Guide
-            </div>
-            <div className="subtitle">
-              Steps and Materials to Publishing on the Mobile App Store
-            </div>
-          </div>
-          <div>
-            <div class="image-container">
-              <div class="image-overlay"></div>
-              <img
-                src="https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Vgcj9KTTbEWLou--g6NBt949iAGTgPEwPhJXA5qiKuXWilOSGCLIWPcsVG1sHT1bNVVnwTluU9k8a6wbPabqlowhJyo5owxxxSsXUnhC-1sIs8oC--hmqM9XH3fbQFfYNApPh1mt4NZrF1h4lmvWPcaa6zqLjOi8tnPYywHSKaNgUs1s8j6XniAvzylIyrtJ4QhMEwVGY4kMHXn0TWL00o8jgXP9bkpUp8wCXGKIJ83uRbK35g0yQDGGPscQhNm0gCcJUpKSOTnUACOY83fUNN8mmDIAs--4Q3tOlugsKcY6xNLYGC4LZxePc99~Hp-0xvxiTRPXDkn05AyNf7suNQ__"
-                alt=""
-              />
-            </div>
-            <div className="title-white">
-              Publishing Mobile Apps: A How To Guide
-            </div>
-            <div className="subtitle">
-              Steps and Materials to Publishing on the Mobile App Store
-            </div>
-          </div>
-          <div>
-            <div class="image-container">
-              <div class="image-overlay"></div>
-              <img
-                src="https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Vgcj9KTTbEWLou--g6NBt949iAGTgPEwPhJXA5qiKuXWilOSGCLIWPcsVG1sHT1bNVVnwTluU9k8a6wbPabqlowhJyo5owxxxSsXUnhC-1sIs8oC--hmqM9XH3fbQFfYNApPh1mt4NZrF1h4lmvWPcaa6zqLjOi8tnPYywHSKaNgUs1s8j6XniAvzylIyrtJ4QhMEwVGY4kMHXn0TWL00o8jgXP9bkpUp8wCXGKIJ83uRbK35g0yQDGGPscQhNm0gCcJUpKSOTnUACOY83fUNN8mmDIAs--4Q3tOlugsKcY6xNLYGC4LZxePc99~Hp-0xvxiTRPXDkn05AyNf7suNQ__"
-                alt=""
-              />
-            </div>
-            <div className="title-white">
-              Publishing Mobile Apps: A How To Guide
-            </div>
-            <div className="subtitle">
-              Steps and Materials to Publishing on the Mobile App Store
-            </div>
-          </div>
-          <div>
-            <div class="image-container">
-              <div class="image-overlay"></div>
-              <img
-                src="https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Vgcj9KTTbEWLou--g6NBt949iAGTgPEwPhJXA5qiKuXWilOSGCLIWPcsVG1sHT1bNVVnwTluU9k8a6wbPabqlowhJyo5owxxxSsXUnhC-1sIs8oC--hmqM9XH3fbQFfYNApPh1mt4NZrF1h4lmvWPcaa6zqLjOi8tnPYywHSKaNgUs1s8j6XniAvzylIyrtJ4QhMEwVGY4kMHXn0TWL00o8jgXP9bkpUp8wCXGKIJ83uRbK35g0yQDGGPscQhNm0gCcJUpKSOTnUACOY83fUNN8mmDIAs--4Q3tOlugsKcY6xNLYGC4LZxePc99~Hp-0xvxiTRPXDkn05AyNf7suNQ__"
-                alt=""
-              />
-            </div>
-            <div className="title-white">
-              Publishing Mobile Apps: A How To Guide
-            </div>
-            <div className="subtitle">
-              Steps and Materials to Publishing on the Mobile App Store
-            </div>
-          </div>
+          {thumbGridData.map((item) => {
+            if (keyword && keyword.trim() != "") {
+              if (
+                item.title.toLowerCase().includes(keyword.toLowerCase()) ||
+                item.subtitle.toLowerCase().includes(keyword.toLowerCase())
+              ) {
+                return (
+                  <div>
+                    <Link to={`/read/${item.uid}`}>
+                      <div class="image-container">
+                        <div class="image-overlay"></div>
+                        <img src={item.src} alt="" />
+                      </div>
+                      <div className="title-white">{item.title}</div>
+                      <div className="subtitle">{item.subtitle}</div>
+                    </Link>
+                  </div>
+                );
+              }
+            } else {
+              return (
+                <div>
+                  <Link to={`/read/${item.uid}`}>
+                    <div class="image-container">
+                      <div class="image-overlay"></div>
+                      <img src={item.src} alt="" />
+                    </div>
+                    <div className="title-white">{item.title}</div>
+                    <div className="subtitle">{item.subtitle}</div>
+                  </Link>
+                </div>
+              );
+            }
+          })}
         </div>
         {button && (
           <div className="outlined-btn">

@@ -5,6 +5,10 @@ import Glossy from "../General/Glossy";
 import ThumbGrid from "./ThumbGrid";
 
 export default function BlogPage() {
+  const [keyword, setKeyword] = useState("");
+  const handleSearchChange = (e)=>{
+    setKeyword(e.target.value)
+  }
   return (
     <>
       <motion.div
@@ -16,7 +20,7 @@ export default function BlogPage() {
           <div className="button-tools">Back to Blogs</div>
         </div>
       </motion.div>
-      <Link to="read">
+      <Link to="/read/uid">
         <motion.div
           exit={{ gridTemplateColumns: "1fr", gridTemplateRows: "1fr" }}
           className="thumb-parent"
@@ -80,6 +84,7 @@ export default function BlogPage() {
           exit={{ opacity: 0 }}
           transition={{ ease: "linear", duration: 1 }}
           className="search"
+
         >
           <div
             style={{
@@ -117,12 +122,14 @@ export default function BlogPage() {
                 outline: "none",
                 height: "35px",
               }}
+              value={keyword}
+              onChange={handleSearchChange}
               placeholder="Type to Search"
             />
           </div>
         </motion.div>
       </motion.div>
-      <ThumbGrid />
+      <ThumbGrid keyword={keyword} />
 
       <div className="footer">
         <div className="button-tools">Load More</div>

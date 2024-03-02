@@ -2,7 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import Glossy from "../General/Glossy";
 
+import {useNavigate } from "react-router-dom";
+
 export default function View() {
+  const navigate = useNavigate();
   return (
     <>
       <motion.div
@@ -12,7 +15,9 @@ export default function View() {
         className="tools tools-header"
       >
         <div>
-          <div className="button-tools icon-btn">
+          <div className="button-tools icon-btn"
+          onClick={()=>{navigate(-1)}}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

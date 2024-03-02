@@ -245,20 +245,6 @@ export default function Carousel({ heading }) {
           <i
             class="fa-solid fa-arrow-left"
             onClick={() => {
-              if (view < 5) {
-                setOpacity((prevOpacity) => {
-                  let temp = [...prevOpacity];
-                  temp[view] = 0.3;
-                  temp[(view + 1) % 6] = 1;
-                  return temp;
-                });
-                setView((view + 1) % 6);
-              }
-            }}
-          ></i>
-          <i
-            class="fa-solid fa-arrow-right"
-            onClick={() => {
               if (view > 0) {
                 setOpacity((prevOpacity) => {
                   let temp = [...prevOpacity];
@@ -267,6 +253,20 @@ export default function Carousel({ heading }) {
                   return temp;
                 });
                 setView((view - 1) % 6);
+              }
+            }}
+          ></i>
+          <i
+            class="fa-solid fa-arrow-right"
+            onClick={() => {
+              if (view < 5) {
+                setOpacity((prevOpacity) => {
+                  let temp = [...prevOpacity];
+                  temp[view] = 0.3;
+                  temp[(view + 1) % 6] = 1;
+                  return temp;
+                });
+                setView((view + 1) % 6);
               }
             }}
           ></i>

@@ -4,6 +4,7 @@ import Glossy from "../General/Glossy";
 import { useScroll } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import Carousel from "../General/Carousel";
+import {Link} from "react-router-dom"
 
 export default function Testimonials() {
   const b = useScroll();
@@ -535,6 +536,7 @@ export default function Testimonials() {
               voluptatibus, tempora rerum doloribus obcaecati, doloremque
               provident dolorum nesciunt officia consectetur possimus eos illo?
             </div>
+            <Link to={`/story/uid`}>
             <div className="outlined-btn" style={{ margin: "unset" }}>
               <div>Their Story</div>
               <svg
@@ -550,6 +552,7 @@ export default function Testimonials() {
                 />
               </svg>
             </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -582,6 +585,7 @@ export default function Testimonials() {
               voluptatibus, tempora rerum doloribus obcaecati, doloremque
               provident dolorum nesciunt officia consectetur possimus eos illo?
             </div>
+            <Link to={`/story/uid`}>
             <div className="outlined-btn" style={{ margin: "unset" }}>
               <div>Their Story</div>
               <svg
@@ -597,6 +601,7 @@ export default function Testimonials() {
                 />
               </svg>
             </div>
+            </Link>
           </div>
         </div>
         <img
@@ -639,6 +644,7 @@ export default function Testimonials() {
               voluptatibus, tempora rerum doloribus obcaecati, doloremque
               provident dolorum nesciunt officia consectetur possimus eos illo?
             </div>
+            <Link to={`/story/uid`}>
             <div className="outlined-btn" style={{ margin: "unset" }}>
               <div>Their Story</div>
               <svg
@@ -654,6 +660,7 @@ export default function Testimonials() {
                 />
               </svg>
             </div>
+            </Link>
           </div>
         </div>
       </div>

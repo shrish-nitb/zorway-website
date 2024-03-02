@@ -239,14 +239,14 @@ body {
 }
 
 .home-second::before {
-  background-image: url(https://s3-alpha-sig.figma.com/img/5ed9/7bcf/7b19e4a0406cebcae657426ed7304a27?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=M26S4Zt9hFDbT~YjPfxBwiIQ3tTT-LO87zz~gWB0F8XP9wVo-4MgU1f0Xf-J67tL-bLYCOCG96Up0TY-thTdbMHT2~I907XM8YhbwHj6KeHUO0TxqdSx9NHGdqoTtKbsOY~VdK-Nr80~IrHBUebB5H8NDo9n3Y8A1mF97UF3QCxGFlGuas92L7FsQMTEInNbMdDDNwR2~wBvGrl8XhscnXxbjOLg41MZ7RAwVi8RKasZTmAL7j~01D7zLMvYYYyU2njUzqi6K5ncSnYMMIGsWUyotOHAdUTPiixS2ApPdCcZN9aCdhyQqMExIyYO9FmaHTTw3SRW~iZqcui9vEisag__);
-
+  background-image: url("./hell.png");
+  background-size: contain;
   position: absolute;
   content: "";
   left: 0;
   background-repeat: no-repeat;
   width: 100%;
-  height: 14.0084rem;
+  height: 13rem;
 }
 
 /* home third section begins */
@@ -726,14 +726,14 @@ a {
   border-radius: 1.5625rem;
 }
 
-.thumbGrid > div > .title-white {
+.thumbGrid > div > a > .title-white {
   font-size: 1.25rem !important;
   line-height: 1.5rem !important;
   padding-inline: 1.125rem;
   margin-top: 1.75rem;
 }
 
-.thumbGrid > div > .subtitle {
+.thumbGrid > div > a > .subtitle {
   font-size: 0.875rem;
   line-height: 1.5rem !important;
   padding-inline: 1.125rem;
@@ -1346,14 +1346,14 @@ a {
   .cards {
     width: 100% !important;
   }
-  .thumbGrid > div > .title-white {
+  .thumbGrid > div > a > .title-white {
     font-size: 1rem !important;
     line-height: 1.4rem !important;
     margin-top: 0;
     padding-inline: 0.8rem;
   }
 
-  .thumbGrid > div > .subtitle {
+  .thumbGrid > div > a > .subtitle {
     font-size: 0.75rem;
     line-height: 1.2rem !important;
     padding-inline: 0.8rem;
@@ -2090,6 +2090,7 @@ a {
   padding-inline: unset !important;
   border-radius: 0px !important;
   padding-bottom: 0px !important;
+  cursor:default;
 }
 
 .testimonial-b {
@@ -2101,6 +2102,7 @@ a {
   z-index: 1;
   right: 5rem;
   top: 5rem;
+  cursor:default;
 }
 
 .testimonial-d {
@@ -2583,4 +2585,17 @@ use media uery for after 830px */
     flex-direction: row;
     gap: 1rem;
   }
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+*:focus {
+  outline: none !important;
 }
