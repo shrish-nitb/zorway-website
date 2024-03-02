@@ -1589,7 +1589,7 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding-block: 116px 122px;
+  padding-block: 116px 40px;
   width: max-content;
   padding-inline: 0px 70px;
   box-sizing: border-box;

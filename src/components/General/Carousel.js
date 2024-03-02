@@ -34,7 +34,12 @@ export default function Carousel({ heading }) {
       )}
       <div
         className="caro-parent"
-        style={{ width: "100%", height: "max-content", overflow: "hidden", boxSizing:"border-box" }}
+        style={{
+          width: "100%",
+          height: "max-content",
+          overflow: "hidden",
+          boxSizing: "border-box",
+        }}
       >
         <motion.div
           className="caro-container"
@@ -226,6 +231,46 @@ export default function Carousel({ heading }) {
             </div>
           </motion.div>
         </motion.div>
+        <div
+          style={{
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            paddingBottom: "122px",
+            fontSize: "2.25rem",
+            gap: "4rem",
+            cursor: "pointer",
+          }}
+        >
+          <i
+            class="fa-solid fa-arrow-left"
+            onClick={() => {
+              if (view < 5) {
+                setOpacity((prevOpacity) => {
+                  let temp = [...prevOpacity];
+                  temp[view] = 0.3;
+                  temp[(view + 1) % 6] = 1;
+                  return temp;
+                });
+                setView((view + 1) % 6);
+              }
+            }}
+          ></i>
+          <i
+            class="fa-solid fa-arrow-right"
+            onClick={() => {
+              if (view > 0) {
+                setOpacity((prevOpacity) => {
+                  let temp = [...prevOpacity];
+                  temp[view] = 0.3;
+                  temp[(view - 1) % 6] = 1;
+                  return temp;
+                });
+                setView((view - 1) % 6);
+              }
+            }}
+          ></i>
+        </div>
       </div>
     </>
   );
