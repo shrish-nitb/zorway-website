@@ -54,7 +54,7 @@ export default function About() {
   return (
     <>
       <motion.section
-      style={{overflow:"hidden"}}
+        style={{ overflow: "hidden" }}
         initial={{ y: 300, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", damping: 8, duration: 0.5 }}
@@ -67,7 +67,6 @@ export default function About() {
           transition={{ duration: 1.8, ease: [0.42, 0, 0.58, 1] }}
           src=""
           alt=""
-          
         />
         <div className="about-heading">
           <span className="about-heading-grad">About</span>
@@ -96,7 +95,7 @@ export default function About() {
         />
         <motion.img
           initial={{ x: 538, opacity: 0 }}
-          animate={{ x: (window.innerWidth > 1023) ? 0 : 538 , opacity: 1 }}
+          animate={{ x: window.innerWidth > 1023 ? 0 : 538, opacity: 1 }}
           transition={{ duration: 2, ease: [0.42, 0, 0.58, 1] }}
           className="classic-3"
           src="Vector 34.svg"
@@ -235,15 +234,75 @@ export default function About() {
         modules={[Autoplay, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide style={{ background: "none" }}>
+          <Glossy>
+            <div className="ideas-plate-parent">
+              <div className="ideas-plate">
+                <div className="ideas-text">
+                  “ Lorem ipsum dolor sit amt, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut “
+                </div>
+              </div>
+              <div className="picture-parent">
+                <img
+                  className="picture"
+                  src="https://s3-alpha-sig.figma.com/img/5fe2/809a/26eb4f76e5e58eb382eba0c64a2864dc?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=coNIei~tDxk-uxNX50Xl1VbqJF~DYia7m20FGhbDTC9E2fMF9dTVlKN1LBhh9vya8wtts2sDgBDw1sfsX6WLeat07~vb9oQulvdN--~2mbZv12z~B0MZLwQR-oG~z-8Rsgb3OQ30m9e4rmW252m50RTyoF35Nsg2sSIJrJJky0P1xfXmFQjUxRnf5XA6LHEcdpjzHMYi8bgfBFtt-KknHBFy79Uv5LUGFtwnOFvyzvHF85PNkmsac3lJSN~VS9RdVXmY6gjbldrOC2FGz1xLNKoQSyKQjoapZduueP0hWYte38GvlJJ07ajB4v2bu1HjPo6jaz6VmD6900EQbHD27g__"
+                  alt=""
+                />
+                <div className="info-ideas">
+                  <span class="member-name">Sai Varun</span>
+                  <span class="member-description">Co-Founder &amp; CEO</span>
+                </div>
+              </div>
+            </div>
+          </Glossy>
+        </SwiperSlide>
+        <SwiperSlide style={{ background: "none" }}>
+          <Glossy>
+            <div className="ideas-plate-parent">
+              <div className="ideas-plate">
+                <div className="ideas-text">
+                  “ Lorem ipsum dolor sit amt, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut “
+                </div>
+              </div>
+              <div className="picture-parent">
+                <img
+                  className="picture"
+                  src="https://s3-alpha-sig.figma.com/img/5fe2/809a/26eb4f76e5e58eb382eba0c64a2864dc?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=coNIei~tDxk-uxNX50Xl1VbqJF~DYia7m20FGhbDTC9E2fMF9dTVlKN1LBhh9vya8wtts2sDgBDw1sfsX6WLeat07~vb9oQulvdN--~2mbZv12z~B0MZLwQR-oG~z-8Rsgb3OQ30m9e4rmW252m50RTyoF35Nsg2sSIJrJJky0P1xfXmFQjUxRnf5XA6LHEcdpjzHMYi8bgfBFtt-KknHBFy79Uv5LUGFtwnOFvyzvHF85PNkmsac3lJSN~VS9RdVXmY6gjbldrOC2FGz1xLNKoQSyKQjoapZduueP0hWYte38GvlJJ07ajB4v2bu1HjPo6jaz6VmD6900EQbHD27g__"
+                  alt=""
+                />
+                <div className="info-ideas">
+                  <span class="member-name">Neeraj Patel</span>
+                  <span class="member-description">Co-Founder &amp; CTO</span>
+                </div>
+              </div>
+            </div>
+          </Glossy>
+        </SwiperSlide>
+        <SwiperSlide style={{ background: "none" }}>
+          <Glossy>
+            <div className="ideas-plate-parent">
+              <div className="ideas-plate">
+                <div className="ideas-text">
+                  “ Lorem ipsum dolor sit amt, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut “
+                </div>
+              </div>
+              <div className="picture-parent">
+                <img
+                  className="picture"
+                  src="https://s3-alpha-sig.figma.com/img/5fe2/809a/26eb4f76e5e58eb382eba0c64a2864dc?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=coNIei~tDxk-uxNX50Xl1VbqJF~DYia7m20FGhbDTC9E2fMF9dTVlKN1LBhh9vya8wtts2sDgBDw1sfsX6WLeat07~vb9oQulvdN--~2mbZv12z~B0MZLwQR-oG~z-8Rsgb3OQ30m9e4rmW252m50RTyoF35Nsg2sSIJrJJky0P1xfXmFQjUxRnf5XA6LHEcdpjzHMYi8bgfBFtt-KknHBFy79Uv5LUGFtwnOFvyzvHF85PNkmsac3lJSN~VS9RdVXmY6gjbldrOC2FGz1xLNKoQSyKQjoapZduueP0hWYte38GvlJJ07ajB4v2bu1HjPo6jaz6VmD6900EQbHD27g__"
+                  alt=""
+                />
+                <div className="info-ideas">
+                  <span class="member-name">Pawan Raj Verma</span>
+                  <span class="member-description">Co-Founder &amp; C0O</span>
+                </div>
+              </div>
+            </div>
+          </Glossy>
+        </SwiperSlide>
       </Swiper>
 
       <section className="members">

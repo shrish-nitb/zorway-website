@@ -82,7 +82,7 @@ export default function Service() {
             </div>
           </div>
         </div>
-        <div style={{ paddingBlock: "11rem 5rem" }}>
+        <div className="service-heading" style={{ paddingBlock: "11rem 5rem" }}>
           <div
             className="title-white service-heading"
             style={{ textAlign: "center" }}
