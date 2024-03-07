@@ -10,11 +10,14 @@ import 'animate.css';
 import Service from "./components/Service/service";
 import View from "./components/Testimonial/View";
 import Reader from "./components/Blogs/Reader";
+import Navbar from "./components/General/Navbar";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+   
     <BrowserRouter>
+    <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

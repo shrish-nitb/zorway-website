@@ -39,7 +39,7 @@ export default function Reader() {
                 fill-opacity="0.8"
               />
             </svg>
-            Back to Blogs
+            Back
           </div>
         </div>
       </motion.div>

@@ -9,6 +9,19 @@ body {
   background-color: #151515;
 }
 
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 107px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0px 0px 40px 40px;
+  background: rgba(13, 13, 13, 0.7);
+  position: fixed;
+  z-index: 1;
+}
+
 .home-first {
   background-image: url(./illumination.png);
   background-position: center;
@@ -99,7 +112,12 @@ body {
 .subHeading > div > div {
   position: absolute;
 }
+
 .subHeading > div {
+  display: flex;
+  justify-content: center;
+}
+.subHeading > div > div > div {
   display: flex;
   /* padding: 0em 4.1875em 0em 4.3125em; */
   flex-direction: column;
@@ -118,6 +136,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   justify-content: flex-start;
+  width: max-content;
 }
 
 .description {
@@ -240,15 +259,15 @@ body {
 
 .home-second::before {
   background-image: url("./hell.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    content: "";
-    height: 13rem;
-    left: 0;
-    top: 9.8125rem;
-    position: sticky;
-    display: block;
-    width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 13rem;
+  left: 0;
+  top: 9.8125rem;
+  position: sticky;
+  display: block;
+  width: 100%;
 }
 
 /* home third section begins */
@@ -2092,7 +2111,7 @@ a {
   padding-inline: unset !important;
   border-radius: 0px !important;
   padding-bottom: 0px !important;
-  cursor:default;
+  cursor: default;
 }
 
 .testimonial-b {
@@ -2104,7 +2123,7 @@ a {
   z-index: 1;
   right: 5rem;
   top: 5rem;
-  cursor:default;
+  cursor: default;
 }
 
 .testimonial-d {
@@ -2600,4 +2619,8 @@ use media uery for after 830px */
 }
 *:focus {
   outline: none !important;
+}
+
+.subHeading > div > div {
+  position: absolute;
 }

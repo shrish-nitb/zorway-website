@@ -8,6 +8,7 @@ import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "animate.css";
+import { useEffect } from "react";
 
 function Home() {
   Aos.init();
@@ -26,11 +27,7 @@ function Home() {
     [0, 0.14140019703108825],
     [100, 20]
   );
-  let anim02 = useTransform(
-    scrollYProgress,
-    [0, 0.14140019703108825],
-    [0, 1]
-  );
+  let anim02 = useTransform(scrollYProgress, [0, 0.14140019703108825], [0, 1]);
   let anim03 = useTransform(
     scrollYProgress,
     [0, 0.14140019703108825],
@@ -57,6 +54,10 @@ function Home() {
   let anim10 = useTransform(scrollYProgress, [0.037, 0.382], ["-100%", "0%"]);
   let anim11 = useTransform(scrollYProgress, [0.037, 0.382], [0, 1]);
 
+  useEffect(()=>{
+    
+  },[])
+
   return (
     <>
       <motion.section className="home-first">
@@ -78,30 +79,13 @@ function Home() {
             <div>
               <div className="heading">Smarter</div>
               <div className="subHeading">
-                <motion.div
-                  animate={{
-                    y: [
-                      0,
-                      0,
-                      -123,
-                      -123,
-                      -123 * 2,
-                      -123 * 2,
-                      -123 * 3,
-                      -123 * 3,
-                    ],
-                  }}
-                  transition={{
-                    duration: 4,
-                    ease: "easeInOut",
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
-                >
-                  <span>Web Assists.</span>
-                  <span>UI/UX development.</span>
-                  <span>Digital transformation.</span>
-                  <span>Web and Mobile application.</span>
+                <motion.div>
+                  <div>
+                    <div>Web Assists.</div>
+                  </div>
+                  <div>
+                    <div>UI/UX Application</div>
+                  </div>
                 </motion.div>
               </div>
             </div>
@@ -124,7 +108,6 @@ function Home() {
         </motion.div>
       </motion.section>
       <Second
-      
         white={
           <>
             <motion.div
@@ -717,7 +700,6 @@ function Home() {
             data-aos="fade-right"
             data-aos-delay="150"
             data-aos-easing="ease-in-sine"
-            
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
