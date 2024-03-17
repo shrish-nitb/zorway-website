@@ -5,13 +5,38 @@ import ThumbGrid from "../Blogs/ThumbGrid";
 import Carousel from "../General/Carousel";
 import Marquee from "react-fast-marquee";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "animate.css";
 import { useEffect } from "react";
 
+function bubbleAnimation() {
+  const swiftUpElements = document.querySelectorAll('.swift-up-text');
+
+  swiftUpElements.forEach(elem => {
+
+    const words = elem.textContent.split(' ');
+    elem.innerHTML = '';
+
+    words.forEach((el, index) => {
+      words[index] = `<span class="bubble-span"><i class="bubble-i">${words[index]}</i></span>`;
+    });
+
+    elem.innerHTML = words.join(' ');
+
+    const children = document.querySelectorAll('.bubble-span > .bubble-i');
+    children.forEach((node, index) => {
+      node.style.animationDelay = `${index * .2}s`;
+    });
+
+  });
+}
+
 function Home() {
   Aos.init();
+
+
   const { scrollYProgress } = useScroll();
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     console.log(latest);
@@ -54,9 +79,12 @@ function Home() {
   let anim10 = useTransform(scrollYProgress, [0.037, 0.382], ["-100%", "0%"]);
   let anim11 = useTransform(scrollYProgress, [0.037, 0.382], [0, 1]);
 
-  useEffect(()=>{
-    
-  },[])
+  const {ref, inView, entry} = useInView();
+  useEffect(() => {
+    if (inView) {
+      bubbleAnimation()
+    }
+  }, [inView]);
 
   return (
     <>
@@ -73,7 +101,7 @@ function Home() {
             className="rings"
             src="rings.png"
           />
-          <img className="icons" src="icons.png" />
+          {/* <img className="icons" src="icons.png" /> */}
           <div className="content">
             <Btnpill />
             <div>
@@ -161,14 +189,12 @@ function Home() {
                 gap: "50px",
                 justifyContent: "center",
                 paddingInline: "4.45vw",
-                x: window.innerWidth > 700 ? anim04 : 0,
-                opacity: window.innerWidth > 700 ? anim06 : 1,
               }}
             >
               <div class="title-white">
                 <span class="purple-head">Who </span>We Are
               </div>
-              <div className="subtitle">
+              <div ref={ref} className="subtitle swift-up-text">
                 We are a collaborative team comprised of builders, designers,
                 and investors dedicated to crafting groundbreaking products
                 within Web3. Our mission extends beyond creation; we actively

@@ -10,7 +10,8 @@ import 'animate.css';
 import Service from "./components/Service/service";
 import View from "./components/Testimonial/View";
 import Reader from "./components/Blogs/Reader";
-import Navbar from "./components/General/Navbar";
+import Navbar from "./components/General/Navbar"; 
+import "../src/hamburgers.css"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
