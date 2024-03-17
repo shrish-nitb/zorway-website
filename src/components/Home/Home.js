@@ -20,12 +20,12 @@ function bubbleAnimation() {
     elem.innerHTML = '';
 
     words.forEach((el, index) => {
-      words[index] = `<span class="bubble-span"><i class="bubble-i">${words[index]}</i></span>`;
+      words[index] = `<span class="bubble-span"><span class="bubble-span-inner">${words[index]}</span></span>`;
     });
 
     elem.innerHTML = words.join(' ');
 
-    const children = document.querySelectorAll('.bubble-span > .bubble-i');
+    const children = document.querySelectorAll('.bubble-span ');
     children.forEach((node, index) => {
       node.style.animationDelay = `${index * .2}s`;
     });
@@ -79,7 +79,7 @@ function Home() {
   let anim10 = useTransform(scrollYProgress, [0.037, 0.382], ["-100%", "0%"]);
   let anim11 = useTransform(scrollYProgress, [0.037, 0.382], [0, 1]);
 
-  const {ref, inView, entry} = useInView();
+  const {ref, inView} = useInView();
   useEffect(() => {
     if (inView) {
       bubbleAnimation()

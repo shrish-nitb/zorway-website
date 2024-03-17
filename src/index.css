@@ -2901,22 +2901,32 @@ use media uery for after 830px */
 .bubble-span{
   display: inline-block;
   overflow: hidden;
-  animation: .3s swift-up ease-in-out forwards;	
+  opacity: 0;
+  animation: .5s fade cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
-.bubble-i{
-  font-style: normal;
-  position: relative;
-  top: 32px;
-  animation: .5s swift-up ease-in-out forwards;
-}
 
-@keyframes swift-up {
-  to {
-    top: 0;
+@keyframes fade {
+  0%{
+    opacity:0;
+    scale: 1.4;
+    filter: blur(1px);
+  }
+  100%{
+    opacity:1;
+    scale: 1;
+    filter: blur(0px);
   }
 }
 
-.bubble-i-animate{
-  visibility: hidden;
+@keyframes fade-inner {
+  0%{
+    font-size: 1.25rem;
+  }
+  50%{
+    font-size: 1.5rem;
+  }
+  100%{
+    font-size: 1.25rem;
+  }
 }
