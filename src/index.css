@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 body {
   margin: 0;
@@ -14,7 +15,7 @@ body {
   width: 100%;
   overflow: hidden;
   height: max-content;
-  padding-block: 20px;
+  padding-block: 10px;
   padding-inline: 40px;
   box-sizing: border-box;
   justify-content: center;
@@ -23,7 +24,7 @@ body {
   border-radius: 0px 0px 40px 40px;
   background: rgba(13, 13, 13, 0.7);
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   font-size: 20px;
 }
 
@@ -38,10 +39,10 @@ body {
 
 .nav-items-list {
   display: flex;
-    gap: 32px;
-    align-items: center;
-    flex-grow: 1;
-    justify-content: flex-end;
+  gap: 32px;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
 }
 
 .nav-items-list>div {
@@ -97,7 +98,7 @@ body {
   display: none !important;
   background: #000000a9;
   padding-block: 10px;
-  padding-inline:10px;
+  padding-inline: 10px;
   box-sizing: border-box;
 }
 
@@ -124,9 +125,7 @@ body {
   font-size: 30px;
 }
 
-.nav-logo{
-  
-}
+.nav-logo {}
 
 .item {
   cursor: pointer;
@@ -352,6 +351,7 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 4.5rem;
+  perspective: 1000px;
   /* 150% */
 }
 
@@ -365,6 +365,7 @@ body {
   line-height: 1.75rem;
   /* 140% */
   max-width: 43rem;
+  perspective: 1000px;
 }
 
 .gapper {
@@ -375,7 +376,7 @@ body {
   gap: 0.75rem;
 }
 
-.home-second::before {
+.floating-shine {
   background-image: url("./hell.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -501,6 +502,23 @@ body {
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.outlined-btn:hover {
+  color: white;
+  background: #9747ff;
+}
+
+.outlined-btn:hover>svg>path {
+  transition-property: fill;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.outlined-btn:hover>svg>path {
+  fill: white;
 }
 
 .home-fourth {
@@ -2898,7 +2916,7 @@ use media uery for after 830px */
 }
 
 
-.bubble-span{
+.bubble-span {
   display: inline-block;
   overflow: hidden;
   opacity: 0;
@@ -2907,26 +2925,120 @@ use media uery for after 830px */
 
 
 @keyframes fade {
-  0%{
-    opacity:0;
+  0% {
+    opacity: 0;
     scale: 1.4;
     filter: blur(1px);
   }
-  100%{
-    opacity:1;
+
+  100% {
+    opacity: 1;
     scale: 1;
     filter: blur(0px);
   }
 }
 
 @keyframes fade-inner {
-  0%{
+  0% {
     font-size: 1.25rem;
   }
-  50%{
+
+  50% {
     font-size: 1.5rem;
   }
-  100%{
+
+  100% {
     font-size: 1.25rem;
   }
+}
+
+.services-section {
+  background-repeat: no-repeat;
+  height: 2100px;
+  background-attachment: fixed;
+  background-size: 100vw;
+  background-position: center;
+  padding-block: 5rem;
+  background-image: url(./services.png);
+  background-color: #0a0909;
+}
+
+.services-section>div {
+  position: sticky;
+  top: 5rem;
+  color: white;
+}
+
+.services-section>div>.title-white {
+  text-align: center;
+}
+
+.curve {
+  height: 604px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: end;
+}
+
+.service-number {
+  color: #9747FF;
+  font-family: "Lexend Deca";
+  font-size: 6.875em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  /* 8.25rem */
+  letter-spacing: -0.25em;
+  text-transform: uppercase;
+}
+
+.service-name {
+  font-family: "Lexend Deca";
+  font-size: 1.25em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  /* 1.625rem */
+}
+
+.service-description {
+  font-family: "Lexend Deca";
+  font-size: 0.875em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+  color: #C8CFD5;
+  /* 1.4875rem */
+}
+
+.curve>div {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 40px;
+  width: 18.75em;
+}
+
+.curve>div:nth-child(2) {
+  position: relative;
+  top: -25%;
+}
+
+.curve>div:nth-child(3) {
+  position: relative;
+  top: -55%;
+}
+
+.curve-img {
+  position: absolute;
+  height: 28rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 90px;
 }
