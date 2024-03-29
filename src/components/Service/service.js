@@ -5,13 +5,49 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Slider from '@mui/material/Slider';
+import Box from '@mui/material/Box';
+
+
+const marks = [
+  {
+    value: 20,
+    label: '20k',
+  },
+  {
+    value: 40,
+    label: '40k',
+  },
+  {
+    value: 80,
+    label: '80k',
+  }, {
+    value: 100,
+    label: '100k+',
+  }
+];
+
+
 
 export default function Service() {
+
+  const [budgetDecided, setBudgetDecided] = useState(false);
+  const [sliderValue, setSliderValue] = useState(20);
+
+  const handleCheckboxChange = (event) => {
+    setBudgetDecided(event.target.checked);
+    if (event.target.checked) {
+      setSliderValue(20);
+    }
+  };
+
+
   const b = useScroll();
   const darkTheme = createTheme({
     palette: {
       mode: "dark", // Use light mode
     },
+
   });
 
   return (
@@ -149,7 +185,38 @@ export default function Service() {
                 <div className="grid-item">
                   <div className="project">
                     <span>Project Budget</span>
-                    <div className="radio-container">
+                    <div style={{ display: "flex", justifyContent: "space-around" }}>
+                      <Box sx={{
+                        width: 300, marginLeft: "10px"
+                      }}>
+                        <Slider
+                          aria-label="budget"
+                          defaultValue={20}
+                          valueLabelDisplay="auto"
+                          marks={marks}
+                          min={20}
+                          max={100}
+                          disabled={budgetDecided}
+                          value={sliderValue}
+                          onChange={(event, newValue) => setSliderValue(newValue)}
+                        />
+                      </Box>
+                      <div class="checkbox-wrapper">
+                        <input
+                          type="checkbox"
+                          id="notdecidedbox"
+                          class="checkbox-input"
+                          checked={budgetDecided}
+                          onChange={handleCheckboxChange}
+                        />
+                        <label for="notdecidedbox" class="checkbox"></label>
+                        <label for="notdecidedbox" class="checkbox-label">
+                          Not Yet Decided
+                        </label>
+                      </div>
+                    </div>
+
+                    {/* <div className="radio-container">
                       <div className="radio-option">
                         <input
                           type="radio"
@@ -214,13 +281,13 @@ export default function Service() {
                           &gt; 80k ₹
                         </label>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="small-size-date-picker">
                     <span>Schedule a Meet</span>
-                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
                       <DateCalendar />
-                    </LocalizationProvider>
+                    </LocalizationProvider> */}
                   </div>
                 </div>
                 <div className="grid-item">
@@ -234,8 +301,7 @@ export default function Service() {
                       />
                       <label for="checkbox1" class="checkbox"></label>
                       <label for="checkbox1" class="checkbox-label">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dolor, eaque!
+                      Create an amazing new product 🚀
                       </label>
                     </div>
 
@@ -247,7 +313,7 @@ export default function Service() {
                       />
                       <label for="checkbox2" class="checkbox"></label>
                       <label for="checkbox2" class="checkbox-label">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing.
+                      Improve our existing product and process
                       </label>
                     </div>
 
@@ -259,7 +325,7 @@ export default function Service() {
                       />
                       <label for="checkbox3" class="checkbox"></label>
                       <label for="checkbox3" class="checkbox-label">
-                        Lorem ipsum dolor sit amet.
+                      Help with DevOps, Cloud, CI/CD
                       </label>
                     </div>
 
@@ -271,8 +337,7 @@ export default function Service() {
                       />
                       <label for="checkbox4" class="checkbox"></label>
                       <label for="checkbox4" class="checkbox-label">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit.
+                      Recruit and hire new team members 👥
                       </label>
                     </div>
 
@@ -284,8 +349,131 @@ export default function Service() {
                       />
                       <label for="checkbox5" class="checkbox"></label>
                       <label for="checkbox5" class="checkbox-label">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit.
+                      Something else
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div className="grid-item">
+                  How did you hear about Zorway?
+                  <div className="checkbox-container">
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="event"
+                        className="checkbox-input"
+                      />
+                      <label htmlFor="event" className="checkbox"></label>
+                      <label htmlFor="event" className="checkbox-label">
+                        Event
+                      </label>
+                    </div>
+
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="friendColleague"
+                        className="checkbox-input"
+                      />
+                      <label htmlFor="friendColleague" className="checkbox"></label>
+                      <label htmlFor="friendColleague" className="checkbox-label">
+                        Friend/colleague
+                      </label>
+                    </div>
+
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="pastClient"
+                        className="checkbox-input"
+                      />
+                      <label htmlFor="pastClient" className="checkbox"></label>
+                      <label htmlFor="pastClient" className="checkbox-label">
+                        Past client
+                      </label>
+                    </div>
+
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="podcast"
+                        className="checkbox-input"
+                      />
+                      <label htmlFor="podcast" className="checkbox"></label>
+                      <label htmlFor="podcast" className="checkbox-label">
+                        Podcast
+                      </label>
+                    </div>
+
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="searchEngine"
+                        className="checkbox-input"
+                      />
+                      <label htmlFor="searchEngine" className="checkbox"></label>
+                      <label htmlFor="searchEngine" className="checkbox-label">
+                        Search engine
+                      </label>
+                    </div>
+
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="chatGPT"
+                        className="checkbox-input"
+                      />
+                      <label htmlFor="chatGPT" className="checkbox"></label>
+                      <label htmlFor="chatGPT" className="checkbox-label">
+                        ChatGPT/AI tool
+                      </label>
+                    </div>
+
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="socialMedia"
+                        className="checkbox-input"
+                      />
+                      <label htmlFor="socialMedia" className="checkbox"></label>
+                      <label htmlFor="socialMedia" className="checkbox-label">
+                        Social media post
+                      </label>
+                    </div>
+
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="zorwayBlog"
+                        className="checkbox-input"
+                      />
+                      <label htmlFor="zorwayBlog" className="checkbox"></label>
+                      <label htmlFor="zorwayBlog" className="checkbox-label">
+                        Zorway blog
+                      </label>
+                    </div>
+
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="zorwayIncubator"
+                        className="checkbox-input"
+                      />
+                      <label htmlFor="zorwayIncubator" className="checkbox"></label>
+                      <label htmlFor="zorwayIncubator" className="checkbox-label">
+                        Zorway incubator
+                      </label>
+                    </div>
+
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="other"
+                        className="checkbox-input"
+                      />
+                      <label htmlFor="other" className="checkbox"></label>
+                      <label htmlFor="other" className="checkbox-label">
+                        Other
                       </label>
                     </div>
                   </div>
@@ -307,7 +495,7 @@ export default function Service() {
                 </div>
               </div>
             </div>
-            <div className="large-size-date-picker">
+            {/* <div className="large-size-date-picker">
               <span className="date-picker-text">Schedule a Meet</span>
               <div
                 style={{
@@ -321,13 +509,13 @@ export default function Service() {
                   <DateCalendar />
                 </LocalizationProvider>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <br />
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14667.237550403466!2d77.3996967789681!3d23.213616207704654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c42e43fe40941%3A0x10377d4af64ac6e9!2sMaulana%20Azad%20National%20Institute%20of%20Technology%2C%20Bhopal%2C%20Madhya%20Pradesh%2C%20India!5e0!3m2!1sen!2sus!4v1659611970585!5m2!1sen!2sus"
-          style={{border:0,width:"100%",height:"40vh"}}
+          style={{ border: 0, width: "100%", height: "40vh" }}
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"

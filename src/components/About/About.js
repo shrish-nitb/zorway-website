@@ -69,6 +69,11 @@ export default function About() {
           alt=""
         />
         <div className="about-heading">
+          <div className="social">
+            <div><i class="fa-brands fa-twitter"></i></div>
+            <div><i class="fa-brands fa-instagram"></i></div>
+            <div><i class="fa-brands fa-linkedin"></i></div>
+          </div>
           <span className="about-heading-grad">About</span>
           <span> Us</span>
         </div>
@@ -197,31 +202,32 @@ export default function About() {
               />
             </motion.div>
             <div className="fading-plates">
-              <motion.img
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={plateOne}
                 transition={{ duration: 1, ease: [0.42, 0, 0.58, 1] }}
-                src="plate-1.png"
+
                 alt=""
-              />
-              <motion.img
+              >
+              </motion.div>
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={plateTwo}
                 transition={{ duration: 1, ease: [0.42, 0, 0.58, 1] }}
-                src="plate-2.png"
+
                 alt=""
-              />
-              <motion.img
+              > </motion.div>
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={plateThree}
                 transition={{ duration: 1, ease: [0.42, 0, 0.58, 1] }}
-                src="plate-3.png"
+
                 alt=""
-              />
+              > </motion.div>
             </div>
           </div>
-        </section>
-      </div>
+        </section >
+      </div >
 
       <Swiper
         slidesPerView={1}
@@ -307,10 +313,10 @@ export default function About() {
 
       <section className="members">
         <div className="title-white purple-head">
-          Unite with Our Founding Team:
+          Unite with Our Founding Team
         </div>
         <div className="title-white"> Let's Make It a Happen!</div>
-        <div className="palette">
+        {/* <div className="palette">
           <MemberThumb
             name={"Sai Varun"}
             info={"Co-Founder & CEO"}
@@ -323,7 +329,7 @@ export default function About() {
             name={"Pawan Raj Verma"}
             info={"Co-Founder & COO"}
           ></MemberThumb>
-        </div>
+        </div> */}
       </section>
       <Glossy bg={`url("112.png")`} position={"right"} paddingInline={true}>
         <div className="career-container">

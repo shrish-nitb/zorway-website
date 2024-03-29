@@ -24,7 +24,7 @@ export default function Second({
   let floatingShineBlur = useTransform(scrollYProgress, [0, 0.17], [9, 0]);
   let popAppearance = useTransform(scrollYProgress, [0.05, 0.14], [100, 0]);
   let popzAppearance = useTransform(scrollYProgress, [0.05, 0.14], [-500, 0]);
-  let hidePop = useTransform(scrollYProgress, [0.15, 0.23], [1, 0]);
+  let hidePop = useTransform(scrollYProgress, [0.15, 0.35], [1, 0]);
   let anim02 = useTransform(scrollYProgress, [0, 0.14], [0, 1]);
   let anim03 = useTransform(scrollYProgress, [0, 0.14], [0, 1.2]);
 

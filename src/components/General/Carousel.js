@@ -22,16 +22,14 @@ export default function Carousel({ heading }) {
   }, [view]);
   return (
     <>
-      {heading ? (
+     
         <div
           class="title-white testimonial-heading"
           style={{ textAlign: "center" }}
         >
           <span class="purple-head ">Our </span>Testimonials
         </div>
-      ) : (
-        <></>
-      )}
+    
       <div
         className="caro-parent"
         style={{

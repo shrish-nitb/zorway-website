@@ -29,7 +29,6 @@ body {
 }
 
 .navbar-font {
-  color: #FFF;
   font-family: Outfit;
 
   font-style: normal;
@@ -47,7 +46,20 @@ body {
 
 .nav-items-list>div {
   cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
 }
+.nav-items-list>div:hover {
+  color: #AA67FE;
+}
+
+.nav-items-list>div:hover>a>.spin-arrow>g>path{
+  fill:#AA67FE;
+  transition: all 0.3s ease;
+}
+
+
+
 
 .nav-button {
   display: flex;
@@ -59,8 +71,12 @@ body {
   box-shadow: 0px 0px 3px 0px rgba(255, 255, 255, 0.12);
 }
 
-.navbar>div:first-child {
-  /* flex-grow: 1; */
+.nav-button:hover{
+  background: #AA67FE;
+  color: white !important;
+  transition-property: all;
+  transition-duration: 600ms;
+  transition-timing-function: ease-out;
 }
 
 .hamburger {
@@ -1072,6 +1088,12 @@ a {
   width: 53.33vw;
 }
 
+.fading-plates>div {
+  position: absolute;
+  width: 53.33vw;
+  height: 33rem;
+}
+
 .plate-icon {
   width: 8.4375rem;
   height: 8.4375rem;
@@ -1120,8 +1142,9 @@ a {
   flex-direction: column;
   box-sizing: border-box;
   text-align: center;
-  background: url("https://s3-alpha-sig.figma.com/img/f295/63c2/037c09846625eb90744f7ce82135d8b1?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ai-rYLdJiAqfJniS~7lQKkVBfjz0ZVUnVXqdeF1M8kerxf9ID-pPZOQDIwNG6jb1WMhuZ0twfRcr~azqSKPWuPliNMi9BBkAXD4E6Y7fVZojMFp6xpAl9MbS51iWOvWMAA7dBqidkrkc08gC6ym7~15XQZLKg2yZjHGsRXNOFyGUt5Qqoa9KrZ2H7lFkrol4MBK3MUHvj9jzdEWwXjm~O9PaRSb7apLxC6v4pRwQRUpVItFoUw6XXIB8~-96q4VG4iYZ8KEmw7kJfl55Nnc87BME9TjqS881xTHj7YI2iNpb2ikXPpC8FwHPWOjQhCZ~9H5I8MtuFT9lcmtPRlN7dg__");
-  background-size: cover;
+  background: url("./aboutframe.png");
+  background-size: 100vw;
+  background-position: 0px -55px;
   position: relative;
   /* background-attachment: fixed; */
   width: 100%;
@@ -1149,6 +1172,12 @@ a {
   background-image: url("group\ 775.png");
   height: 16.6875rem;
   background-position: center;
+  z-index: 0;
+}
+
+.about-heading {
+  position: relative;
+  z-index: 100;
 }
 
 .avatars-bg {
@@ -1710,6 +1739,12 @@ a {
     width: 100% !important;
   }
 
+  .fading-plates>div {
+    position: absolute !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+
   .about-hero-section {
     /* background-size: contain; */
     background-size: 100vh;
@@ -1893,6 +1928,12 @@ a {
   }
 
   .fading-plates>img {
+    position: absolute !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  .fading-plates>div {
     position: absolute !important;
     height: auto !important;
     width: 100% !important;
@@ -2149,6 +2190,12 @@ a {
     width: 100% !important;
   }
 
+  .fading-plates>div {
+    position: absolute !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+
   .snap-scroll {
     position: relative;
     z-index: 10000000;
@@ -2307,6 +2354,12 @@ a {
     width: 100% !important;
   }
 
+  .fading-plates>div {
+    position: absolute !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+
   .about-hero-section {
     /* background-size: contain; */
     background-size: 100vh;
@@ -2392,7 +2445,7 @@ a {
 }
 
 .testimonial-d {
-  background: url("lines.png");
+  /* background: url("lines.png"); */
   background-size: contain;
   columns: 2;
   column-gap: 20px;
@@ -2584,8 +2637,8 @@ a {
 }
 
 .project {
-  display: flex;
-  gap: 60px;
+  display: flex;gap: 17px;
+  flex-direction: column;
 }
 
 .checkbox-container {
@@ -2633,7 +2686,7 @@ a {
   font-size: 16px;
   cursor: pointer;
   color: rgba(255, 255, 255, 0.8);
-
+  width: max-content;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
@@ -2671,7 +2724,7 @@ a {
 }
 
 .gcp-child {
-  column-gap: 11vw;
+  /* column-gap: 11vw; */
 }
 
 /* 
@@ -2804,7 +2857,7 @@ use media uery for after 830px */
   width: 100%;
   height: auto;
   position: absolute;
-  bottom: -13rem;
+  bottom: -5rem;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -3046,17 +3099,99 @@ use media uery for after 830px */
   top: 90px;
 }
 
-a{
+a {
   text-decoration: none !important;
   color: unset;
 }
 
-.home-second::before{
+.home-second::before {
   display: block;
   position: absolute;
   top: -26px;
   width: 100%;
   height: 100px;
-  background-color: red;
+  /* background-color: red; */
   content: " ";
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-block: 20px;
+  font-size: 23px;
+}
+
+.social>div {
+  background-color: #AA67FE;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.MuiSlider-root {
+  color: white !important;
+}
+
+.dropdown {
+  display: inline-flex;
+  padding: 59px 58px 50px 64px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 132px;
+  border-radius: 0px 0px 25px 25px;
+  background: #0c0c0cee;
+  position: fixed;
+  right: 7px;
+  top: 75px;
+  z-index: 100;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  opacity: 0;
+  visibility: hidden;
+  max-height:0px;
+}
+
+.dd-item{
+  display: flex;
+  gap: 15.75px;
+  flex-direction: column;
+}
+
+.dd-item>div:first-child {
+  color: #AA67FE;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  /* 36px */
+}
+
+.dropdown {
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  max-height: 200px; /* Set maximum height as per your requirement */
+}
+
+.spin-arrow{
+  transition: all 0.3s ease-out;
+}
+
+.spin-arrow.open{
+  transform: rotate(180Deg);
 }
