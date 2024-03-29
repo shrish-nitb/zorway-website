@@ -49,12 +49,13 @@ body {
   color: white;
   transition: color 0.3s ease;
 }
+
 .nav-items-list>div:hover {
   color: #AA67FE;
 }
 
-.nav-items-list>div:hover>a>.spin-arrow>g>path{
-  fill:#AA67FE;
+.nav-items-list>div:hover>a>.spin-arrow>g>path {
+  fill: #AA67FE;
   transition: all 0.3s ease;
 }
 
@@ -71,7 +72,7 @@ body {
   box-shadow: 0px 0px 3px 0px rgba(255, 255, 255, 0.12);
 }
 
-.nav-button:hover{
+.nav-button:hover {
   background: #AA67FE;
   color: white !important;
   transition-property: all;
@@ -1091,7 +1092,22 @@ a {
 .fading-plates>div {
   position: absolute;
   width: 53.33vw;
-  height: 33rem;
+  height: 20rem;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #898CA9;
+  padding: 3.125rem 4.375rem;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  display: flex;
+  gap: 6.375rem;
+  opacity: 0;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
 }
 
 .plate-icon {
@@ -2637,7 +2653,8 @@ a {
 }
 
 .project {
-  display: flex;gap: 17px;
+  display: flex;
+  gap: 17px;
   flex-direction: column;
 }
 
@@ -3158,10 +3175,10 @@ a {
   line-height: 150%;
   opacity: 0;
   visibility: hidden;
-  max-height:0px;
+  max-height: 0px;
 }
 
-.dd-item{
+.dd-item {
   display: flex;
   gap: 15.75px;
   flex-direction: column;
@@ -3185,13 +3202,14 @@ a {
 .dropdown.open {
   opacity: 1;
   visibility: visible;
-  max-height: 200px; /* Set maximum height as per your requirement */
+  max-height: 200px;
+  /* Set maximum height as per your requirement */
 }
 
-.spin-arrow{
+.spin-arrow {
   transition: all 0.3s ease-out;
 }
 
-.spin-arrow.open{
+.spin-arrow.open {
   transform: rotate(180Deg);
 }

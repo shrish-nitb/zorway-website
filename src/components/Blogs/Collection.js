@@ -30,7 +30,7 @@ export default function BlogPage() {
             <motion.img
               exit={{ maxHeight: "607px", maxWidth: "1700px" }}
               transition={{ type: "spring", damping: 9, duration: 2 }}
-              src="https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Vgcj9KTTbEWLou--g6NBt949iAGTgPEwPhJXA5qiKuXWilOSGCLIWPcsVG1sHT1bNVVnwTluU9k8a6wbPabqlowhJyo5owxxxSsXUnhC-1sIs8oC--hmqM9XH3fbQFfYNApPh1mt4NZrF1h4lmvWPcaa6zqLjOi8tnPYywHSKaNgUs1s8j6XniAvzylIyrtJ4QhMEwVGY4kMHXn0TWL00o8jgXP9bkpUp8wCXGKIJ83uRbK35g0yQDGGPscQhNm0gCcJUpKSOTnUACOY83fUNN8mmDIAs--4Q3tOlugsKcY6xNLYGC4LZxePc99~Hp-0xvxiTRPXDkn05AyNf7suNQ__"
+              src="https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=S8gZupDM8HypN9Qzg2arhvL9V45MCZFYsclzuTOLqY6NyAlWrqZVYhJp9gI3Dvc5gQ~ZxItN1iKWHaqqZ~nEYXdvv4Gwge40UPv-eyt-moGrE2WHir8GPdbxdDxImu4jO4AX7ITYZmpA0owLGzYYJaJLdytOuZ47uGez0LUJOg9Rz45w~7qUQgLhOf1FlkW5VIvUVSRZHKnJ~QU7f06M2DPkBJJrVPn5Z2sYu4blnJHE8MkOUx4uw3qv68aaXinFBJF2tw0kIqE4bYBEb4m2FOvyOrtsTPYLpWh6ymmYRARiPQJwAipoJ3rRBddnObLBi03tNk1TtdKTCYQKhMws~Q__"
               alt=""
             />
           </div>

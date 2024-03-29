@@ -32,7 +32,7 @@ export default function Second({
     <section className="home-second">
       <motion.div className="floating-shine" style={{ filter: `blur(${FSV}px)`, opacity: hidePop }} />
       <div className="gapper" style={{ textAlign: "center" }}>
-        <div style={destination === "homepage" && window.innerWidth > 639 ? { height: "60rem" } : {}}>
+        <div style={(destination == "homepage" && window.innerWidth > 639) ? { height: "60rem", marginTop: "-100px" } : { marginTop: "-100px" }}>
           <div className="title-white purple-head">{purple}</div>
           <div style={destination === "homepage" && window.innerWidth > 639 ? { position: "sticky", top: "308px", perspective: "1000px" } : {}}>
             <motion.div style={destination === "homepage" && window.innerWidth > 639 ? { y: popAppearance, z: popzAppearance, opacity: anim02, scale: anim03 } : {}}>

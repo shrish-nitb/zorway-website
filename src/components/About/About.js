@@ -203,27 +203,30 @@ export default function About() {
             </motion.div>
             <div className="fading-plates">
               <motion.div
-                initial={{ opacity: 0 }}
                 animate={plateOne}
-                transition={{ duration: 1, ease: [0.42, 0, 0.58, 1] }}
-
-                alt=""
+                transition={{ duration: 0.5, ease: [0.42, 0, 0.58, 1] }}
               >
+                <img src="./plate-1.png" width={109} height={109} alt="" />
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat ante ut tellus fermentum, nec consequat libero sollicitudin. Vivamus quis neque a urna fermentum varius at vitae justo. Maecenas vel elit eu nisi convallis tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat ante ut tellus fermentum, nec consequat libero sollicitudin. Vivamus quis neque a urna fermentum varius at vitae justo. Maecenas vel elit eu nisi convallis tempor.
+                </div>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0 }}
                 animate={plateTwo}
-                transition={{ duration: 1, ease: [0.42, 0, 0.58, 1] }}
-
-                alt=""
-              > </motion.div>
+                transition={{ duration: 0.5, ease: [0.42, 0, 0.58, 1] }}
+              >
+                <img src="./plate-2.png" width={109} height={109} alt="" />
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat ante ut tellus fermentum, nec consequat libero sollicitudin. Vivamus quis neque a urna fermentum varius at vitae justo. Maecenas vel elit eu nisi convallis tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat ante ut tellus fermentum, nec consequat libero sollicitudin. Vivamus quis neque a urna fermentum varius at vitae justo. Maecenas vel elit eu nisi convallis tempor.
+                </div> </motion.div>
               <motion.div
-                initial={{ opacity: 0 }}
                 animate={plateThree}
-                transition={{ duration: 1, ease: [0.42, 0, 0.58, 1] }}
-
-                alt=""
-              > </motion.div>
+                transition={{ duration: 0.5, ease: [0.42, 0, 0.58, 1] }}
+              >
+                <img src="./plate-3.png" width={109} height={109} alt="" />
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat ante ut tellus fermentum, nec consequat libero sollicitudin. Vivamus quis neque a urna fermentum varius at vitae justo. Maecenas vel elit eu nisi convallis tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat ante ut tellus fermentum, nec consequat libero sollicitudin. Vivamus quis neque a urna fermentum varius at vitae justo. Maecenas vel elit eu nisi convallis tempor.
+                </div></motion.div>
             </div>
           </div>
         </section >
