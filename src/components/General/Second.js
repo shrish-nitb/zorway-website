@@ -35,9 +35,9 @@ export default function Second({
         <div style={destination === "homepage" && window.innerWidth > 639 ? { height: "60rem" } : {}}>
           <div className="title-white purple-head">{purple}</div>
           <div style={destination === "homepage" && window.innerWidth > 639 ? { position: "sticky", top: "308px", perspective: "1000px" } : {}}>
-            <motion.div style={{ y: popAppearance, z: popzAppearance, opacity: anim02, scale: anim03 }}>
-              <motion.div className="title-white" style={{ opacity: hidePop }}>{white}</motion.div>
-              <motion.div className="subtitle" style={{ opacity: hidePop }}>{subtitle}</motion.div>
+            <motion.div style={destination === "homepage" && window.innerWidth > 639 ? { y: popAppearance, z: popzAppearance, opacity: anim02, scale: anim03 } : {}}>
+              <motion.div className="title-white" style={destination === "homepage" && window.innerWidth > 639 ? { opacity: hidePop } : {}}>{white}</motion.div>
+              <motion.div className="subtitle" style={destination === "homepage" && window.innerWidth > 639 ? { opacity: hidePop } : {}}>{subtitle}</motion.div>
             </motion.div>
           </div>
         </div>
