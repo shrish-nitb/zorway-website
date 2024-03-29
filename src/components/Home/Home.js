@@ -341,7 +341,7 @@ function Home() {
           </motion.div>
         </div>
       </section>
-      <section className="services-section">
+      {/* <section className="services-section">
         <div>
           <div className="title-white">
             <span className="purple-head">What We </span>
@@ -376,7 +376,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="home-fifth">
         <div className="title-white">
           <span className="purple-head">Reasons </span>
