@@ -27,7 +27,7 @@ export default function Navbar() {
       </div>
       <div className="mobile-navbar">
         <div>
-          <img height={50} src="logo.png" alt="" />
+          <img height={50} width={50} src="logo.png" alt="" />
         </div>
         <div>
           <div class="nav-toggle-button hamburger hamburger--collapse "

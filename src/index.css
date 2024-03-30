@@ -530,13 +530,10 @@ body {
 }
 
 .outlined-btn:hover>svg>path {
+  fill: white;
   transition-property: fill;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
-}
-
-.outlined-btn:hover>svg>path {
-  fill: white;
 }
 
 .home-fourth {
@@ -799,7 +796,7 @@ body {
 }
 
 .thumb-parent {
-  background-color: #151515;
+  background-color: transparent;
   gap: 3.0625rem;
   padding-inline: 10vw;
   margin-left: auto;
@@ -814,7 +811,7 @@ body {
 
 .image-container>img {
   border-radius: 1.5625rem;
-  cursor: pointer;
+  /* cursor: pointer; */
   width: 100%;
   /* max-width: 52.875rem;
   max-height: 28.75rem; */
@@ -822,7 +819,7 @@ body {
 }
 
 .thumb-parent>div {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 a {
@@ -938,7 +935,7 @@ a {
   width: 100%;
 }
 
-.tools.back{
+.tools.back {
   visibility: hidden;
   z-index: 20;
 }
@@ -3219,4 +3216,91 @@ a {
 
 .spin-arrow.open {
   transform: rotate(180Deg);
+}
+
+.light {
+  background: rgba(255, 255, 255, 0.90);
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.light>* {
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.light .title-white {
+  color: #000 !important;
+}
+
+.light .subtitle {
+  color: rgba(0, 0, 0, 0.80);
+}
+
+.light .Glossy-inner .subtitle {
+  color: #fff;
+}
+
+.light .button-tools {
+  color: #000;
+  border-color: #000;
+}
+
+.light .search {
+  background: rgba(0, 0, 0, 0.13);
+}
+
+.light .blog-info>div>div:first-child {
+  color: #000 !important;
+}
+
+.light .blog-info>div>div:last-child {
+  color: rgba(0, 0, 0, 0.60);
+}
+
+.light .button-tools svg>path {
+  fill: #666666;
+}
+
+.light .button-tools svg>g>path {
+  fill: #666666;
+}
+
+.light .icon-btn svg>path {
+  fill: black;
+}
+
+.light .content-blog {
+  color: #000;
+}
+
+.light .content-blog-heading {
+  color: #000;
+}
+
+.light .outlined-btn>svg>path {
+  fill: #aa67fe;
+  transition-property: fill;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.light .outlined-btn:hover>svg>path {
+  fill: #fff;
+}
+
+.mode-switch {
+  position: fixed;
+  top: 100px;
+  right: 50px;
+  z-index: 99;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.light .mode-switch {
+  color: black;
 }
