@@ -185,7 +185,7 @@ export default function Service() {
                 <div className="grid-item">
                   <div className="project">
                     <span>Project Budget</span>
-                    <div style={{ display: "flex", justifyContent: "space-around" }}>
+                    <div style={{ display: "flex", flexDirection:"column", gap:"10px"}}>
                       <Box sx={{
                         width: 300, marginLeft: "10px"
                       }}>
