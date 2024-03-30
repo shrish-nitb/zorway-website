@@ -58,6 +58,8 @@ export default function ThumbGrid({ bg, purple, white, button, keyword }) {
             display: white || purple ? "block" : "none",
           }}
         >
+          <br />
+          <br />
           <span className="title-white purple-head">{purple}</span>
           <span className="title-white"> {white}</span>
         </div>
@@ -123,7 +125,9 @@ export default function ThumbGrid({ bg, purple, white, button, keyword }) {
             </svg>
           </div>
         )}
+         <br />
       </div>
+     
     </>
   );
 }

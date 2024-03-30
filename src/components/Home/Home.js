@@ -11,56 +11,36 @@ import "aos/dist/aos.css";
 import "animate.css";
 import { useEffect } from "react";
 
-function bubbleAnimation() {
-  const swiftUpElements = document.querySelectorAll('.swift-up-text');
+// function bubbleAnimation() {
+//   const swiftUpElements = document.querySelectorAll('.swift-up-text');
 
-  swiftUpElements.forEach(elem => {
+//   swiftUpElements.forEach(elem => {
 
-    const words = elem.textContent.split(' ');
-    elem.innerHTML = '';
+//     const words = elem.textContent.split(' ');
+//     elem.innerHTML = '';
 
-    words.forEach((el, index) => {
-      words[index] = `<span class="bubble-span"><span class="bubble-span-inner">${words[index]}</span></span>`;
-    });
+//     words.forEach((el, index) => {
+//       words[index] = `<span class="bubble-span"><span class="bubble-span-inner">${words[index]}</span></span>`;
+//     });
 
-    elem.innerHTML = words.join(' ');
+//     elem.innerHTML = words.join(' ');
 
-    const children = document.querySelectorAll('.bubble-span ');
-    children.forEach((node, index) => {
-      node.style.animationDelay = `${index * .1}s`;
-    });
+//     const children = document.querySelectorAll('.bubble-span ');
+//     children.forEach((node, index) => {
+//       node.style.animationDelay = `${index * .1}s`;
+//     });
 
-  });
-}
+//   });
+// }
 
 function Home() {
   Aos.init();
 
 
   const { scrollYProgress } = useScroll();
-  // useMotionValueEvent(scrollYProgress, "change", (latest) => {
-  //   console.log(latest);
-  // });
-
-  let anim05 = useTransform(
-    scrollYProgress,
-    [0.18, 0.23],
-    ["-100%", "0%"]
-  );
-  let anim06 = useTransform(
-    scrollYProgress,
-    [0.18, 0.23],
-    [0, 1]
-  );
   let anim07 = useTransform(scrollYProgress, [0.03, 0.127], [1, 0]);
   let anim08 = useTransform(scrollYProgress, [0.03, 0.127], [0, -100]);
 
-  const { ref, inView } = useInView();
-  useEffect(() => {
-    if (inView) {
-      bubbleAnimation()
-    }
-  }, [inView]);
 
   return (
     <>
@@ -77,7 +57,7 @@ function Home() {
             className="rings"
             src="rings.png"
           />
-          {/* <img className="icons" src="icons.png" /> */}
+          <img className="icons" src="icons.png" />
           <div className="content">
             <Btnpill />
             <div>
@@ -138,12 +118,7 @@ function Home() {
           <>
             <motion.img
               src="globe.png"
-              style={
-                window.innerWidth > 700
-                  ? { x: anim05, opacity: anim06, width: "100%" }
-                  : {}
-              }
-              alt=""
+              width="100%"
             />
           </>
         }
@@ -161,7 +136,7 @@ function Home() {
               <div class="title-white">
                 <span class="purple-head">Who </span>We Are
               </div>
-              <div ref={ref} className="subtitle swift-up-text">
+              <div className="subtitle">
                 We are a collaborative team comprised of builders, designers,
                 and investors dedicated to crafting groundbreaking products
                 within Web3. Our mission extends beyond creation; we actively
