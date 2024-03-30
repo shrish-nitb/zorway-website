@@ -39,10 +39,8 @@ function Home() {
   const { scrollYProgress } = useScroll();
   let anim07 = useTransform(scrollYProgress, [0.03, 0.127], [1, 0]);
   let anim08 = useTransform(scrollYProgress, [0.03, 0.127], [0, -100]);
-  useEffect(() => {
-    AOS.init();
-  }, [])
-
+  
+  AOS.init();
   return (
     <>
       <motion.section className="home-first">
