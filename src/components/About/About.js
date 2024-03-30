@@ -240,9 +240,11 @@ export default function About() {
           delay: 2500,
           disableOnInteraction: false,
         }}
+        style={window.innerWidth < 600 ? {marginTop: "60px"} : {}}
         modules={[Autoplay, Navigation]}
         className="mySwiper"
       >
+  
         <SwiperSlide style={{ background: "none" }}>
           <Glossy>
             <div className="ideas-plate-parent">

@@ -9,11 +9,16 @@ import Testimonials from "./Testimonial/Testimonial";
 import Service from "./Service/service";
 import View from "./Testimonial/View";
 import Reader from "./Blogs/Reader";
+import Footer from './General/Footer';
+import { useRef } from "react";
+import ScrollContainer from './General/ScrollContainer';
+
 
 export default function App() {
-    const location = useLocation();
+
     return (
         <>
+
             <Navbar />
             <AnimatePresence>
                 <Routes location={location} key={location.pathname}>
@@ -26,6 +31,8 @@ export default function App() {
                     <Route path="service/*" element={<Service />} />
                 </Routes>
             </AnimatePresence>
+            <Footer />
+
         </>
     )
 }

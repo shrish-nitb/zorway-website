@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 const FadeInOnScroll = ({ children, threshold, duration }) => {
     const controls = useAnimation();
-    const { ref, inView } = useInView({ threshold: threshold || 1 });
+    const { ref, inView } = useInView({ threshold: threshold || 0.7});
 
     useEffect(() => {
         if (inView) {

@@ -46,16 +46,17 @@ export default function ThumbGrid({ bg, purple, white, button, keyword }) {
       <div
         style={{
           background: bg,
-          paddingBlock: 25,
+          paddingTop: 25,
           display: "flex",
           flexDirection: "column",
-          gap: 61,
+          // gap: 61,
         }}
       >
         <div
           style={{
             textAlign: "center",
             display: white || purple ? "block" : "none",
+            margin: "3rem"
           }}
         >
           <br />
@@ -108,8 +109,9 @@ export default function ThumbGrid({ bg, purple, white, button, keyword }) {
             }
           })}
         </div>
+        
         {button && (
-          <div className="outlined-btn">
+          <div className="outlined-btn" style={{marginBlock:"3rem"}}>
             <div>{button}</div>
             <svg
               xmlns="http://www.w3.org/2000/svg"

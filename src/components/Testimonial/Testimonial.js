@@ -5,6 +5,7 @@ import { useScroll } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import Carousel from "../General/Carousel";
 import {Link} from "react-router-dom"
+import Counter from "../General/Counter";
 
 export default function Testimonials() {
   const b = useScroll();
@@ -21,7 +22,7 @@ export default function Testimonials() {
         <motion.div
           style={{
             position: "relative",
-            zIndex: 100,
+            zIndex: 98,
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
@@ -460,26 +461,7 @@ export default function Testimonials() {
         </Marquee>
       </div>
 
-      <Glossy bg={`url("112.png")`} position={"right"} paddingInline={false}>
-        <div className="stats-container">
-          <div className="stats-sub-container">
-            <div className="stats-item-a">1+</div>
-            <div className="stats-item-b">Years of Business</div>
-          </div>
-          <div className="stats-sub-container">
-            <div className="stats-item-a">15+</div>
-            <div className="stats-item-b">Happy Clients</div>
-          </div>
-          <div className="stats-sub-container">
-            <div className="stats-item-a">20+</div>
-            <div className="stats-item-b">Projects Completed</div>
-          </div>
-          <div className="stats-sub-container">
-            <div className="stats-item-a">15k+</div>
-            <div className="stats-item-b">Lines of Code</div>
-          </div>
-        </div>
-      </Glossy>
+     <Counter></Counter>
 
       <div
         style={{

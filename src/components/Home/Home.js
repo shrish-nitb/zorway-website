@@ -36,12 +36,15 @@ import MovingArray from "./MovingArray";
 
 
 function Home() {
-  AOS.init();
   const { scrollYProgress } = useScroll();
   let anim07 = useTransform(scrollYProgress, [0.03, 0.127], [1, 0]);
   let anim08 = useTransform(scrollYProgress, [0.03, 0.127], [0, -100]);
-  
-  
+
+  useEffect(() => {
+    AOS.init()
+
+  }, [])
+
   return (
     <>
       <motion.section className="home-first">
@@ -217,7 +220,7 @@ function Home() {
               </div>
             </FadeInOnScroll>
           </motion.div>
-          <FadeInOnScroll  threshold={0.5}>
+          <FadeInOnScroll threshold={0.5}>
             <motion.div
               className="features"
             >
@@ -1145,8 +1148,7 @@ function Home() {
         white={"Blogs"}
         button={"All Blogs"}
       ></ThumbGrid>
-      <br />
-      <br />
+
     </>
   );
 }

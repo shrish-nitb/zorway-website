@@ -63,7 +63,7 @@ export default function Service() {
           <motion.div
             style={{
               position: "relative",
-              zIndex: 100,
+              zIndex: 98,
               display: "flex",
               alignItems: "center",
               flexDirection: "column",
