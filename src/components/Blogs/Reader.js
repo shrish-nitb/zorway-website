@@ -82,7 +82,7 @@ export default function Reader() {
                   position: "static",
                   y: "0",
                   opacity: 1,
-                  width: "auto"
+                  width: "calc(-24.5px + 28.5714vw)"
                 }
                 : {}
             }
