@@ -145,6 +145,7 @@ export default function Service() {
                 backgroundColor: "#1A191B",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
+                overflow:"hidden"
               }}
             >
               <div className="grid-container">
@@ -284,7 +285,7 @@ export default function Service() {
                     </div> */}
                   </div>
                   <div className="small-size-date-picker">
-                    <span>Schedule a Meet</span>
+                    {/* <span>Schedule a Meet</span> */}
                     {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
                       <DateCalendar />
                     </LocalizationProvider> */}
