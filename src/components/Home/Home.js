@@ -395,7 +395,7 @@ function Home() {
         </FadeInOnScroll>
         <div className="cards">
           <div
-            data-aos="fade-up"
+            data-aos="zoom-out"
             data-aos-delay="150"
 
           >
@@ -440,7 +440,7 @@ function Home() {
             <div>Custom website development</div>
           </div>
           <div
-            data-aos="fade-up"
+            data-aos="zoom-out"
             data-aos-delay="150"
 
           >
@@ -480,7 +480,7 @@ function Home() {
             <div>Complete Research</div>
           </div>
           <div
-            data-aos="fade-up"
+            data-aos="zoom-out"
             data-aos-delay="150"
           >
             <svg
@@ -503,7 +503,7 @@ function Home() {
             <div>Complete UI/UX Wire-frames</div>
           </div>
           <div
-            data-aos="fade-up"
+            data-aos="zoom-out"
             data-aos-delay="150"
           >
             <svg
@@ -545,7 +545,7 @@ function Home() {
             <div>Fastest Delivery</div>
           </div>
           <div
-            data-aos="fade-up"
+            data-aos="zoom-out"
             data-aos-delay="150"
           >
             <svg
@@ -575,7 +575,7 @@ function Home() {
             <div>Domain/Hosting Setup</div>
           </div>
           <div
-            data-aos="fade-up"
+            data-aos="zoom-out"
             data-aos-delay="150"
           >
             <svg
@@ -605,7 +605,7 @@ function Home() {
             <div>Technical Consultancy</div>
           </div>
           <div
-            data-aos="fade-up"
+            data-aos="zoom-out"
             data-aos-delay="150"
           >
             <svg
@@ -635,7 +635,7 @@ function Home() {
             <div>Dedicated Writers</div>
           </div>
           <div
-            data-aos="fade-up"
+            data-aos="zoom-out"
             data-aos-delay="150"
           >
             <svg
@@ -670,7 +670,7 @@ function Home() {
             <div>Satisfaction </div>
           </div>
           <div
-            data-aos="fade-up"
+            data-aos="zoom-out"
             data-aos-delay="150"
           >
             <svg
@@ -712,7 +712,7 @@ function Home() {
             <div>Flexible Revision</div>
           </div>
           <div
-            data-aos="fade-up"
+            data-aos="zoom-out"
             data-aos-delay="150"
           >
             <svg
