@@ -154,7 +154,7 @@ function Home() {
                 </div>
 
               </FadeInOnScroll>
-              <FadeInOnScroll threshold={0.5}>
+              <FadeInOnScroll>
                 <div className="outlined-btn"
                 >
                   <div>Know More</div>
@@ -217,7 +217,7 @@ function Home() {
               </div>
             </FadeInOnScroll>
           </motion.div>
-          <FadeInOnScroll>
+          <FadeInOnScroll  threshold={0.5}>
             <motion.div
               className="features"
             >
