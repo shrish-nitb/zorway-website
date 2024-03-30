@@ -5,6 +5,10 @@ import ThumbGrid from "../Blogs/ThumbGrid";
 import Carousel from "../General/Carousel";
 import Marquee from "react-fast-marquee";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import FadeInOnScroll from "./FadeInOnScroll";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 // function bubbleAnimation() {
 //   const swiftUpElements = document.querySelectorAll('.swift-up-text');
@@ -35,7 +39,9 @@ function Home() {
   const { scrollYProgress } = useScroll();
   let anim07 = useTransform(scrollYProgress, [0.03, 0.127], [1, 0]);
   let anim08 = useTransform(scrollYProgress, [0.03, 0.127], [0, -100]);
-
+  useEffect(() => {
+    AOS.init();
+  }, [])
 
   return (
     <>
@@ -111,11 +117,13 @@ function Home() {
         destination={"homepage"}
         left={
           <>
-            <motion.img
+            <FadeInOnScroll threshold={0.2} duration={2.5}>
+              <img
 
-              src="globe.png"
-              width="100%"
-            />
+                src="globe.png"
+                width="100%"
+              />
+            </FadeInOnScroll>
           </>
         }
         right={
@@ -131,26 +139,75 @@ function Home() {
               }}
 
 
-            >
-              <div class="title-white"
-              >
-                <div data-aos="zoom-in" data-aos-offset="300"
+            > <FadeInOnScroll>
+                <div class="title-white"
                 >
+
                   <span class="purple-head">Who </span>We Are
+
                 </div>
-              </div>
-              <div className="subtitle" data-aos="zoom-in" data-aos-offset="300"
+              </FadeInOnScroll>
+              <FadeInOnScroll>
+
+                <div className="subtitle"
+                >
+                  We are a collaborative team comprised of builders, designers,
+                  and investors dedicated to crafting groundbreaking products
+                  within Web3. Our mission extends beyond creation; we actively
+                  empower founders throughout their journey. With a focus on
+                  innovation and support, we strive to make a lasting impact in
+                  the digital landscape.
+                </div>
+
+              </FadeInOnScroll>
+              <FadeInOnScroll>
+                <div className="outlined-btn"
+                >
+                  <div>Know More</div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                  >
+                    <path
+                      d="M24.5138 14.0053C24.513 13.8326 24.4773 13.6618 24.4087 13.5033C24.3401 13.3448 24.2402 13.2018 24.1148 13.083L16.8173 5.78552C16.5268 5.50727 16.2276 5.38477 15.9161 5.38477C15.2056 5.38477 14.6946 5.88527 14.6946 6.56252C14.6946 6.91777 14.8381 7.21877 15.0621 7.44102L17.5593 9.97327L20.7811 12.9168L18.2051 12.761H4.74059C3.99684 12.761 3.48584 13.272 3.48584 14.0053C3.48584 14.728 3.99684 15.239 4.74059 15.239H18.2051L20.7811 15.0815L17.5611 18.0268L15.0603 20.559C14.9435 20.6734 14.8507 20.8101 14.7876 20.961C14.7245 21.1119 14.6923 21.274 14.6928 21.4375C14.6928 22.1148 15.2056 22.6153 15.9161 22.6153C16.2276 22.6153 16.5286 22.4928 16.7928 22.2373L24.1148 14.917C24.2389 14.7998 24.3382 14.6588 24.4067 14.5025C24.4753 14.3462 24.5117 14.1759 24.5138 14.0053Z"
+                      fill="#AA67FE"
+                    />
+                  </svg>
+                </div>
+              </FadeInOnScroll>
+            </motion.div>
+          </>
+        }
+      />
+      <section className="home-third" style={{ overflowX: "hidden" }}>
+        <div className="third-flex">
+          <motion.div
+            className="third-flex-text"
+          >
+            <FadeInOnScroll>
+              <div
               >
-                We are a collaborative team comprised of builders, designers,
-                and investors dedicated to crafting groundbreaking products
-                within Web3. Our mission extends beyond creation; we actively
-                empower founders throughout their journey. With a focus on
-                innovation and support, we strive to make a lasting impact in
-                the digital landscape.
+                <span className="third-flex-head-white">We Design,</span>
+                <br />
+                <span className="third-flex-head-color">
+                  Craft Brands & <br /> Execute Digital Projects
+                </span>
               </div>
-              <div className="outlined-btn" data-aos="zoom-in" data-aos-offset="300"
+            </FadeInOnScroll>
+            <FadeInOnScroll>
+              <div className="subtitle"
               >
-                <div>Know More</div>
+                We're a Premier Digital Solution and Development Firm, Committed
+                to Crafting Tailored, High-Impact Websites for Businesses of Every
+                Scale, Fueling Their Online Success."
+              </div>
+            </FadeInOnScroll>
+            <FadeInOnScroll>
+              <div className="outlined-btn" style={{ marginLeft: "unset" }} >
+                <div>Get A Quote</div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="28"
@@ -164,166 +221,128 @@ function Home() {
                   />
                 </svg>
               </div>
+            </FadeInOnScroll>
+          </motion.div>
+          <FadeInOnScroll>
+            <motion.div
+              className="features"
+            >
+              <div data-aos="zoom-out" data-aos-easing="ease-out">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="29"
+                  viewBox="0 0 30 29"
+                  fill="none"
+                >
+                  <circle cx="15.083" cy="14.4364" r="10.7006" fill="#AA67FE" />
+                  <path
+                    d="M9.13818 13.6633L13.894 18.4191L21.0278 11.2857"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <div>Custom website development</div>
+              </div>
+              <div data-aos="zoom-out" data-aos-easing="ease-out">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="29"
+                  viewBox="0 0 30 29"
+                  fill="none"
+                >
+                  <circle cx="15.083" cy="14.4364" r="10.7006" fill="#AA67FE" />
+                  <path
+                    d="M9.13818 13.6633L13.894 18.4191L21.0278 11.2857"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <div>Flexible Revision Policy</div>
+              </div>
+              <div data-aos="zoom-out" data-aos-easing="ease-out">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="29"
+                  viewBox="0 0 30 29"
+                  fill="none"
+                >
+                  <circle cx="15.083" cy="14.4364" r="10.7006" fill="#AA67FE" />
+                  <path
+                    d="M9.13818 13.6633L13.894 18.4191L21.0278 11.2857"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <div>Domain/Hosting Setup</div>
+              </div>
+              <div data-aos="zoom-out" data-aos-easing="ease-out">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="29"
+                  viewBox="0 0 30 29"
+                  fill="none"
+                >
+                  <circle cx="15.083" cy="14.4364" r="10.7006" fill="#AA67FE" />
+                  <path
+                    d="M9.13818 13.6633L13.894 18.4191L21.0278 11.2857"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <div>Technical Consultancy</div>
+              </div>
+              <div data-aos="zoom-out" data-aos-easing="ease-out">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="29"
+                  viewBox="0 0 30 29"
+                  fill="none"
+                >
+                  <circle cx="15.083" cy="14.4364" r="10.7006" fill="#AA67FE" />
+                  <path
+                    d="M9.13818 13.6633L13.894 18.4191L21.0278 11.2857"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <div>Complete UI/UX Wire-frames</div>
+              </div>
+              <div data-aos="zoom-out" data-aos-easing="ease-out">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="29"
+                  viewBox="0 0 30 29"
+                  fill="none"
+                >
+                  <circle cx="15.083" cy="14.4364" r="10.7006" fill="#AA67FE" />
+                  <path
+                    d="M9.13818 13.6633L13.894 18.4191L21.0278 11.2857"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <div>Plagiarism Free Content</div>
+              </div>
             </motion.div>
-          </>
-        }
-      />
-      <section className="home-third" style={{ overflowX: "hidden" }}>
-        <div className="third-flex">
-          <motion.div
-            className="third-flex-text"
-          >
-            <div data-aos="fade-up" data-aos-delay="300"
-            >
-              <span className="third-flex-head-white">We Design,</span>
-              <br />
-              <span className="third-flex-head-color">
-                Craft Brands & <br /> Execute Digital Projects
-              </span>
-            </div>
-            <div className="subtitle" data-aos="fade-up" data-aos-delay="300"
-            >
-              We're a Premier Digital Solution and Development Firm, Committed
-              to Crafting Tailored, High-Impact Websites for Businesses of Every
-              Scale, Fueling Their Online Success."
-            </div>
-            <div className="outlined-btn" style={{ marginLeft: "unset" }} data-aos="fade-up">
-              <div>Get A Quote</div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="28"
-                viewBox="0 0 28 28"
-                fill="none"
-              >
-                <path
-                  d="M24.5138 14.0053C24.513 13.8326 24.4773 13.6618 24.4087 13.5033C24.3401 13.3448 24.2402 13.2018 24.1148 13.083L16.8173 5.78552C16.5268 5.50727 16.2276 5.38477 15.9161 5.38477C15.2056 5.38477 14.6946 5.88527 14.6946 6.56252C14.6946 6.91777 14.8381 7.21877 15.0621 7.44102L17.5593 9.97327L20.7811 12.9168L18.2051 12.761H4.74059C3.99684 12.761 3.48584 13.272 3.48584 14.0053C3.48584 14.728 3.99684 15.239 4.74059 15.239H18.2051L20.7811 15.0815L17.5611 18.0268L15.0603 20.559C14.9435 20.6734 14.8507 20.8101 14.7876 20.961C14.7245 21.1119 14.6923 21.274 14.6928 21.4375C14.6928 22.1148 15.2056 22.6153 15.9161 22.6153C16.2276 22.6153 16.5286 22.4928 16.7928 22.2373L24.1148 14.917C24.2389 14.7998 24.3382 14.6588 24.4067 14.5025C24.4753 14.3462 24.5117 14.1759 24.5138 14.0053Z"
-                  fill="#AA67FE"
-                />
-              </svg>
-            </div>
-          </motion.div>
-          <motion.div
-            className="features"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-          >
-            <div data-aos="zoom-out" data-aos-easing="ease-out">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="29"
-                viewBox="0 0 30 29"
-                fill="none"
-              >
-                <circle cx="15.083" cy="14.4364" r="10.7006" fill="#AA67FE" />
-                <path
-                  d="M9.13818 13.6633L13.894 18.4191L21.0278 11.2857"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <div>Custom website development</div>
-            </div>
-            <div data-aos="zoom-out" data-aos-easing="ease-out">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="29"
-                viewBox="0 0 30 29"
-                fill="none"
-              >
-                <circle cx="15.083" cy="14.4364" r="10.7006" fill="#AA67FE" />
-                <path
-                  d="M9.13818 13.6633L13.894 18.4191L21.0278 11.2857"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <div>Flexible Revision Policy</div>
-            </div>
-            <div data-aos="zoom-out" data-aos-easing="ease-out">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="29"
-                viewBox="0 0 30 29"
-                fill="none"
-              >
-                <circle cx="15.083" cy="14.4364" r="10.7006" fill="#AA67FE" />
-                <path
-                  d="M9.13818 13.6633L13.894 18.4191L21.0278 11.2857"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <div>Domain/Hosting Setup</div>
-            </div>
-            <div data-aos="zoom-out" data-aos-easing="ease-out">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="29"
-                viewBox="0 0 30 29"
-                fill="none"
-              >
-                <circle cx="15.083" cy="14.4364" r="10.7006" fill="#AA67FE" />
-                <path
-                  d="M9.13818 13.6633L13.894 18.4191L21.0278 11.2857"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <div>Technical Consultancy</div>
-            </div>
-            <div data-aos="zoom-out" data-aos-easing="ease-out">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="29"
-                viewBox="0 0 30 29"
-                fill="none"
-              >
-                <circle cx="15.083" cy="14.4364" r="10.7006" fill="#AA67FE" />
-                <path
-                  d="M9.13818 13.6633L13.894 18.4191L21.0278 11.2857"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <div>Complete UI/UX Wire-frames</div>
-            </div>
-            <div data-aos="zoom-out" data-aos-easing="ease-out">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="29"
-                viewBox="0 0 30 29"
-                fill="none"
-              >
-                <circle cx="15.083" cy="14.4364" r="10.7006" fill="#AA67FE" />
-                <path
-                  d="M9.13818 13.6633L13.894 18.4191L21.0278 11.2857"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <div>Plagiarism Free Content</div>
-            </div>
-          </motion.div>
+          </FadeInOnScroll>
         </div>
       </section>
       {/* <section className="services-section">
@@ -363,15 +382,17 @@ function Home() {
         </div>
       </section> */}
       <section className="home-fifth">
-        <div className="title-white" data-aos="fade-up">
-          <span className="purple-head">Reasons </span>
-          Why We Are The One
-        </div>
-        <div className="subtitle subtitle-fifth" data-aos="fade-up">
-          Customer satisfaction is our priority, and we ensure to deliver what
-          we promise. Let us align our innovative ideas and strategies to your
-          needs to generate unique and powerful results.
-        </div>
+        <FadeInOnScroll>
+          <div className="title-white" >
+            <span className="purple-head">Reasons </span>
+            Why We Are The One
+          </div>
+          <div className="subtitle subtitle-fifth" >
+            Customer satisfaction is our priority, and we ensure to deliver what
+            we promise. Let us align our innovative ideas and strategies to your
+            needs to generate unique and powerful results.
+          </div>
+        </FadeInOnScroll>
         <div className="cards">
           <div
             data-aos="fade-up"
@@ -718,14 +739,16 @@ function Home() {
       <Carousel heading={true}></Carousel>
       <section className="home-sixth">
         <div className="container-sixth">
-          <div className="title-white" data-aos="fade-up" data-aos-delay="300">
-            <span className="purple-head">Endorsed </span>
-            By
-          </div>
-          <div className="subtitle subtitle-sixth" data-aos="fade-up" data-aos-delay="300">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et
-          </div>
+          <FadeInOnScroll>
+            <div className="title-white" >
+              <span className="purple-head">Endorsed </span>
+              By
+            </div>
+            <div className="subtitle subtitle-sixth" >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et
+            </div>
+          </FadeInOnScroll>
           <Marquee style={{ width: "80vw" }}>
             <div className="marquee-child">
               <svg
