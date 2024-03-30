@@ -908,16 +908,17 @@ a {
 }
 
 .thumbGrid>div>a>.title-white {
-  font-size: 1.25rem !important;
-  line-height: 1.5rem !important;
+  font-size: 1.5rem !important;
+  line-height: 32px !important;
   padding-inline: 1.125rem;
   margin-top: 1.75rem;
 }
 
 .thumbGrid>div>a>.subtitle {
-  font-size: 0.875rem;
-  line-height: 1.5rem !important;
+  font-size: 1rem;
+  line-height: 23px !important;
   padding-inline: 1.125rem;
+  margin-top: 9px;
 }
 
 .tp-reader {
@@ -1579,14 +1580,14 @@ a {
     line-height: 24px !important;
     margin-top: 15px;
     padding-inline: 0.8rem;
-}
+  }
 
-.thumbGrid>div>a>.subtitle {
-  font-size: 1rem;
-  line-height: 16px !important;
-  padding-inline: 0.8rem;
-  margin-top: 5px;
-}
+  .thumbGrid>div>a>.subtitle {
+    font-size: 1rem;
+    line-height: 16px !important;
+    padding-inline: 0.8rem;
+    margin-top: 5px;
+  }
 
   .home-third {
     background: none !important;
@@ -1699,7 +1700,7 @@ a {
 
   .thumbGrid {
     grid-template-columns: 250px !important;
-}
+  }
 
   section {
     box-sizing: border-box;
