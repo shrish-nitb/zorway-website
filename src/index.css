@@ -234,7 +234,7 @@ body {
 
 .subHeading {
   height: 4.125em;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .subHeading>div>div {
