@@ -809,7 +809,7 @@ body {
   grid-template-rows: 28.75rem;
   padding-block: 5vh;
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 
 .image-container>img {
@@ -933,6 +933,13 @@ a {
   display: flex;
   justify-content: space-between;
   position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.tools.back{
+  visibility: hidden;
   z-index: 20;
 }
 

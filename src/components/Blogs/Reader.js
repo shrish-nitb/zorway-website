@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import copy from "copy-to-clipboard";
@@ -7,17 +7,21 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Reader() {
-  const location = useLocation();
   const navigate = useNavigate();
+  const [keyword, setKeyword] = useState("");
+  const handleSearchChange = (e) => {
+    setKeyword(e.target.value)
+  }
 
   return (
     <>
       <ToastContainer />
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ y: "200px", opacity: 0 }}
+        animate={{ visibility: "visible", y: "0px", opacity: 1, transition: { ease: "easeOut", duration: 0.7, delay: 0.8 } }}
+        exit={{ opacity: 0, transition: { ease: "linear", duration: 0.6 } }}
         transition={{ ease: "linear", duration: 1 }}
-        className="tools tools-header"
+        className="tools back tools-header"
       >
         <div>
           <div
@@ -43,21 +47,141 @@ export default function Reader() {
           </div>
         </div>
       </motion.div>
-      <motion.div className="thumb-parent tp-reader">
-        <div class="image-container">
-          <div class="image-overlay"></div>
-          <motion.img
-            style={{ maxHeight: "607px", maxWidth: "100%" }}
-            src="https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=S8gZupDM8HypN9Qzg2arhvL9V45MCZFYsclzuTOLqY6NyAlWrqZVYhJp9gI3Dvc5gQ~ZxItN1iKWHaqqZ~nEYXdvv4Gwge40UPv-eyt-moGrE2WHir8GPdbxdDxImu4jO4AX7ITYZmpA0owLGzYYJaJLdytOuZ47uGez0LUJOg9Rz45w~7qUQgLhOf1FlkW5VIvUVSRZHKnJ~QU7f06M2DPkBJJrVPn5Z2sYu4blnJHE8MkOUx4uw3qv68aaXinFBJF2tw0kIqE4bYBEb4m2FOvyOrtsTPYLpWh6ymmYRARiPQJwAipoJ3rRBddnObLBi03tNk1TtdKTCYQKhMws~Q__"
-            alt=""
-          />
-        </div>
+
+      <motion.div>
+        <motion.div
+          animate={{ gridTemplateColumns: "1fr", gridTemplateRows: "1fr" }}
+          exit={{ gridTemplateColumns: "1.9fr 1fr", gridTemplateRows: "28.75rem" }}
+          className="thumb-parent"
+        >
+          <div class="image-container">
+            <div class="image-overlay"></div>
+            <motion.img
+              animate={{ maxHeight: "607px", maxWidth: "1700px" }}
+              exit={{ maxHeight: "unset", maxWidth: "unset" }}
+              transition={{ type: "spring", damping: 9, duration: 2 }}
+              src="https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=S8gZupDM8HypN9Qzg2arhvL9V45MCZFYsclzuTOLqY6NyAlWrqZVYhJp9gI3Dvc5gQ~ZxItN1iKWHaqqZ~nEYXdvv4Gwge40UPv-eyt-moGrE2WHir8GPdbxdDxImu4jO4AX7ITYZmpA0owLGzYYJaJLdytOuZ47uGez0LUJOg9Rz45w~7qUQgLhOf1FlkW5VIvUVSRZHKnJ~QU7f06M2DPkBJJrVPn5Z2sYu4blnJHE8MkOUx4uw3qv68aaXinFBJF2tw0kIqE4bYBEb4m2FOvyOrtsTPYLpWh6ymmYRARiPQJwAipoJ3rRBddnObLBi03tNk1TtdKTCYQKhMws~Q__"
+              alt=""
+            />
+          </div>
+          <motion.div
+            animate={
+              window.innerWidth > 1280
+                ? {
+                  position: "absolute",
+                  right: "10vw",
+                  width: "calc((80vw - 49px) / 2.8)",
+                  y: "30vh",
+                  opacity: 0,
+                }
+                : {}
+            }
+            exit={
+              window.innerWidth > 1280
+                ? {
+                  position: "static",
+                  y: "0",
+                  opacity: 1,
+                }
+                : {}
+            }
+            transition={{ type: "spring", duration: 1 }}
+          >
+            <div className="title-white ">
+              Publishing Mobile Apps:
+              <br />A How To Guide
+            </div>
+            <div className="subtitle">
+              Steps and Materials to Publishing on the Mobile App Store
+            </div>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          animate={window.innerWidth > 1280 ? { position: "absolute", y: "-614.8px", opacity: 1 } : { position: "absolute", }}
+          exit={window.innerWidth > 1280 ? { position: "relative", y: "0", opacity: 1, transition: { ease: "easeOut", duration: 1 } } : { position: "relative", }}
+          transition={{ ease: "linear", duration: 1 }}
+          className="tools"
+        >
+          <div>
+            <motion.div
+              animate={{ opacity: 0 }}
+              exit={{ opacity: 1 }}
+              transition={{ ease: "linear", duration: 1 }}
+              className="button-tools">All</motion.div>
+            <motion.div
+              animate={{ opacity: 0 }}
+              exit={{ opacity: 1 }}
+              transition={{ ease: "linear", duration: 1 }}
+              className="button-tools"
+            >
+              Report
+            </motion.div>
+            <motion.div
+              animate={{ opacity: 0 }}
+              exit={{ opacity: 1 }}
+              transition={{ ease: "linear", duration: 1 }}
+              className="button-tools"
+            >
+              Blogs
+            </motion.div>
+          </div>
+          <motion.div
+            animate={{ opacity: 0 }}
+            exit={{ opacity: 1 }}
+            transition={{ ease: "linear", duration: 1 }}
+            className="search"
+
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                width: "100%",
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+
+              >
+                <path
+                  d="M20.4167 21.875L13.8542 15.3125C13.3333 15.7292 12.7344 16.059 12.0573 16.3021C11.3802 16.5451 10.6597 16.6667 9.89583 16.6667C8.00347 16.6667 6.40208 16.0111 5.09167 14.7C3.78125 13.3889 3.12569 11.7875 3.125 9.89583C3.125 8.00347 3.78056 6.40208 5.09167 5.09167C6.40278 3.78125 8.00417 3.12569 9.89583 3.125C11.7882 3.125 13.3899 3.78056 14.701 5.09167C16.0122 6.40278 16.6674 8.00417 16.6667 9.89583C16.6667 10.6597 16.5451 11.3802 16.3021 12.0573C16.059 12.7344 15.7292 13.3333 15.3125 13.8542L21.875 20.4167L20.4167 21.875ZM9.89583 14.5833C11.1979 14.5833 12.3049 14.1278 13.2167 13.2167C14.1285 12.3056 14.584 11.1986 14.5833 9.89583C14.5833 8.59375 14.1278 7.48715 13.2167 6.57604C12.3056 5.66493 11.1986 5.20903 9.89583 5.20833C8.59375 5.20833 7.48715 5.66424 6.57604 6.57604C5.66493 7.48785 5.20903 8.59444 5.20833 9.89583C5.20833 11.1979 5.66424 12.3049 6.57604 13.2167C7.48785 14.1285 8.59444 14.584 9.89583 14.5833Z"
+                  fill="black"
+                  fill-opacity="0.6"
+                />
+              </svg>
+              <input
+                type="text"
+                style={{
+                  flexGrow: 1,
+                  color: "rgba(0, 0, 0, 0.60)",
+                  fontFamily: "Rubik",
+                  fontSize: 20,
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  lineHeight: 20,
+                  background: "none",
+                  border: "none",
+                  outline: "none",
+                  height: "35px",
+                }}
+                value={keyword}
+                onChange={handleSearchChange}
+                placeholder="Type to Search"
+              />
+            </div>
+          </motion.div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "linear", duration: 1 }}
           className="tools"
-          style={{ padding: 0 }}
         >
           <div className="blog-info">
             <div>
@@ -118,6 +242,7 @@ export default function Reader() {
             </div>
           </div>
         </motion.div>
+
       </motion.div>
 
       <motion.div
