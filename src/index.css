@@ -1623,6 +1623,10 @@ a {
     font-size: 13px;
   }
 
+  .subHeading{
+    font-size: 8px !important;
+  }
+
   .second-grid {
     grid-template-columns: 1fr !important;
     justify-items: center !important;
