@@ -188,7 +188,7 @@ export default function Service() {
                     <span>Project Budget</span>
                     <div style={{ display: "flex", flexDirection:"column", gap:"10px"}}>
                       <Box sx={{
-                        width: 300, marginLeft: "10px"
+                        width: 300, marginLeft: "5px"
                       }}>
                         <Slider
                           aria-label="budget"
