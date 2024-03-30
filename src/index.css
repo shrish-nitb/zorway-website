@@ -3290,9 +3290,9 @@ a {
 }
 
 .mode-switch {
-  position: fixed;
+  position: absolute;
   top: 100px;
-  right: 50px;
+  right: 40px;
   z-index: 99;
   background: none;
   border: none;
