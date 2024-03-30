@@ -154,7 +154,7 @@ function Home() {
                 </div>
 
               </FadeInOnScroll>
-              <FadeInOnScroll>
+              <FadeInOnScroll threshold={0.5}>
                 <div className="outlined-btn"
                 >
                   <div>Know More</div>
