@@ -5,11 +5,6 @@ import ThumbGrid from "../Blogs/ThumbGrid";
 import Carousel from "../General/Carousel";
 import Marquee from "react-fast-marquee";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import "animate.css";
-import { useEffect } from "react";
 
 // function bubbleAnimation() {
 //   const swiftUpElements = document.querySelectorAll('.swift-up-text');
@@ -33,9 +28,9 @@ import { useEffect } from "react";
 //   });
 // }
 
-function Home() {
-  Aos.init();
 
+
+function Home() {
 
   const { scrollYProgress } = useScroll();
   let anim07 = useTransform(scrollYProgress, [0.03, 0.127], [1, 0]);
@@ -117,6 +112,7 @@ function Home() {
         left={
           <>
             <motion.img
+
               src="globe.png"
               width="100%"
             />
@@ -125,6 +121,7 @@ function Home() {
         right={
           <>
             <motion.div
+
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -132,11 +129,18 @@ function Home() {
                 justifyContent: "center",
                 paddingInline: "4.45vw",
               }}
+
+
             >
-              <div class="title-white">
-                <span class="purple-head">Who </span>We Are
+              <div class="title-white"
+              >
+                <div data-aos="zoom-in" data-aos-offset="300"
+                >
+                  <span class="purple-head">Who </span>We Are
+                </div>
               </div>
-              <div className="subtitle">
+              <div className="subtitle" data-aos="zoom-in" data-aos-offset="300"
+              >
                 We are a collaborative team comprised of builders, designers,
                 and investors dedicated to crafting groundbreaking products
                 within Web3. Our mission extends beyond creation; we actively
@@ -144,7 +148,8 @@ function Home() {
                 innovation and support, we strive to make a lasting impact in
                 the digital landscape.
               </div>
-              <div className="outlined-btn">
+              <div className="outlined-btn" data-aos="zoom-in" data-aos-offset="300"
+              >
                 <div>Know More</div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -168,19 +173,21 @@ function Home() {
           <motion.div
             className="third-flex-text"
           >
-            <div>
+            <div data-aos="fade-up" data-aos-delay="300"
+            >
               <span className="third-flex-head-white">We Design,</span>
               <br />
               <span className="third-flex-head-color">
                 Craft Brands & <br /> Execute Digital Projects
               </span>
             </div>
-            <div className="subtitle">
+            <div className="subtitle" data-aos="fade-up" data-aos-delay="300"
+            >
               We're a Premier Digital Solution and Development Firm, Committed
               to Crafting Tailored, High-Impact Websites for Businesses of Every
               Scale, Fueling Their Online Success."
             </div>
-            <div className="outlined-btn" style={{ marginLeft: "unset" }}>
+            <div className="outlined-btn" style={{ marginLeft: "unset" }} data-aos="fade-up">
               <div>Get A Quote</div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -198,6 +205,9 @@ function Home() {
           </motion.div>
           <motion.div
             className="features"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
             <div data-aos="zoom-out" data-aos-easing="ease-out">
               <svg
@@ -353,11 +363,11 @@ function Home() {
         </div>
       </section> */}
       <section className="home-fifth">
-        <div className="title-white">
+        <div className="title-white" data-aos="fade-up">
           <span className="purple-head">Reasons </span>
           Why We Are The One
         </div>
-        <div className="subtitle subtitle-fifth">
+        <div className="subtitle subtitle-fifth" data-aos="fade-up">
           Customer satisfaction is our priority, and we ensure to deliver what
           we promise. Let us align our innovative ideas and strategies to your
           needs to generate unique and powerful results.
@@ -366,7 +376,7 @@ function Home() {
           <div
             data-aos="fade-up"
             data-aos-delay="150"
-            data-aos-easing="ease-in-sine"
+
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -409,9 +419,9 @@ function Home() {
             <div>Custom website development</div>
           </div>
           <div
-            data-aos="fade-down"
+            data-aos="fade-up"
             data-aos-delay="150"
-            data-aos-easing="ease-in-sine"
+
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -449,9 +459,8 @@ function Home() {
             <div>Complete Research</div>
           </div>
           <div
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-delay="150"
-            data-aos-easing="ease-in-sine"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -473,9 +482,8 @@ function Home() {
             <div>Complete UI/UX Wire-frames</div>
           </div>
           <div
-            data-aos="fade-right"
+            data-aos="fade-up"
             data-aos-delay="150"
-            data-aos-easing="ease-in-sine"
           >
             <svg
               width="24"
@@ -518,7 +526,6 @@ function Home() {
           <div
             data-aos="fade-up"
             data-aos-delay="150"
-            data-aos-easing="ease-in-sine"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -547,9 +554,8 @@ function Home() {
             <div>Domain/Hosting Setup</div>
           </div>
           <div
-            data-aos="fade-down"
+            data-aos="fade-up"
             data-aos-delay="150"
-            data-aos-easing="ease-in-sine"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -578,9 +584,8 @@ function Home() {
             <div>Technical Consultancy</div>
           </div>
           <div
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-delay="150"
-            data-aos-easing="ease-in-sine"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -609,9 +614,8 @@ function Home() {
             <div>Dedicated Writers</div>
           </div>
           <div
-            data-aos="fade-right"
+            data-aos="fade-up"
             data-aos-delay="150"
-            data-aos-easing="ease-in-sine"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -647,7 +651,6 @@ function Home() {
           <div
             data-aos="fade-up"
             data-aos-delay="150"
-            data-aos-easing="ease-in-sine"
           >
             <svg
               width="24"
@@ -688,9 +691,8 @@ function Home() {
             <div>Flexible Revision</div>
           </div>
           <div
-            data-aos="fade-down"
+            data-aos="fade-up"
             data-aos-delay="150"
-            data-aos-easing="ease-in-sine"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -716,11 +718,11 @@ function Home() {
       <Carousel heading={true}></Carousel>
       <section className="home-sixth">
         <div className="container-sixth">
-          <div className="title-white">
+          <div className="title-white" data-aos="fade-up" data-aos-delay="300">
             <span className="purple-head">Endorsed </span>
             By
           </div>
-          <div className="subtitle subtitle-sixth">
+          <div className="subtitle subtitle-sixth" data-aos="fade-up" data-aos-delay="300">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et
           </div>
