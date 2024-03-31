@@ -62,7 +62,7 @@ export default function View() {
                 fill-opacity="0.8"
               />
             </svg>
-            Back
+            
           </div>
         </div>
       </motion.div>

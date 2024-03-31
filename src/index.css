@@ -2132,6 +2132,10 @@ a {
     display: none;
   }
 
+  .thumb-parent.story {
+    padding-top: 6.1rem !important;
+  }
+
   .center {
     font-size: 21px;
     /* ipad air */
@@ -2569,7 +2573,8 @@ a {
 }
 
 .thumb-parent.story {
-  padding-block: 6.1rem;
+
+  padding-block: 4.1rem;
 }
 
 .testimonial-a {
@@ -2587,7 +2592,7 @@ a {
   position: absolute;
   z-index: 1;
   right: 5rem;
-  top: 5rem;
+  top: 8rem;
   cursor: default;
 }
 
