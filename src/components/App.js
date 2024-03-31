@@ -15,6 +15,7 @@ import ScrollContainer from './General/ScrollContainer';
 
 
 export default function App() {
+    let location = useLocation()
 
     return (
         <>
