@@ -39,7 +39,7 @@ export default function Testimonials() {
           </div>
         </motion.div>
         <motion.div
-          className="classic-1 avatars-bg"
+          className="classic-1 avatars-bg animate__animated animate__pulse animate__infinite animate__slower"
           initial={{ y: "-100px", opacity: 0 }}
           animate={{ y: "0px", opacity: 1 }}
           transition={{ duration: 1.8, ease: [0.42, 0, 0.58, 1] }}
