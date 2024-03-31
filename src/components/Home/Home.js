@@ -1,5 +1,5 @@
 import Btnpill from "./btn-pill";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Second from "../General/Second";
 import ThumbGrid from "../Blogs/ThumbGrid";
 import Carousel from "../General/Carousel";
@@ -8,7 +8,7 @@ import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import FadeInOnScroll from "./FadeInOnScroll";
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import MovingArray from "./MovingArray";
 
 // function bubbleAnimation() {
@@ -36,6 +36,38 @@ import MovingArray from "./MovingArray";
 
 
 function Home() {
+  const sectionRef = useRef(null);
+  const controls = useAnimation();
+  const containerAnimation = useAnimation();
+
+  useEffect(() => {
+    // Set window position to 0 with smooth scroll animation
+    const scrollOptions = {
+      top: 0,
+      behavior: 'smooth'
+    };
+
+    const smoothScrollToTop = () => {
+      const scrollToTop = () => {
+        const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (currentScroll > 0) {
+          window.requestAnimationFrame(scrollToTop);
+          window.scrollTo(0, currentScroll - currentScroll / 8);
+        }
+      };
+
+      scrollToTop();
+    };
+
+    smoothScrollToTop();
+    containerAnimation.start({
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    });
+  }, [containerAnimation]);
+
   const { scrollYProgress } = useScroll();
   let anim07 = useTransform(scrollYProgress, [0.03, 0.127], [1, 0]);
   let anim08 = useTransform(scrollYProgress, [0.03, 0.127], [0, -100]);

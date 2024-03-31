@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
 import copy from "copy-to-clipboard";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -7,10 +7,41 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import Cookies from 'js-cookie';
 
 export default function Reader() {
+  const sectionRef = useRef(null);
+  const controls = useAnimation();
+  const containerAnimation = useAnimation();
+
+  useEffect(() => {
+    // Set window position to 0 with smooth scroll animation
+    const scrollOptions = {
+      top: 0,
+      behavior: 'smooth'
+    };
+
+    const smoothScrollToTop = () => {
+      const scrollToTop = () => {
+        const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (currentScroll > 0) {
+          window.requestAnimationFrame(scrollToTop);
+          window.scrollTo(0, currentScroll - currentScroll / 8);
+        }
+      };
+
+      scrollToTop();
+    };
+
+    smoothScrollToTop();
+    containerAnimation.start({
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    });
+  }, [containerAnimation]);
+
   const navigate = useNavigate();
   const [keyword, setKeyword] = useState("");
   const handleSearchChange = (e) => {

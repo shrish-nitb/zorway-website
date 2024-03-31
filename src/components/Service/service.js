@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useScroll } from "framer-motion";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -7,7 +7,6 @@ import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Slider from '@mui/material/Slider';
 import Box from '@mui/material/Box';
-
 
 const marks = [
   {
@@ -30,6 +29,37 @@ const marks = [
 
 
 export default function Service() {
+  const sectionRef = useRef(null);
+  const controls = useAnimation();
+  const containerAnimation = useAnimation();
+
+  useEffect(() => {
+    // Set window position to 0 with smooth scroll animation
+    const scrollOptions = {
+      top: 0,
+      behavior: 'smooth'
+    };
+
+    const smoothScrollToTop = () => {
+      const scrollToTop = () => {
+        const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (currentScroll > 0) {
+          window.requestAnimationFrame(scrollToTop);
+          window.scrollTo(0, currentScroll - currentScroll / 8);
+        }
+      };
+
+      scrollToTop();
+    };
+
+    smoothScrollToTop();
+    containerAnimation.start({
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    });
+  }, [containerAnimation]);
 
   const [budgetDecided, setBudgetDecided] = useState(false);
   const [sliderValue, setSliderValue] = useState(20);

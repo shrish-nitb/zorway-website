@@ -1,10 +1,41 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { motion, useAnimation } from "framer-motion";
 import Glossy from "../General/Glossy";
-
 import {useNavigate } from "react-router-dom";
 
 export default function View() {
+  const sectionRef = useRef(null);
+  const controls = useAnimation();
+  const containerAnimation = useAnimation();
+
+  useEffect(() => {
+    // Set window position to 0 with smooth scroll animation
+    const scrollOptions = {
+      top: 0,
+      behavior: 'smooth'
+    };
+
+    const smoothScrollToTop = () => {
+      const scrollToTop = () => {
+        const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (currentScroll > 0) {
+          window.requestAnimationFrame(scrollToTop);
+          window.scrollTo(0, currentScroll - currentScroll / 8);
+        }
+      };
+
+      scrollToTop();
+    };
+
+    smoothScrollToTop();
+    containerAnimation.start({
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    });
+  }, [containerAnimation]);
+
   const navigate = useNavigate();
   return (
     <>
@@ -12,7 +43,7 @@ export default function View() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ ease: "linear", duration: 1 }}
-        className="tools tools-header"
+        className="tools story tools-header"
       >
         <div>
           <div className="button-tools icon-btn"
@@ -36,7 +67,7 @@ export default function View() {
         </div>
       </motion.div>
      
-        <motion.div className="thumb-parent tp-reader testimonial-a" >
+        <motion.div className="thumb-parent story tp-reader testimonial-a" >
         <div className="about-heading testimonial-c">
           <span className="about-heading-grad">Digital Core <br /> Capabilities</span>
         </div>
@@ -44,7 +75,7 @@ export default function View() {
             <div className="image-overlay testimonial-a"></div>
             <motion.img className="testimonial-a"
               style={{ maxHeight: "607px", maxWidth: "100%" }}
-              src="https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Vgcj9KTTbEWLou--g6NBt949iAGTgPEwPhJXA5qiKuXWilOSGCLIWPcsVG1sHT1bNVVnwTluU9k8a6wbPabqlowhJyo5owxxxSsXUnhC-1sIs8oC--hmqM9XH3fbQFfYNApPh1mt4NZrF1h4lmvWPcaa6zqLjOi8tnPYywHSKaNgUs1s8j6XniAvzylIyrtJ4QhMEwVGY4kMHXn0TWL00o8jgXP9bkpUp8wCXGKIJ83uRbK35g0yQDGGPscQhNm0gCcJUpKSOTnUACOY83fUNN8mmDIAs--4Q3tOlugsKcY6xNLYGC4LZxePc99~Hp-0xvxiTRPXDkn05AyNf7suNQ__"
+              src="https://s3-alpha-sig.figma.com/img/ec1d/89b1/203eb88c429c7528e8fcd6ab7f7d2e01?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CD-L8UUgpSdxHuDRFXmQYpGfOPuY72ebgWs72g3bthI4OxOGipsEUjVg-u8Sn8yFeohKPgcKedVGsaYtD2h9wC~YI2Jk0jwxOIaUV6ysvt~39hQcffrXj1V7LC5HNnuLkvwIdlTrcmLDEVybrjDqdaWjdJrxUFqtawuJAP7esT1vk30RROgtWwCqSdBm9nKOe-xvAH9nfzeouScGwdX3rO09pujuSmBpyqIJK5KN1JU45ya4w1iXx~hTvuNgTW7aOip78nu4qK1RQMI6-ddE8qHxrX4lqVZwDQ0p5mNMRYKHMjQh7nIOOZFXH5yBo28-wmxF5SBzht0TvQWLsO5wmg__"
               alt=""
             />
           </div>

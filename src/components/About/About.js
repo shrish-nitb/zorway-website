@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Second from "../General/Second";
 import ScrollPlates from "./ScrollPlates";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Glossy from "../General/Glossy";
 import MemberThumb from "./MemberThumb";
 import { useScroll } from "framer-motion";
@@ -18,6 +18,38 @@ import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 
 export default function About() {
+  const sectionRef = useRef(null);
+  const controls = useAnimation();
+  const containerAnimation = useAnimation();
+
+  useEffect(() => {
+    // Set window position to 0 with smooth scroll animation
+    const scrollOptions = {
+      top: 0,
+      behavior: 'smooth'
+    };
+
+    const smoothScrollToTop = () => {
+      const scrollToTop = () => {
+        const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (currentScroll > 0) {
+          window.requestAnimationFrame(scrollToTop);
+          window.scrollTo(0, currentScroll - currentScroll / 8);
+        }
+      };
+
+      scrollToTop();
+    };
+
+    smoothScrollToTop();
+    containerAnimation.start({
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    });
+  }, [containerAnimation]);
+
   const b = useScroll();
   const [actionOne, setActionOne] = useState({});
   const [actionTwo, setActionTwo] = useState({});

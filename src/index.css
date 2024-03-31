@@ -2564,6 +2564,14 @@ a {
   margin-right: auto;
 }
 
+.tools.story {
+  position: absolute;
+}
+
+.thumb-parent.story {
+  padding-block: 4rem;
+}
+
 .testimonial-a {
   padding-inline: unset !important;
   border-radius: 0px !important;
