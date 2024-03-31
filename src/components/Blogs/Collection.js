@@ -33,7 +33,7 @@ export default function BlogPage() {
     <>
       <div id="swticher" className={`${isDarkMode ? '' : 'light'}`}>
         <button onClick={toggleDarkMode} className="mode-switch">
-          <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} /> 
+          <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
         </button>
         <motion.div
           initial={{ opacity: 0 }}
@@ -48,26 +48,31 @@ export default function BlogPage() {
         <motion.div
           className="thumb-parent"
         >
+
           <div class="image-container">
-
-            <div class="image-overlay"></div>
-
+            <Link to="/read/headpost">
+              <div class="image-overlay"></div>
+            </Link>
             <motion.img
               src="https://s3-alpha-sig.figma.com/img/7cd3/8fa5/a4bae463af518f8105d9a332943b929f?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=S8gZupDM8HypN9Qzg2arhvL9V45MCZFYsclzuTOLqY6NyAlWrqZVYhJp9gI3Dvc5gQ~ZxItN1iKWHaqqZ~nEYXdvv4Gwge40UPv-eyt-moGrE2WHir8GPdbxdDxImu4jO4AX7ITYZmpA0owLGzYYJaJLdytOuZ47uGez0LUJOg9Rz45w~7qUQgLhOf1FlkW5VIvUVSRZHKnJ~QU7f06M2DPkBJJrVPn5Z2sYu4blnJHE8MkOUx4uw3qv68aaXinFBJF2tw0kIqE4bYBEb4m2FOvyOrtsTPYLpWh6ymmYRARiPQJwAipoJ3rRBddnObLBi03tNk1TtdKTCYQKhMws~Q__"
               alt=""
             />
 
+
           </div>
 
           <motion.div>
-            <div className="title-white ">
-              Publishing Mobile Apps:
-              <br />A How To Guide
-            </div>
-            <div className="subtitle">
-              Steps and Materials to Publishing on the Mobile App Store
-            </div>
+            <Link to="/read/headpost">
+              <div className="title-white ">
+                Publishing Mobile Apps:
+                <br />A How To Guide
+              </div>
+              <div className="subtitle">
+                Steps and Materials to Publishing on the Mobile App Store
+              </div>
+            </Link>
           </motion.div>
+
         </motion.div>
 
         <motion.div
