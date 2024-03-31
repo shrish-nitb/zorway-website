@@ -6,8 +6,8 @@ import Carousel from "../General/Carousel";
 import Marquee from "react-fast-marquee";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import FadeInOnScroll from "./FadeInOnScroll";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import MovingArray from "./MovingArray";
 
