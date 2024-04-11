@@ -887,8 +887,8 @@ a {
   .footerItemList {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    align-items: center;
+    align-content: center !important;
+    align-items: center !important;
   }
 
   .footerItem div::before {
