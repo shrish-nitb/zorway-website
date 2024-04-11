@@ -3294,7 +3294,7 @@ a {
   display: flex;
   flex-direction: column;
   align-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .footerItem {
@@ -3520,6 +3520,7 @@ a {
   align-items: center;
   align-content: center;
   gap: 10px;
+  cursor: default;
 }
 
 .footerItem.contactItem div::before {
