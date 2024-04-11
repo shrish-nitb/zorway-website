@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 body {
   margin: 0;
@@ -880,12 +881,26 @@ a {
 
   .Maal {
     grid-template-columns: 1fr !important;
+    gap: 50px;
+  }
+
+  .footerItemList {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+
+  .footerItem div::before {
+    content: "" !important;
+  }
+
+  .footerItem {
+    text-align: inherit !important;
   }
 
   .footercloser {
     gap: 10px;
-    border-top: solid 0.5px #C8CFD5;
-    margin-top: 5rem;
     padding-top: 3rem;
     text-align: left;
     display: flex;
@@ -3270,10 +3285,20 @@ a {
 
 .social {
   display: flex;
-  justify-content: center;
   gap: 20px;
   padding-block: 20px;
   font-size: 23px;
+}
+
+.footerItemList {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.footerItem {
+  text-align: unset;
 }
 
 .social>div {
@@ -3440,9 +3465,8 @@ a {
 
 .Footer {
   min-height: 394px;
-  background: url("./footerbg.png");
-  background-size: 100vw auto;
-  padding: 40px 140px;
+  background: #1B1D21;
+  padding: 90px 140px 40px 140px;
   text-align: center;
   color: #fff;
   font-family: "Lexend Deca";
@@ -3455,22 +3479,89 @@ a {
   background-position: center;
 }
 
+.footerDesc {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.footerItemList {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerHead {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 13px;
+  padding-bottom: 16px;
+  border-bottom: solid 1px #AA67FE;
+  width: max-content;
+}
+
+.footerItem {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 13px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 20px;
+  padding: 25px 0px;
+  cursor: pointer;
+}
+
+.footerItem.contactItem div {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+}
+
+.footerItem.contactItem div::before {
+  font-size: 22px;
+}
+
+.footerItem div::before {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f054";
+  padding-right: 10px;
+  color: #AA67FE;
+}
+
+.footerItem.contactItem div:nth-child(1)::before {
+  content: "\f3c5" !important;
+}
+
+.footerItem.contactItem div:nth-child(2)::before {
+  content: "\f0e0" !important;
+}
+
+.footerItem.contactItem div:nth-child(3)::before {
+  content: "\f2a0" !important;
+}
+
+.footerItem.contactItem {
+  gap: 30px;
+}
+
 .Maal {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   height: 65%;
 }
 
-.MaalOne,
-.MaalThree {
+.MaalOne {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
-
-.MaalThree>div {
-  text-align: left;
 }
 
 
@@ -3488,10 +3579,8 @@ a {
 }
 
 .footercloser {
-  border-top: solid 0.5px #C8CFD5;
-  margin-top: 5rem;
   padding-top: 3rem;
-  text-align: left;
+  text-align: center;
   display: flex;
 }
 
@@ -3509,6 +3598,8 @@ a {
   font-weight: 500;
   line-height: 160%;
 }
+
+
 
 /* locomotive scroll */
 
