@@ -366,7 +366,7 @@ body {
 
 .title-white {
   color: #fff;
-
+  text-align: center;
   font-family: Inter;
   font-size: 3rem;
   font-style: normal;
@@ -3179,7 +3179,7 @@ use media uery for after 830px */
 
 .services-section {
   background-repeat: no-repeat;
-  height: 2100px;
+  height: 100vh;
   background-attachment: fixed;
   background-size: 100vw;
   background-position: center;
@@ -3188,6 +3188,7 @@ use media uery for after 830px */
   background-color: #0a0909;
 }
 
+/* 
 .services-section>div {
   position: sticky;
   top: 5rem;
@@ -3216,7 +3217,7 @@ use media uery for after 830px */
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
-  /* 8.25rem */
+  8.25rem 
   letter-spacing: -0.25em;
   text-transform: uppercase;
 }
@@ -3227,7 +3228,7 @@ use media uery for after 830px */
   font-style: normal;
   font-weight: 600;
   line-height: 130%;
-  /* 1.625rem */
+  
 }
 
 .service-description {
@@ -3237,7 +3238,7 @@ use media uery for after 830px */
   font-weight: 400;
   line-height: 170%;
   color: #C8CFD5;
-  /* 1.4875rem */
+  
 }
 
 .curve>div {
@@ -3266,6 +3267,25 @@ use media uery for after 830px */
   left: 50%;
   transform: translateX(-50%);
   top: 90px;
+} */
+
+.text-services {
+  font-family: "Lexend Deca";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 62.4px;
+  color: white;
+  padding: 65px 198px 0px 198px;
+}
+
+.text-services::after {
+  display: block;
+  width: 170px;
+  height: 1px;
+  content: " ";
+  margin-top: 25px;
+  background-color: #C8CFD5;
 }
 
 a {
@@ -3691,3 +3711,98 @@ html.has-scroll-dragging {
   right: auto;
   bottom: 0;
 } */
+
+
+.service {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #727272;
+  background-color: rgba(21, 21, 21, 0.5);
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 3rem;
+  z-index: 50;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin:1rem;
+}
+
+.main-box {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  font-family: 'Inter', sans-serif;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.circle {
+  width: 7rem;
+  height: 7rem;
+  left: 0px;
+  top: 0px;
+  background: rgba(151, 71, 255, 0.39);
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding:2rem; */
+}
+
+.servicelogo{
+    width:100%;
+    height:100%;
+
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #8b5cf6;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.development {
+  color: #ffffff;
+}
+
+.content2 {
+  text-align: center;
+  color: white;
+  line-height: 18px;
+}
+
+.Ellipse1 {
+  width: 51px;
+  height: 49px;
+  background: linear-gradient(202deg, rgba(175.63, 126.59, 237.36, 0.56) 0%, rgba(40.16, 40.16, 40.16, 0) 100%);
+  box-shadow: 0px 98px 250px 313px #453A52;
+  border-radius: 9999px;
+  display: none;
+  position: absolute;
+  right: -150px;
+  top: -200px;
+  z-index: -4;
+  animation: ellipseAnimation 1s ease forwards; /* Added animation */
+}
+
+@keyframes ellipseAnimation {
+  0% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.service:hover .Ellipse1 {
+  display: block;
+}

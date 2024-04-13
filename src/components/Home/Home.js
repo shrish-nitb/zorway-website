@@ -10,6 +10,7 @@ import FadeInOnScroll from "./FadeInOnScroll";
 // import 'aos/dist/aos.css';
 import { useEffect, useRef } from "react";
 import MovingArray from "./MovingArray";
+import Cards from "../General/Cards";
 
 // function bubbleAnimation() {
 //   const swiftUpElements = document.querySelectorAll('.swift-up-text');
@@ -380,34 +381,10 @@ function Home() {
             <span className="purple-head">What We </span>
             Offer
           </div>
-          <img className="curve-img" src="
-          curve.png
-          " alt="" />
-          <div className="curve">
-            <div>
-
-              <div className="service-number">1</div>
-              <div>
-                <div className="service-name">Website Development</div>
-                <div className="service-description">Developing a user-friendly interface to engage more possible customers.</div>
-              </div>
-
-            </div>
-            <div>
-              <div className="service-number">2</div>
-              <div>
-                <div className="service-name">App Development</div>
-                <div className="service-description">Developing a user-friendly interface to engage more possible customers.</div>
-              </div>
-            </div>
-            <div>
-              <div className="service-number">3</div>
-              <div>
-                <div className="service-name">UI/UX Design</div>
-                <div className="service-description">Magically designing logos, and other media to build the brand identity.</div>
-              </div>
-            </div>
+          <div className="text-services">
+            Explore what services <br /> we’re offering
           </div>
+          <Cards></Cards>
         </div>
       </section>
       <section className="home-fifth">
