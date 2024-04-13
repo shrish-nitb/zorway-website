@@ -1425,6 +1425,22 @@ a {
     filter: grayscale(1);
   }
 
+  .text-services {
+    color: #fff;
+    font-family: Lexend Deca;
+    font-size: 35px !important;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px !important;
+    text-align: center !important;
+    margin-block: 2rem !important ;
+    padding: unset !important;
+}
+
+.text-services::after {
+  display: none !important;
+}
+
   .ideas-plate-parent {
     height: max-content;
     box-sizing: border-box;
