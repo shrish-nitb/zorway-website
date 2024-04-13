@@ -377,7 +377,7 @@ function Home() {
       </section>
       <section className="services-section">
         <div>
-          <div className="title-white">
+          <div className="title-white" style={{textAlign:"center"}}>
             <span className="purple-head">What We </span>
             Offer
           </div>
