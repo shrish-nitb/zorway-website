@@ -366,7 +366,7 @@ body {
 
 .title-white {
   color: #fff;
-  text-align: center;
+  /* text-align: center; */
   font-family: Inter;
   font-size: 3rem;
   font-style: normal;
