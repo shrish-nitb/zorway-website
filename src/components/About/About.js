@@ -101,7 +101,7 @@ export default function About() {
           alt=""
         />
         <div className="about-heading">
-          <div className="social">
+          <div className="social" style={{justifyContent:"center"}}>
             <div><i class="fa-brands fa-twitter"></i></div>
             <div><i class="fa-brands fa-instagram"></i></div>
             <div><i class="fa-brands fa-linkedin"></i></div>
